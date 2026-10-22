@@ -21,18 +21,24 @@
     // 0.18 per frame reads as "follows" without feeling attached. With
     // reduced motion the preview sits exactly at the pointer instead.
     const EASE = RM ? 1 : 0.18;
-    const OFFSET_X = 28, OFFSET_Y = -120;
+    // Portrait 4:5 thumbnails, 240px wide: sit to the right of the
+    // pointer and centered on it vertically.
+    const OFFSET_X = 28, OFFSET_Y = -150;
+    // Keep the whole thumbnail on screen near the top and bottom edges.
+    const clampY = v => Math.max(16, Math.min(v, window.innerHeight - preview.offsetHeight - 16));
     function tick() {
       x += (px + OFFSET_X - x) * EASE;
-      y += (py + OFFSET_Y - y) * EASE;
+      y += (clampY(py + OFFSET_Y) - y) * EASE;
       preview.style.transform = `translate3d(${x}px, ${y}px, 0)`;
       raf = on || Math.abs(px + OFFSET_X - x) > 0.5 ? requestAnimationFrame(tick) : null;
     }
     table.querySelectorAll('.tg-row').forEach(row => {
       const src = row.dataset.img;
-      const pre = new Image(); pre.src = src; // warm the cache so the swap is instant
+      if (src) { const pre = new Image(); pre.src = src; } // warm the cache so the swap is instant
       row.addEventListener('pointerenter', () => {
-        if (!on) { x = px + OFFSET_X; y = py + OFFSET_Y; }
+        // A row without a thumbnail still fills, it just shows no preview.
+        if (!src) { on = false; preview.classList.remove('is-on'); return; }
+        if (!on) { x = px + OFFSET_X; y = clampY(py + OFFSET_Y); }
         if (img.getAttribute('src') !== src) img.setAttribute('src', src);
         on = true;
         preview.classList.add('is-on');

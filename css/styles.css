@@ -492,7 +492,7 @@ body.at-hero .section-nav .section-pill { opacity: 0; transform: translateY(12px
 
 /* Table index */
 .table-grid { position: relative; margin-top: 8px; border-top: 1px solid var(--page-rule); }
-.tg-head, .tg-row { display: grid; grid-template-columns: 64px minmax(0, 1.6fr) minmax(0, .8fr) minmax(0, .8fr); gap: 16px; align-items: baseline; padding: 0 16px; }
+.tg-head, .tg-row { display: grid; grid-template-columns: 64px minmax(0, 1.6fr) minmax(0, 1fr); gap: 16px; align-items: baseline; padding: 0 16px; }
 .tg-head { font: 400 10px/1 var(--font-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--page-muted); padding-top: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--page-rule); }
 .tg-row { position: relative; padding-top: 22px; padding-bottom: 22px; border-bottom: 1px solid var(--page-rule); color: var(--page-fg); text-decoration: none; isolation: isolate; transition: color var(--duration-base) ease; }
 .tg-row::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--row-bg); transform: scaleY(0); transform-origin: bottom; transition: transform var(--duration-slow) var(--ease-exit); }
@@ -506,7 +506,7 @@ body.at-hero .section-nav .section-pill { opacity: 0; transform: translateY(12px
   .tg-row:hover::before, .tg-row:focus-visible::before { transform: scaleY(1); transition: transform var(--duration-slow) var(--ease-enter); }
   .tg-row:hover .tg-n, .tg-row:hover .tg-meta, .tg-row:focus-visible .tg-n, .tg-row:focus-visible .tg-meta { color: var(--row-fg); opacity: .7; }
 }
-.tg-preview { position: fixed; top: 0; left: 0; z-index: 45; width: 300px; aspect-ratio: 786 / 724; pointer-events: none; opacity: 0; transform: translate3d(-9999px, 0, 0); will-change: transform, opacity; }
+.tg-preview { position: fixed; top: 0; left: 0; z-index: 45; width: 240px; aspect-ratio: 4 / 5; pointer-events: none; opacity: 0; transform: translate3d(-9999px, 0, 0); will-change: transform, opacity; }
 .tg-preview img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md); box-shadow: var(--shadow-md); transform: scale(.92); transition: transform var(--reveal-medium) var(--ease-enter); }
 .tg-preview.is-on { opacity: 1; transition: opacity var(--duration-slow) var(--ease-enter); }
 .tg-preview.is-on img { transform: scale(1); }
