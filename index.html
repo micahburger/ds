@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Design system · Micah Lindenberger</title>
+<meta name="description" content="The tokens, type, color, motion, components and writing rules behind Micah Lindenberger's portfolio and case studies." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23161516'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%239C8B70'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Source+Serif+4:wght@400&family=Cormorant+Garamond:wght@300;400&family=Manrope:wght@400;500;600&family=Bodoni+Moda:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" />
+<link rel="stylesheet" href="css/tokens.css?v=1" />
+<link rel="stylesheet" href="css/styles.css?v=1" />
+</head>
+<body>
+
+  <a class="skip-link" href="#principles">Skip to content</a>
+
+  <div class="top-bar" aria-hidden="true">
+    <span>Design system</span>
+    <span class="top-bar-section">Hero</span>
+  </div>
+
+  <nav class="section-nav" aria-label="Sections">
+    <button type="button" class="section-pill" aria-haspopup="true" aria-label="Jump to section">
+      <span class="pill-count">1 / 11</span>
+      <span class="pill-sep">&middot;</span>
+      <span class="pill-name">Hero</span>
+    </button>
+  </nav>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <main>
+
+  <!-- ═══ 1 · HERO ═══════════════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="title">
+      <h1>Design system</h1>
+      <h1 class="title-stanza">Micah</h1>
+      <h1>Lindenberger</h1>
+      <p class="label hero-meta">Version 1 &middot; October 2026 &middot; Hover the title</p>
+      <p class="label scroll-cue"><span aria-hidden="true">&darr;</span> Scroll</p>
+    </div>
+  </section>
+
+  <!-- ═══ 2 · PRINCIPLES ═════════════════════════════════════════════════ -->
+  <section id="principles">
+    <div class="wrap reveal">
+      <p class="label eyebrow">Principles</p>
+      <h2 class="section-headline">Six rules the work follows.</h2>
+      <p class="section-body">Everything below comes from four live sites: the 2026 mini portfolio, the rental application case study, Lattice and the earlier case studies at micahburger.com. These rules are what they share.</p>
+      <ol class="num-list">
+        <li><span class="num">01</span><div><h3>The work leads.</h3><p>One idea per screen. Text on the left, the product on the right.</p></div></li>
+        <li><span class="num">02</span><div><h3>Scale contrast.</h3><p>Very large, tightly set titles against small, quiet body copy and labels. Titles sit under a line-height of 1 with negative tracking.</p></div></li>
+        <li><span class="num">03</span><div><h3>Color lives in the page.</h3><p>Each project owns its background. Chrome stays neutral and inverts against it automatically.</p></div></li>
+        <li><span class="num">04</span><div><h3>Warm neutrals.</h3><p>Never pure black on pure white for text. Ink is #141414, paper is #F4F1EC, cream is #FAF7F3.</p></div></li>
+        <li><span class="num">05</span><div><h3>Quiet, fast, directional motion.</h3><p>Media moves first, copy follows. Exits are shorter than entrances. Every animation has a reduced-motion version.</p></div></li>
+        <li><span class="num">06</span><div><h3>Restraint.</h3><p>Fewer elements, fewer words. Nothing decorative that does not explain the work.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ 3 · REGISTERS ══════════════════════════════════════════════════ -->
+  <section id="registers">
+    <div class="wrap wrap-wide reveal">
+      <p class="label eyebrow">Registers</p>
+      <h2 class="section-headline">Three registers, one hand.</h2>
+      <p class="section-body">Pick one before building. A register sets the color, type, layout and stack. A case study can also carry a product register: the real product UI, scoped under <code>.product</code> so it never styles the shell.</p>
+
+      <div class="register-grid">
+        <article class="register-card">
+          <div class="register-preview preview-deck" aria-hidden="true">
+            <div class="mini-header"><span>MICAH LINDENBERGER</span><span class="mini-pill">Menu</span><span>2026 Mini portfolio</span></div>
+            <div class="mini-body">
+              <div class="mini-copy"><div class="mini-title">Applicant<br>experience</div><div class="mini-line"></div><div class="mini-line short"></div></div>
+              <div class="mini-panel"><div class="mini-phone"></div></div>
+            </div>
+          </div>
+          <h3>Deck</h3>
+          <p>A mini portfolio. Three to six projects, one per screen, each in its own color.</p>
+          <dl class="spec"><dt>Type</dt><dd>Proxima Nova, Inter</dd><dt>Stack</dt><dd>Vite + React, no animation library</dd><dt>Live</dt><dd><a href="https://2026folio.micahburger.com/">2026folio.micahburger.com</a></dd></dl>
+        </article>
+
+        <article class="register-card">
+          <div class="register-preview preview-graphite" aria-hidden="true">
+            <div class="mini-hero">Rental application<br>redesign</div>
+            <div class="mini-label">CASE STUDY</div>
+            <div class="mini-pillnav">2 / 7 &middot; Thesis</div>
+          </div>
+          <h3>Long-form</h3>
+          <p>One deep case study read top to bottom. Dark, editorial, annotated screens.</p>
+          <dl class="spec"><dt>Type</dt><dd>Instrument Sans, Inter, IBM Plex Mono</dd><dt>Stack</dt><dd>Plain HTML, CSS, JS. GSAP for one signature moment</dd><dt>Live</dt><dd><a href="https://applicants.micahburger.com/">applicants.micahburger.com</a></dd></dl>
+        </article>
+
+        <article class="register-card">
+          <div class="register-preview preview-lattice" aria-hidden="true">
+            <span data-atm="museum"></span><span data-atm="graphite"></span><span data-atm="signal"></span><span data-atm="forest"></span><span data-atm="electric"></span><span data-atm="midnight"></span><span data-atm="clay"></span>
+          </div>
+          <h3>Lattice variant</h3>
+          <p>A new site that needs a different mood. Any atmosphere plus any type set below.</p>
+          <dl class="spec"><dt>Type</dt><dd>Five curated pairings</dd><dt>Stack</dt><dd>Either of the above</dd><dt>Live</dt><dd><a href="https://lattice2026.micahburger.com/">lattice2026.micahburger.com</a></dd></dl>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 4 · COLOR ══════════════════════════════════════════════════════ -->
+  <section id="color">
+    <div class="wrap wrap-wide reveal">
+      <p class="label eyebrow">Color</p>
+      <h2 class="section-headline">Color lives in the page.</h2>
+      <p class="section-body">Neutrals are warm and few. Accent is rare. Click any swatch to copy its value.</p>
+
+      <h3 class="sub-heading">Graphite</h3>
+      <div class="swatch-row" data-swatches='[["--page-bg","#161516","Page"],["--page-surface","#1D1D1D","Surface"],["--page-rule","#303030","Rule"],["--page-muted","#B7B0A8","Muted, labels only"],["--page-soft","#D0C9C1","Soft, body copy"],["--page-fg","#F4F1EC","Foreground"],["--page-accent","#9C8B70","Accent, 18px and up"]]'></div>
+
+      <h3 class="sub-heading">Deck project backgrounds</h3>
+      <p class="sub-body">The header and dots pick light or dark from the background: light when .299r + .587g + .114b is above 150.</p>
+      <div class="deck-swatches">
+        <button type="button" class="deck-swatch" data-copy="#FAF7F3" style="--bg:#FAF7F3"><span class="ds-head">MICAH LINDENBERGER <i>Menu</i></span><span class="ds-name">Warm cream</span><span class="ds-hex">#FAF7F3 &middot; panel</span></button>
+        <button type="button" class="deck-swatch" data-copy="#F2E6FB" style="--bg:#F2E6FB"><span class="ds-head">MICAH LINDENBERGER <i>Menu</i></span><span class="ds-name">Lilac</span><span class="ds-hex">#F2E6FB &middot; open</span></button>
+        <button type="button" class="deck-swatch" data-copy="#222222" style="--bg:#222222"><span class="ds-head">MICAH LINDENBERGER <i>Menu</i></span><span class="ds-name">Charcoal</span><span class="ds-hex">#222222 &middot; bleed</span></button>
+        <button type="button" class="deck-swatch" data-copy="#FFFFFF" style="--bg:#FFFFFF"><span class="ds-head">MICAH LINDENBERGER <i>Menu</i></span><span class="ds-name">White</span><span class="ds-hex">#FFFFFF &middot; open, resume</span></button>
+      </div>
+      <div class="swatch-row swatch-row-sm" data-swatches='[["--deck-ink","#141414","Ink"],["--deck-ink-header","#1C1C1C","Header on light"],["--deck-paper-text","#F5F4F1","Text on dark"],["--deck-placeholder","#f4f2ec","Media placeholder"],["--deck-overview","#000000","Overview"],["--cursor-color-active","#ff5a36","Cursor, active"],["--cursor-color-grabbing","#db4d2e","Cursor, grabbing"]]'></div>
+
+      <h3 class="sub-heading">Hero sparks</h3>
+      <p class="sub-body">Used only by the hero scramble. Nowhere else.</p>
+      <div class="swatch-row swatch-row-sm" data-swatches='[["--hero-spark-1","#85AF00","Moss"],["--hero-spark-2","#FFCC00","Signal yellow"],["--hero-spark-3","#FB9CFD","Magenta"],["--hero-spark-4","#A19BFF","Periwinkle"],["--hero-spark-5","#FF4C00","Orange red"]]'></div>
+
+      <h3 class="sub-heading">Lattice atmospheres</h3>
+      <p class="sub-body">Seven moods. Set <code>data-atm</code> on any element to re-skin it.</p>
+      <div class="atm-grid" data-atm-grid></div>
+    </div>
+  </section>
+
+  <!-- ═══ 5 · TYPE ═══════════════════════════════════════════════════════ -->
+  <section id="type">
+    <div class="wrap wrap-wide reveal">
+      <p class="label eyebrow">Type</p>
+      <h2 class="section-headline">Big and tight. Small and quiet.</h2>
+      <p class="section-body">Titles carry the page. Everything else steps back.</p>
+
+      <h3 class="sub-heading">Graphite scale</h3>
+      <div class="type-table">
+        <div class="type-row"><div class="type-spec"><span>Hero</span>Instrument Sans 600<br>7.5vw / .95 / -.03em</div><div class="type-sample t-hero">Design system</div></div>
+        <div class="type-row"><div class="type-spec"><span>Section headline</span>Inter 500<br>38px / 1.15 / -.01em</div><div class="type-sample t-headline">Designed to be picked back up.</div></div>
+        <div class="type-row"><div class="type-spec"><span>Display</span>Instrument Sans 600<br>clamp(30px, 3.6vw, 54px) / 1.04</div><div class="type-sample t-display">Making payment make sense.</div></div>
+        <div class="type-row"><div class="type-spec"><span>Item title</span>Instrument Sans 600<br>19px</div><div class="type-sample t-item">No clear sense of progress</div></div>
+        <div class="type-row"><div class="type-spec"><span>Body</span>Inter 300<br>16px / 1.6, soft</div><div class="type-sample t-body">Reducing the number of steps helped, but the bigger change was giving the application a visible structure.</div></div>
+        <div class="type-row"><div class="type-spec"><span>Label</span>IBM Plex Mono 400<br>10px, uppercase, .14em</div><div class="type-sample"><span class="label">Arc one &middot; Moment one</span></div></div>
+        <div class="type-row"><div class="type-spec"><span>Number</span>IBM Plex Mono 400<br>20px, accent</div><div class="type-sample t-num">01</div></div>
+      </div>
+
+      <h3 class="sub-heading">Deck scale</h3>
+      <div class="deck-type">
+        <div class="deck-type-sample">
+          <div class="dt-header">MICAH LINDENBERGER</div>
+          <div class="dt-title">Applicant<br>experience</div>
+          <p class="dt-body">Applying for a rental is long, sensitive, mostly completed on a phone, and ends with a payment.</p>
+        </div>
+        <dl class="spec spec-stack">
+          <dt>Title</dt><dd>Proxima Nova 400, clamp(40px, 5.2vw, 94px), line-height .79, -.03em. Mobile 64px / .88.</dd>
+          <dt>Stacked title</dt><dd>clamp(56px, 6vw, 96px), weight 900, line-height .94, one span per line.</dd>
+          <dt>Body</dt><dd>18px / 1.4, mobile 16px. 16px between paragraphs.</dd>
+          <dt>Header</dt><dd>Inter 500, 14px / 1.15, -.01em. Name in uppercase.</dd>
+          <dt>Disciplines</dt><dd>13px, .02em, 75% opacity, joined with a middle dot.</dd>
+        </dl>
+      </div>
+
+      <h3 class="sub-heading">Lattice type sets</h3>
+      <div class="typeset-grid">
+        <article class="typeset" style="--h:'Newsreader',Georgia,serif;--b:'Source Serif 4',Georgia,serif;--w:300;--tt:none;--ls:-.01em;--lh:1.04"><p class="ts-name">Editorial</p><p class="ts-display">A quiet life. Well made.</p><p class="ts-body">Essays on design, culture and the details that quietly shape everyday life.</p><p class="ts-meta">Newsreader &middot; Source Serif 4 &middot; Inter</p></article>
+        <article class="typeset" style="--h:'Instrument Sans',sans-serif;--b:'Inter',sans-serif;--w:600;--tt:none;--ls:0;--lh:1.04"><p class="ts-name">Contemporary</p><p class="ts-display">A quiet life. Well made.</p><p class="ts-body">Essays on design, culture and the details that quietly shape everyday life.</p><p class="ts-meta">Instrument Sans &middot; Inter &middot; IBM Plex Mono</p></article>
+        <article class="typeset" style="--h:'Cormorant Garamond',Georgia,serif;--b:'Manrope',sans-serif;--w:300;--tt:uppercase;--ls:-.02em;--lh:1"><p class="ts-name">Fashion</p><p class="ts-display">A quiet life. Well made.</p><p class="ts-body">Essays on design, culture and the details that quietly shape everyday life.</p><p class="ts-meta">Cormorant Garamond &middot; Manrope &middot; Inter</p></article>
+        <article class="typeset" style="--h:'Bodoni Moda',Georgia,serif;--b:'Newsreader',Georgia,serif;--w:400;--tt:none;--ls:-.01em;--lh:1.06"><p class="ts-name">Luxury</p><p class="ts-display">A quiet life. Well made.</p><p class="ts-body">Essays on design, culture and the details that quietly shape everyday life.</p><p class="ts-meta">Bodoni Moda &middot; Newsreader &middot; Inter</p></article>
+        <article class="typeset" style="--h:'IBM Plex Mono',monospace;--b:'IBM Plex Sans',sans-serif;--w:400;--tt:none;--ls:0;--lh:1.35"><p class="ts-name">Mono</p><p class="ts-display">A quiet life. Well made.</p><p class="ts-body">Essays on design, culture and the details that quietly shape everyday life.</p><p class="ts-meta">IBM Plex Mono &middot; IBM Plex Sans</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 6 · SPACE ══════════════════════════════════════════════════════ -->
+  <section id="space">
+    <div class="wrap wrap-wide reveal">
+      <p class="label eyebrow">Space and surface</p>
+      <h2 class="section-headline">Generous margins. Few surfaces.</h2>
+      <p class="section-body">Space does the grouping. Surfaces, radii and shadows are used sparingly and always from this short list.</p>
+
+      <div class="space-grid">
+        <div class="space-block">
+          <h3 class="sub-heading">Graphite</h3>
+          <ul class="measure-list">
+            <li><span class="bar" style="--w:120px"></span><code>--space-section</code><em>clamp(64px, 10vw, 120px)</em></li>
+            <li><span class="bar" style="--w:48px"></span><code>--gutter</code><em>clamp(20px, 6vw, 48px)</em></li>
+            <li><span class="bar bar-wide"></span><code>--content-max</code><em>1080px, 1300 to 1407 for media</em></li>
+          </ul>
+        </div>
+        <div class="space-block">
+          <h3 class="sub-heading">Deck</h3>
+          <ul class="measure-list">
+            <li><span class="bar" style="--w:140px"></span><code>--page-margin-left</code><em>140px</em></li>
+            <li><span class="bar" style="--w:130px"></span><code>--page-margin-top</code><em>130px</em></li>
+            <li><span class="bar" style="--w:64px"></span><code>--page-margin</code><em>64px</em></li>
+            <li><span class="bar" style="--w:28px"></span><code>--page-margin-mobile</code><em>28px, top 96px</em></li>
+          </ul>
+        </div>
+        <div class="space-block">
+          <h3 class="sub-heading">Lattice spacing presets</h3>
+          <table class="mini-table">
+            <thead><tr><th></th><th>Nav</th><th>Section</th><th>Gap</th><th>Element</th><th>Micro</th></tr></thead>
+            <tbody>
+              <tr><th>Generous</th><td>64</td><td>72 / 60</td><td>44</td><td>28</td><td>18</td></tr>
+              <tr><th>Rhythmic</th><td>56</td><td>48 / 40</td><td>24</td><td>16</td><td>8</td></tr>
+              <tr><th>Compact</th><td>44</td><td>24 / 24</td><td>12</td><td>12</td><td>6</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h3 class="sub-heading">Radius and shadow</h3>
+      <div class="surface-row">
+        <div class="surface" style="border-radius:var(--radius-sm);box-shadow:var(--shadow-sm)"><code>--radius-sm</code><em>8px</em><code>--shadow-sm</code></div>
+        <div class="surface" style="border-radius:var(--radius-md);box-shadow:var(--shadow-md)"><code>--radius-md</code><em>14px</em><code>--shadow-md</code></div>
+        <div class="surface" style="border-radius:var(--radius-lg);box-shadow:var(--shadow-lg)"><code>--radius-lg</code><em>20px</em><code>--shadow-lg</code></div>
+        <div class="surface surface-pill"><code>pill</code><em>999px</em></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 7 · MOTION ═════════════════════════════════════════════════════ -->
+  <section id="motion">
+    <div class="wrap wrap-wide reveal">
+      <p class="label eyebrow">Motion</p>
+      <h2 class="section-headline">Quiet, fast, directional.</h2>
+      <p class="section-body">Five curves cover everything. Distances stay small: 12px for lists, 16px for copy, 24px for reveals, 40px for direction. Only transform and opacity move, plus a page color wash.</p>
+      <p class="rm-note label" hidden>Reduced motion is on for this device, so the demos below play instantly.</p>
+
+      <div class="curve-grid" data-curves></div>
+
+      <div class="demo" id="demo-deck">
+        <div class="demo-head"><h3 class="sub-heading">Deck project change</h3><p class="demo-spec">Media leaves 320ms, copy follows 120ms later. New media arrives at 160ms, copy at 320ms. Page color crossfades 560ms.</p></div>
+        <div class="deck-demo" tabindex="0" role="group" aria-label="Deck transition demo. Use the arrow keys or buttons.">
+          <div class="dd-bg"></div>
+          <div class="dd-header"><span>MICAH LINDENBERGER</span><span class="dd-pill">Menu</span><span>2026 Mini portfolio</span></div>
+          <div class="dd-stage"></div>
+        </div>
+        <div class="demo-controls"><button type="button" class="ctl" data-deck="-1">&larr; Previous</button><button type="button" class="ctl" data-deck="1">Next &rarr;</button></div>
+      </div>
+
+      <div class="demo-pair">
+        <div class="demo" id="demo-carousel">
+          <div class="demo-head"><h3 class="sub-heading">Media carousel</h3><p class="demo-spec">Auto every 4.2s, 700ms move curve. Click or drag: 400ms settle curve. Drag past 20% or flick to commit.</p></div>
+          <div class="carousel" tabindex="0" role="group" aria-roledescription="carousel" aria-label="Carousel demo">
+            <div class="car-stage"><div class="car-track"></div></div>
+            <div class="car-dots" role="tablist" aria-label="Examples"></div>
+          </div>
+        </div>
+
+        <div class="demo" id="demo-zoom">
+          <div class="demo-head"><h3 class="sub-heading">Overview zoom</h3><p class="demo-spec">FLIP with the Web Animations API, 650ms move curve. Others dim to 15% in 200ms. Click a card, then click again or press Escape.</p></div>
+          <div class="zoom-box"><div class="zoom-grid"></div></div>
+        </div>
+      </div>
+
+      <div class="demo-trio">
+        <div class="demo" id="demo-reveal">
+          <div class="demo-head"><h3 class="sub-heading">Scroll reveal</h3><p class="demo-spec">Rise 24px and fade, 400ms enter curve, once per section.</p></div>
+          <div class="reveal-box"><div class="rb-line rb-label"></div><div class="rb-line rb-head"></div><div class="rb-line"></div><div class="rb-line short"></div></div>
+          <div class="demo-controls"><button type="button" class="ctl" data-replay-reveal>Replay</button></div>
+        </div>
+
+        <div class="demo" id="demo-hover">
+          <div class="demo-head"><h3 class="sub-heading">Hover grow</h3><p class="demo-spec">Pills 1.12, cards 1.05, 320ms enter curve. Fine pointers only.</p></div>
+          <div class="hover-box">
+            <span class="grow-pill">Menu</span>
+            <span class="grow-card"></span>
+          </div>
+        </div>
+
+        <div class="demo" id="demo-drawer">
+          <div class="demo-head"><h3 class="sub-heading">Drawer and jump list</h3><p class="demo-spec">In: 36px and fade, 240ms enter curve. Out: 180ms exit curve.</p></div>
+          <div class="drawer-box">
+            <div class="drawer" hidden><p class="label">Design controls</p><div class="rb-line"></div><div class="rb-line short"></div><div class="rb-line"></div></div>
+          </div>
+          <div class="demo-controls"><button type="button" class="ctl" data-drawer aria-expanded="false">Open drawer</button></div>
+        </div>
+      </div>
+
+      <div class="demo-pair">
+        <div class="demo" id="demo-cursor">
+          <div class="demo-head"><h3 class="sub-heading">Custom cursor</h3><p class="demo-spec">16px white dot with difference blending. Orange over anything clickable, darker while grabbing. Move into the box.</p></div>
+          <div class="cursor-zone"><div class="cz-dot" aria-hidden="true"></div><button type="button" class="cz-button">A button</button><span class="cz-drag">Drag me</span></div>
+        </div>
+        <div class="demo" id="demo-scramble">
+          <div class="demo-head"><h3 class="sub-heading">Hero scramble</h3><p class="demo-spec">GSAP SplitText. On hover each character flashes a spark color for 300ms, rippling out from the center. Half swap to a random glyph, a third show their width. After 6s idle a random line plays every 4s.</p></div>
+          <div class="scramble-note"><p>The live version is the title at the top of this page.</p><button type="button" class="ctl" data-to-hero>Go to the hero &uarr;</button></div>
+        </div>
+      </div>
+
+      <h3 class="sub-heading">Page to page</h3>
+      <p class="sub-body">Recommended for multi-page sites. Native View Transitions with the same curves. Chrome, Edge and Safari animate it, Firefox simply navigates.</p>
+      <pre class="code" data-copyable><code>@view-transition { navigation: auto; }
+::view-transition-old(root) { animation: .32s cubic-bezier(.65,0,.35,1) both vt-out; }
+::view-transition-new(root) { animation: .38s cubic-bezier(.23,1,.32,1) .16s both vt-in; }
+@keyframes vt-out { to   { opacity: 0; transform: translateY(-16px); } }
+@keyframes vt-in  { from { opacity: 0; transform: translateY(16px); } }
+.case-hero-media { view-transition-name: hero-media; }</code></pre>
+
+      <h3 class="sub-heading">Reduced motion</h3>
+      <p class="sub-body">Required on every build. Transitions drop to 120ms, keyframes are removed, view changes become a 150ms crossfade, carousels stop, zooms become fades, and the hero is never split.</p>
+    </div>
+  </section>
+
+  <!-- ═══ 8 · COMPONENTS ═════════════════════════════════════════════════ -->
+  <section id="components">
+    <div class="wrap wrap-wide reveal">
+      <p class="label eyebrow">Components</p>
+      <h2 class="section-headline">A short list of parts.</h2>
+      <p class="section-body">Most pages need only these. Each one already exists on a live site.</p>
+
+      <div class="comp-grid">
+        <article class="comp comp-span">
+          <div class="comp-stage comp-headers">
+            <div class="hdr" style="--bg:#FAF7F3;--fg:#1C1C1C"><span>MICAH LINDENBERGER</span><span class="hdr-pill">Menu</span><span>2026 Mini portfolio</span></div>
+            <div class="hdr" style="--bg:#222222;--fg:#F5F4F1"><span>MICAH LINDENBERGER</span><span class="hdr-pill">Menu</span><span>2026 Mini portfolio</span></div>
+            <div class="hdr" style="--bg:#000000;--fg:#F5F4F1"><span>MICAH LINDENBERGER</span><span class="hdr-pill">Close</span><span>2026 Mini portfolio</span></div>
+          </div>
+          <h3>Deck header</h3>
+          <p>Centered, Inter 500 14px. The pill fills with the header color and takes the page color as its text, so it always inverts.</p>
+        </article>
+
+        <article class="comp comp-span">
+          <div class="comp-stage comp-frames">
+            <div class="frame frame-phone"><span>Phone<br>260w, 9/19, r36</span></div>
+            <div class="frame frame-card"><span>Card<br>340w, 4/3, r18</span></div>
+            <div class="frame frame-desktop"><span>Desktop<br>440w, 16/10, r14</span></div>
+          </div>
+          <h3>Media frames</h3>
+          <p>Placeholders inside a 786 by 762 box. Real exported screens drop the frame and its shadow.</p>
+        </article>
+
+        <article class="comp">
+          <div class="comp-stage comp-center light-stage">
+            <div class="dots"><span class="is-active"></span><span></span><span></span></div>
+          </div>
+          <h3>Progress dots</h3>
+          <p>8px circles, 12px apart, with a 12px invisible hit area. Active dot is the text color at 90%.</p>
+        </article>
+
+        <article class="comp">
+          <div class="comp-stage comp-center">
+            <span class="section-pill section-pill-static"><span class="pill-count">2 / 7</span><span class="pill-sep">&middot;</span><span class="pill-name">Thesis</span></span>
+          </div>
+          <h3>Section pill</h3>
+          <p>Fixed bottom right. Opens the jump list. Hidden while the hero is in view. Try the real one on this page.</p>
+        </article>
+
+        <article class="comp">
+          <div class="comp-stage">
+            <ol class="num-list num-list-compact">
+              <li><span class="num">01</span><div><h3>No clear sense of progress</h3><p>The flow never said how much was left.</p></div></li>
+              <li><span class="num">02</span><div><h3>Errors caught too late</h3><p>Typos surfaced after reports were pulled.</p></div></li>
+            </ol>
+          </div>
+          <h3>Numbered breakdown</h3>
+          <p>Mono number in accent, Instrument Sans title, short body, hairline rule between items.</p>
+        </article>
+
+        <article class="comp">
+          <div class="comp-stage">
+            <p class="label">Moment one</p>
+            <ol class="notes">
+              <li><span class="n">01</span>When a step is complete, its number becomes a check.</li>
+              <li><span class="n">02</span>The primary action changes from Start to Continue.</li>
+            </ol>
+          </div>
+          <h3>Annotation notes</h3>
+          <p>Sit beside a screen. Sticky on wide screens so they travel with the phone they describe.</p>
+        </article>
+
+        <article class="comp">
+          <div class="comp-stage comp-center">
+            <button type="button" class="text-link">Replay animation</button>
+          </div>
+          <h3>Text control</h3>
+          <p>Mono 11px, uppercase, muted. Underline appears on hover. Never accent colored.</p>
+        </article>
+
+        <article class="comp">
+          <div class="comp-stage comp-center">
+            <div class="jumplist-static">
+              <span><i>01</i>Hero</span><span class="active"><i>02</i>Thesis</span><span><i>03</i>Diagnosis</span>
+            </div>
+          </div>
+          <h3>Jump list</h3>
+          <p>Mono 12px on the surface color. The current section takes the accent.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 9 · LAYOUTS ════════════════════════════════════════════════════ -->
+  <section id="layouts">
+    <div class="wrap wrap-wide reveal">
+      <p class="label eyebrow">Layouts</p>
+      <h2 class="section-headline">Text left, work right.</h2>
+      <p class="section-body">The deck holds one composition per screen. The long-form page stacks a few repeatable sections.</p>
+
+      <div class="layout-grid">
+        <figure class="wire">
+          <div class="wire-stage wire-deck">
+            <div class="w-header"></div>
+            <div class="w-text"><b>Text</b><em>600px</em></div>
+            <div class="w-gap"><em>clamp(48px, 8vw, 125px)</em></div>
+            <div class="w-media"><b>Media</b><em>786 &times; 762</em></div>
+            <span class="w-m w-ml">140</span><span class="w-m w-mt">130</span><span class="w-m w-mr">64</span>
+          </div>
+          <figcaption><strong>Deck project.</strong> Both columns centered vertically. Bleed, panel and open share this frame; panel fills the page with the active slide's color.</figcaption>
+        </figure>
+
+        <figure class="wire">
+          <div class="wire-stage wire-overview">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <figcaption><strong>Overview.</strong> Black page, two columns, 56px gap, padding 140 64 96. Each card is the real page scaled with container query units. One column under 900px.</figcaption>
+        </figure>
+
+        <figure class="wire">
+          <div class="wire-stage wire-resume">
+            <div class="wr-label"><b>Work<br>history</b></div>
+            <div class="wr-rows"><span></span><span></span><span></span></div>
+          </div>
+          <figcaption><strong>Resume.</strong> Label column minmax(240px, 380px), content 1fr, 64px apart. 72px logos, 56px between rows.</figcaption>
+        </figure>
+
+        <figure class="wire">
+          <div class="wire-stage wire-long">
+            <span class="wl-hero">Hero</span>
+            <span class="wl-split"><i></i><i></i></span>
+            <span class="wl-list"><i></i><i></i><i></i></span>
+            <span class="wl-split wl-rev"><i></i><i></i></span>
+          </div>
+          <figcaption><strong>Long-form.</strong> 120px section padding, 1080px reading column, widened to 1300 for text and screen pairs. Notes stick beside the screen.</figcaption>
+        </figure>
+      </div>
+
+      <h3 class="sub-heading">Breakpoints</h3>
+      <dl class="spec spec-inline"><dt>900px</dt><dd>Columns stack, the deck scrolls, header turns fixed with a color scrim.</dd><dt>600px</dt><dd>Tighter header, 12px gaps.</dd><dt>2000px</dt><dd>The composition centers instead of stretching.</dd></dl>
+    </div>
+  </section>
+
+  <!-- ═══ 10 · CASE STUDIES ══════════════════════════════════════════════ -->
+  <section id="case-studies">
+    <div class="wrap wrap-wide reveal">
+      <p class="label eyebrow">Case studies</p>
+      <h2 class="section-headline">Problem, move, proof.</h2>
+      <p class="section-body">Two templates. Both end with something measured.</p>
+
+      <div class="template-grid">
+        <article class="template">
+          <p class="label">Deck card</p>
+          <div class="deck-card-sample">
+            <p class="dcs-title">Applicant experience</p>
+            <p><mark>Problem.</mark> Applying for a rental is long, sensitive, mostly completed on a phone, and ends with a payment.</p>
+            <p><mark>Move.</mark> I restructured the application into clear chapters that follow the applicant's mental model.</p>
+            <p><mark>Media.</mark> Three screens, each with a plain label.</p>
+          </div>
+          <ul class="rules">
+            <li>Title: two to four words naming the surface.</li>
+            <li>First paragraph: who, what context, why it is hard.</li>
+            <li>Second paragraph starts with "I" and a strong verb.</li>
+            <li>Optional third line: status or one number.</li>
+          </ul>
+        </article>
+
+        <article class="template">
+          <p class="label">Long-form, seven sections</p>
+          <ol class="outline">
+            <li><i>01</i><b>Hero</b><span>Project name, then "Case study / Micah Lindenberger". Nothing else.</span></li>
+            <li><i>02</i><b>Thesis</b><span>Why it matters to the business. Two paragraphs and a collage.</span></li>
+            <li><i>03</i><b>Diagnosis</b><span>Three numbered breakdowns.</span></li>
+            <li><i>04</i><b>Arc one</b><span>Outcome as the headline. Annotated moments.</span></li>
+            <li><i>05</i><b>Arc two</b><span>Same weight as arc one.</span></li>
+            <li><i>06</i><b>Arc three</b><span>Same weight again. Flag a thin one.</span></li>
+            <li><i>07</i><b>Close</b><span>Measured outcomes, how it was built, what comes next.</span></li>
+          </ol>
+        </article>
+      </div>
+
+      <div class="callout">
+        <p class="pull-line">Every case study needs at least one number.</p>
+        <p class="section-body">"22% rise in video call scheduling." "Closings 3 days faster." If the number is not known yet, leave a marked placeholder. Never invent one.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 11 · VOICE ═════════════════════════════════════════════════════ -->
+  <section id="voice">
+    <div class="wrap reveal">
+      <p class="label eyebrow">Voice</p>
+      <h2 class="section-headline">Say less. Mean it.</h2>
+      <div class="voice-list">
+        <div class="voice-row"><p class="v-rule">No em dashes.</p><p class="v-do">The flow had no save point. People left.</p><p class="v-dont">The flow had no save point &mdash; and people left.</p></div>
+        <div class="voice-row"><p class="v-rule">Headlines are sentences.</p><p class="v-do">Designed to be picked back up.</p><p class="v-dont">Progress &amp; Resumption Framework</p></div>
+        <div class="voice-row"><p class="v-rule">First person for decisions.</p><p class="v-do">I collapsed the common path to a few taps.</p><p class="v-dont">The team leveraged synergies to streamline workflows.</p></div>
+        <div class="voice-row"><p class="v-rule">Name the real insight.</p><p class="v-do">Payment placement was never the real variable, comprehension was.</p><p class="v-dont">We tested several payment placements.</p></div>
+        <div class="voice-row"><p class="v-rule">Restraint over addition.</p><p class="v-do">Cut the adjective, the second example and anything the screen already shows.</p><p class="v-dont">An incredibly intuitive, beautifully crafted, seamless experience.</p></div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap wrap-wide">
+      <div class="footer-grid">
+        <div>
+          <p class="label">Use it</p>
+          <p class="section-body">Copy <a href="css/tokens.css" download>tokens.css</a> into a new project, or ask Claude to use the <code>micah-design-system</code> skill.</p>
+        </div>
+        <div>
+          <p class="label">Sources</p>
+          <ul class="foot-links">
+            <li><a href="https://2026folio.micahburger.com/">2026folio.micahburger.com</a></li>
+            <li><a href="https://applicants.micahburger.com/">applicants.micahburger.com</a></li>
+            <li><a href="https://lattice2026.micahburger.com/">lattice2026.micahburger.com</a></li>
+            <li><a href="https://micahburger.com/">micahburger.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="label">Contact</p>
+          <ul class="foot-links">
+            <li><a href="mailto:micahmicahdesign@gmail.com">micahmicahdesign@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/micahburger/">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/shell.js?v=1"></script>
+  <script src="js/demos.js?v=1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="js/hero.js?v=1"></script>
+</body>
+</html>
