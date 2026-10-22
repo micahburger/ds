@@ -81,9 +81,13 @@
     const rel = (i, at) => { let r = i - at; if (r * 2 > n) r -= n; if (r * 2 < -n) r += n; return r; };
     const timing = src => RM ? '120ms linear' : (src === 'auto' ? '700ms cubic-bezier(.65,0,.35,1)' : '400ms cubic-bezier(.32,.72,0,1)');
 
-    function layout(src, first) {
+    // With an even count, the slide exactly half a ring away has no "short
+    // way". Send it out on the side opposite travel (matters most for two
+    // slides, where every move is that tie).
+    function layout(src, first, dir = 1) {
       slides.forEach((s, i) => {
-        const o = rel(i, index);
+        let o = rel(i, index);
+        if (n % 2 === 0 && Math.abs(o * 2) === n) o = -dir;
         const prev = Number(s.dataset.o ?? o);
         s.style.transition = (first || Math.abs(o - prev) > 1) ? 'none' : `transform ${timing(src)}`;
         s.style.setProperty('--o', o);
@@ -103,7 +107,21 @@
       if (RM || !inView || hovering || drag) return;
       timer = setTimeout(() => go(index + 1, 'auto'), 4200);
     }
-    function go(i, src) { index = ((i % n) + n) % n; layout(src); schedule(); }
+    function go(i, src) {
+      const dir = Math.sign(i - index) || 1;
+      index = ((i % n) + n) % n;
+      // Park the incoming slide on the side it should arrive from, without
+      // a transition, so it always enters in the direction of travel.
+      const incoming = slides[index];
+      if (Number(incoming.dataset.o) !== dir) {
+        incoming.style.transition = 'none';
+        incoming.style.setProperty('--o', dir);
+        incoming.dataset.o = dir;
+        void incoming.offsetWidth;
+      }
+      layout(src, false, dir);
+      schedule();
+    }
 
     layout('auto', true);
     new IntersectionObserver(es => { inView = es[0].isIntersecting; schedule(); }, { threshold: 0.5 }).observe(root);
