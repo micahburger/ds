@@ -8,9 +8,10 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23161516'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%239C8B70'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" />
-<link rel="stylesheet" href="css/tokens.css?v=6" />
-<link rel="stylesheet" href="css/styles.css?v=6" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;700&family=Cormorant+Garamond:wght@400&display=swap" />
+<link rel="stylesheet" href="https://use.typekit.net/ejx8vdd.css" />
+<link rel="stylesheet" href="css/tokens.css?v=8" />
+<link rel="stylesheet" href="css/styles.css?v=8" />
 </head>
 <body>
 
@@ -71,26 +72,39 @@
       <div class="register-grid">
         <article class="register-card">
           <div class="register-preview preview-deck" aria-hidden="true">
-            <div class="mini-header"><span>MICAH LINDENBERGER</span><span class="mini-pill">Menu</span><span>2026 Mini portfolio</span></div>
-            <div class="mini-body">
-              <div class="mini-copy"><div class="mini-title">Applicant<br>experience</div><div class="mini-line"></div><div class="mini-line short"></div></div>
-              <div class="mini-panel"><div class="mini-phone"></div></div>
+            <div class="rp-canvas deck-canvas">
+              <div class="dk-header"><span>MICAH LINDENBERGER</span><span class="dk-pill">Menu</span><span>2026 Mini portfolio</span></div>
+              <div class="dk-copy">
+                <p class="dk-title">Applicant<br>experience</p>
+                <p class="dk-body">Applying for a rental is long, sensitive, mostly completed on a phone, and ends with a payment.</p>
+                <p class="dk-body">I restructured the application into clear chapters that follow the applicant's mental model.</p>
+              </div>
+              <img class="dk-media" src="img/applicant-experience.webp" alt="" />
+              <div class="dk-dots"><i class="on"></i><i></i><i></i></div>
             </div>
           </div>
           <h3>Deck</h3>
           <p>A mini portfolio. Three to six projects, one per screen, each in its own color.</p>
-          <dl class="spec"><dt>Type</dt><dd>Proxima Nova, Inter</dd><dt>Stack</dt><dd>Vite + React, no animation library</dd><dt>Live</dt><dd><a href="https://2026folio.micahburger.com/">2026folio.micahburger.com</a></dd></dl>
+          <dl class="spec"><dt>Type</dt><dd>Proxima Nova, Inter</dd><dt>Stack</dt><dd>Vite + React, no animation library</dd><dt>Live</dt><dd><a href="https://2026folio.micahburger.com/" target="_blank" rel="noopener">2026folio.micahburger.com</a></dd></dl>
         </article>
 
         <article class="register-card">
-          <div class="register-preview preview-graphite" aria-hidden="true">
-            <div class="mini-hero">Rental application<br>redesign</div>
-            <div class="mini-label">CASE STUDY</div>
-            <div class="mini-pillnav">2 / 7 &middot; Thesis</div>
+          <div class="register-preview preview-case" aria-hidden="true">
+            <div class="rp-canvas case-canvas">
+              <div class="cs-nav"><span class="cs-name">M Lindenberger</span><span class="cs-links"><span>Opendoor</span><span>Carrier</span><span>Lincoln</span><span>Rockwell</span><span>BBC</span></span></div>
+              <p class="cs-title">Redesign of Opendoor&rsquo;s<br>seller experience</p>
+              <div class="cs-copy">
+                <p class="cs-intro">Opendoor aimed to simplify home selling, but the addition of &lsquo;List with Opendoor&rsquo; created a new challenge: how to seamlessly integrate these distinct pathways.</p>
+                <p class="cs-intro">I led the redesign of the seller experience, working across teams to unify the flow from offer to closing while also refreshing Opendoor&rsquo;s visual and interaction design standards.</p>
+                <p class="cs-meta"><b>Objective:</b> To create a cohesive, flexible experience for home sellers, integrating the option to list on the market with Opendoor&rsquo;s cash offer.</p>
+                <p class="cs-meta"><b>Role:</b> Led the redesign and managed cross-functional collaboration across Product, Design, and Engineering</p>
+              </div>
+              <img class="cs-hero" src="img/registers/opendoor-hero.webp" alt="" />
+            </div>
           </div>
           <h3>Long-form</h3>
-          <p>One deep case study read top to bottom. Dark, editorial, annotated screens.</p>
-          <dl class="spec"><dt>Type</dt><dd>Instrument Sans, Inter, IBM Plex Mono</dd><dt>Stack</dt><dd>Plain HTML, CSS, JS. GSAP for one signature moment</dd><dt>Live</dt><dd><a href="https://applicants.micahburger.com/">applicants.micahburger.com</a></dd></dl>
+          <p>The case-study page from micahburger.com. A big serif title and a short overview, then the problem, then big UI. One project, read top to bottom.</p>
+          <dl class="spec"><dt>Type</dt><dd>Orpheus Pro titles, Poppins text</dd><dt>Color</dt><dd>Dark #161416 or cream #F5F1EB, chosen per project</dd><dt>Stack</dt><dd>Semplice on WordPress today; plain HTML for new builds</dd><dt>Live</dt><dd><a href="https://micahburger.com/project/opendoor" target="_blank" rel="noopener">micahburger.com/project/opendoor</a></dd></dl>
         </article>
 
       </div>
@@ -396,7 +410,7 @@
             <span class="wl-list"><i></i><i></i><i></i></span>
             <span class="wl-split wl-rev"><i></i><i></i></span>
           </div>
-          <figcaption><strong>Long-form.</strong> 120px section padding, 1080px reading column, widened to 1300 for text and screen pairs. Notes stick beside the screen.</figcaption>
+          <figcaption><strong>Long-form.</strong> Serif title and overview at the top, full-width UI under them, then problem and solution sections that alternate text and screens.</figcaption>
         </figure>
       </div>
 
@@ -419,35 +433,35 @@
         </div>
         <div class="table-grid" data-cursor="View">
           <div class="tg-head" aria-hidden="true"><span>No.</span><span>Project</span><span>Industry</span></div>
-          <a class="tg-row" href="https://micahburger.com/project/opendoor" data-img="img/index/opendoor-tn.webp" style="--row-bg:#3d3f46;--row-fg:#F4F1EC">
+          <a class="tg-row" href="https://micahburger.com/project/opendoor" data-img="img/index/opendoor-tn.webp" style="--row-bg:#3d3f46;--row-fg:#F4F1EC" target="_blank" rel="noopener">
             <span class="tg-n">01</span><span class="tg-title">Opendoor</span><span class="tg-meta">Real estate</span>
             <img class="tg-thumb" src="img/index/opendoor-tn.webp" alt="" loading="lazy" />
           </a>
-          <a class="tg-row" href="https://micahburger.com/project/fpo" data-img="img/index/fpo.webp" style="--row-bg:#7a3232;--row-fg:#F4F1EC">
+          <a class="tg-row" href="https://micahburger.com/project/fpo" data-img="img/index/fpo.webp" style="--row-bg:#7a3232;--row-fg:#F4F1EC" target="_blank" rel="noopener">
             <span class="tg-n">02</span><span class="tg-title">Flight Profile Optimizer</span><span class="tg-meta">Commercial aviation</span>
             <img class="tg-thumb" src="img/index/fpo.webp" alt="" loading="lazy" />
           </a>
-          <a class="tg-row" href="https://micahburger.com/project/infinity" data-img="img/index/infinity.webp" style="--row-bg:#6b6764;--row-fg:#F4F1EC">
+          <a class="tg-row" href="https://micahburger.com/project/infinity" data-img="img/index/infinity.webp" style="--row-bg:#6b6764;--row-fg:#F4F1EC" target="_blank" rel="noopener">
             <span class="tg-n">03</span><span class="tg-title">Infinity Thermostat App</span><span class="tg-meta">Residential HVAC</span>
             <img class="tg-thumb" src="img/index/infinity.webp" alt="" loading="lazy" />
           </a>
-          <a class="tg-row" href="https://micahburger.com/project/aba" data-img="img/index/aba.webp" style="--row-bg:#193a59;--row-fg:#F4F1EC">
+          <a class="tg-row" href="https://micahburger.com/project/aba" data-img="img/index/aba.webp" style="--row-bg:#193a59;--row-fg:#F4F1EC" target="_blank" rel="noopener">
             <span class="tg-n">04</span><span class="tg-title">American Bar Association</span><span class="tg-meta">Legal</span>
             <img class="tg-thumb" src="img/index/aba.webp" alt="" loading="lazy" />
           </a>
-          <a class="tg-row" href="https://micahburger.com/project/wwe" data-img="img/index/wwe.webp" style="--row-bg:#2f2f2f;--row-fg:#F4F1EC">
+          <a class="tg-row" href="https://micahburger.com/project/wwe" data-img="img/index/wwe.webp" style="--row-bg:#2f2f2f;--row-fg:#F4F1EC" target="_blank" rel="noopener">
             <span class="tg-n">05</span><span class="tg-title">WWE</span><span class="tg-meta">Entertainment</span>
             <img class="tg-thumb" src="img/index/wwe.webp" alt="" loading="lazy" />
           </a>
-          <a class="tg-row" href="https://micahburger.com/project/bbc" data-img="img/index/bbc.webp" style="--row-bg:#2d3c5d;--row-fg:#F4F1EC">
+          <a class="tg-row" href="https://micahburger.com/project/bbc" data-img="img/index/bbc.webp" style="--row-bg:#2d3c5d;--row-fg:#F4F1EC" target="_blank" rel="noopener">
             <span class="tg-n">06</span><span class="tg-title">BBC News Stream</span><span class="tg-meta">News</span>
             <img class="tg-thumb" src="img/index/bbc.webp" alt="" loading="lazy" />
           </a>
-          <a class="tg-row" href="https://micahburger.com/project/rockwell" data-img="img/index/rockwell.webp" style="--row-bg:#34361f;--row-fg:#F4F1EC">
+          <a class="tg-row" href="https://micahburger.com/project/rockwell" data-img="img/index/rockwell.webp" style="--row-bg:#34361f;--row-fg:#F4F1EC" target="_blank" rel="noopener">
             <span class="tg-n">07</span><span class="tg-title">Rockwell Group</span><span class="tg-meta">Architecture and design</span>
             <img class="tg-thumb" src="img/index/rockwell.webp" alt="" loading="lazy" />
           </a>
-          <a class="tg-row" href="https://micahburger.com/project/lincoln" data-img="img/index/lincoln.webp" style="--row-bg:#726747;--row-fg:#F4F1EC">
+          <a class="tg-row" href="https://micahburger.com/project/lincoln" data-img="img/index/lincoln.webp" style="--row-bg:#726747;--row-fg:#F4F1EC" target="_blank" rel="noopener">
             <span class="tg-n">08</span><span class="tg-title">Lincoln</span><span class="tg-meta">Automotive</span>
             <img class="tg-thumb" src="img/index/lincoln.webp" alt="" loading="lazy" />
           </a>
@@ -467,10 +481,10 @@
             <img src="img/assistant.webp" alt="" data-key="3" loading="lazy" />
           </div>
           <ul class="txg-list">
-            <li><a href="https://2026folio.micahburger.com/applicant-experience" data-key="0">Applicant experience</a></li>
-            <li><a href="https://2026folio.micahburger.com/requesting-an-application" data-key="1">Requesting</a></li>
-            <li><a href="https://2026folio.micahburger.com/messaging" data-key="2">Messaging</a></li>
-            <li><a href="https://2026folio.micahburger.com/ai-assistant" data-key="3">Rental Assistant</a></li>
+            <li><a href="https://2026folio.micahburger.com/applicant-experience" data-key="0" target="_blank" rel="noopener">Applicant experience</a></li>
+            <li><a href="https://2026folio.micahburger.com/requesting-an-application" data-key="1" target="_blank" rel="noopener">Requesting</a></li>
+            <li><a href="https://2026folio.micahburger.com/messaging" data-key="2" target="_blank" rel="noopener">Messaging</a></li>
+            <li><a href="https://2026folio.micahburger.com/ai-assistant" data-key="3" target="_blank" rel="noopener">Rental Assistant</a></li>
           </ul>
         </div>
       </div>
@@ -478,16 +492,25 @@
       <div class="pattern" id="pattern-gallery">
         <div class="pattern-head">
           <h3 class="sub-heading">Gallery slider</h3>
-          <p class="demo-spec">Big UI, one frame at a time. Here it compares two design directions for the same Opendoor screen, Novo and Eero, as in the case study. Auto advances every 4.2s on the 700ms move curve while in view; arrows, keys, drag and a flick use the 400ms settle curve. Pauses on hover.</p>
+          <p class="demo-spec">Big UI, one frame at a time. Auto advances every 4.2s on the 700ms move curve while in view; arrows, keys, drag and a flick use the 400ms settle curve. Pauses on hover. Lincoln, Build and Price.</p>
         </div>
-        <div class="gallery-slider" tabindex="0" role="group" aria-roledescription="carousel" aria-label="Opendoor gallery">
+        <div class="gallery-slider" tabindex="0" role="group" aria-roledescription="carousel" aria-label="Lincoln gallery">
           <div class="gs-stage" data-cursor="Drag">
             <div class="gs-track">
-              <figure class="gs-slide" data-caption="Novo, preliminary offer">
-                <img src="img/slider/od-novo.webp" srcset="img/slider/od-novo-900.webp 900w, img/slider/od-novo.webp 1600w" sizes="(max-width: 900px) 100vw, 1200px" alt="Opendoor preliminary offer, in the new Novo design system, mobile and desktop." loading="lazy" draggable="false" />
+              <figure class="gs-slide" data-caption="Build and Price, desktop and mobile">
+                <img src="img/slider/lincoln-hero.webp" srcset="img/slider/lincoln-hero-900.webp 900w, img/slider/lincoln-hero.webp 1600w" sizes="(max-width: 900px) 100vw, 1200px" alt="Lincoln: build and price, desktop and mobile." loading="lazy" draggable="false" />
               </figure>
-              <figure class="gs-slide" data-caption="Eero, preliminary offer">
-                <img src="img/slider/od-eero.webp" srcset="img/slider/od-eero-900.webp 900w, img/slider/od-eero.webp 1600w" sizes="(max-width: 900px) 100vw, 1200px" alt="Opendoor preliminary offer, in the previous Eero design system, mobile and desktop." loading="lazy" draggable="false" />
+              <figure class="gs-slide" data-caption="Choose a model">
+                <img src="img/slider/lincoln-models.webp" srcset="img/slider/lincoln-models-900.webp 900w, img/slider/lincoln-models.webp 1600w" sizes="(max-width: 900px) 100vw, 1200px" alt="Lincoln: choose a model." loading="lazy" draggable="false" />
+              </figure>
+              <figure class="gs-slide" data-caption="Engine and drive options">
+                <img src="img/slider/lincoln-engine.webp" srcset="img/slider/lincoln-engine-900.webp 900w, img/slider/lincoln-engine.webp 1600w" sizes="(max-width: 900px) 100vw, 1200px" alt="Lincoln: engine and drive options." loading="lazy" draggable="false" />
+              </figure>
+              <figure class="gs-slide" data-caption="Price summary">
+                <img src="img/slider/lincoln-summary.webp" srcset="img/slider/lincoln-summary-900.webp 900w, img/slider/lincoln-summary.webp 1600w" sizes="(max-width: 900px) 100vw, 1200px" alt="Lincoln: price summary." loading="lazy" draggable="false" />
+              </figure>
+              <figure class="gs-slide" data-caption="Nautilus launch page">
+                <img src="img/slider/lincoln-nautilus.webp" srcset="img/slider/lincoln-nautilus-900.webp 900w, img/slider/lincoln-nautilus.webp 1600w" sizes="(max-width: 900px) 100vw, 1200px" alt="Lincoln: nautilus launch page." loading="lazy" draggable="false" />
               </figure>
             </div>
           </div>
@@ -506,19 +529,19 @@
       <div class="pattern" id="pattern-compare">
         <div class="pattern-head">
           <h3 class="sub-heading">Before and after</h3>
-          <p class="demo-spec">Drag the divider, or focus it and use the arrow keys. The divider settles with the 400ms settle curve when you click instead of drag. Every redesign case study should have one.</p>
+          <p class="demo-spec">Drag the divider, or focus it and use the arrow keys. A click settles on the 400ms settle curve. Every redesign case study should have one. Here: Opendoor's preliminary offer in Eero, the previous system, and in Novo.</p>
         </div>
         <div class="compare-wrap">
           <figure class="compare" data-cursor="Drag" style="--pos:50%">
-            <img class="cmp-before" src="img/before-v1.webp" alt="Before: the original application step, with a reuse upsell and payment summary." />
-            <div class="cmp-after"><img src="img/after-v2.webp" alt="After: the redesigned application start, with the agent, four clear sections and time to complete." /></div>
+            <img class="cmp-before" src="img/compare/eero.webp" srcset="img/compare/eero-900.webp 900w, img/compare/eero.webp 1600w" sizes="(max-width: 900px) 100vw, 1200px" alt="Before: Opendoor's preliminary offer in the previous Eero design system, mobile and desktop." draggable="false" />
+            <div class="cmp-after"><img src="img/compare/novo.webp" srcset="img/compare/novo-900.webp 900w, img/compare/novo.webp 1600w" sizes="(max-width: 900px) 100vw, 1200px" alt="After: the same preliminary offer redesigned in Novo, mobile and desktop." draggable="false" /></div>
             <span class="cmp-tag cmp-tag-l">V1</span><span class="cmp-tag cmp-tag-r">V2</span>
             <div class="cmp-handle" aria-hidden="true"><span></span></div>
             <input class="cmp-range" type="range" min="0" max="100" value="50" step="1" aria-label="Reveal before or after. Lower shows more of V1." />
           </figure>
           <div class="compare-copy">
-            <p class="label">Rental application redesign</p>
-            <p class="compare-line">The old step led with an upsell and a subtotal. The new one starts with who gets the application, how long it takes and what comes next.</p>
+            <p class="label">Opendoor, preliminary offer</p>
+            <p class="compare-line">Eero spread the offer across a busy page. Novo leads with one offer card, the cash range and a single next step.</p>
             <dl class="spec spec-stack">
               <dt>Frame</dt><dd>Both images exported on the same canvas, so the divider lines up.</dd>
               <dt>Labels</dt><dd>Mono tags, V1 left, V2 right. Never color-code them.</dd>
@@ -577,15 +600,15 @@
         </article>
 
         <article class="template">
-          <p class="label">Long-form, seven sections</p>
+          <p class="label">Long-form, top to bottom</p>
           <ol class="outline">
-            <li><i>01</i><b>Hero</b><span>Project name, then "Case study / Micah Lindenberger". Nothing else.</span></li>
-            <li><i>02</i><b>Thesis</b><span>Why it matters to the business. Two paragraphs and a collage.</span></li>
-            <li><i>03</i><b>Diagnosis</b><span>Three numbered breakdowns.</span></li>
-            <li><i>04</i><b>Arc one</b><span>Outcome as the headline. Annotated moments.</span></li>
-            <li><i>05</i><b>Arc two</b><span>Same weight as arc one.</span></li>
-            <li><i>06</i><b>Arc three</b><span>Same weight again. Flag a thin one.</span></li>
-            <li><i>07</i><b>Close</b><span>Measured outcomes, how it was built, what comes next.</span></li>
+            <li><i>01</i><b>Title</b><span>Two lines of Orpheus Pro. The product name, or what changed: "Redesign of Opendoor&rsquo;s seller experience".</span></li>
+            <li><i>02</i><b>Overview</b><span>Two short paragraphs beside or under the title: the challenge, then what I led.</span></li>
+            <li><i>03</i><b>Objective, role</b><span>One sentence each, bold label in sage #C3C3AF.</span></li>
+            <li><i>04</i><b>Hero UI</b><span>Full width and big. Real screens, or the device in hand.</span></li>
+            <li><i>05</i><b>Challenge</b><span>Pain points or the brief, each a bold title and a short body beside a screen.</span></li>
+            <li><i>06</i><b>What changed</b><span>Feature by feature, text with UI, alternating sides. Sliders for directions.</span></li>
+            <li><i>07</i><b>Outcomes</b><span>Learnings and business impact, with numbers. Project team last.</span></li>
           </ol>
         </article>
       </div>
@@ -624,28 +647,28 @@
         <div>
           <p class="label">Sources</p>
           <ul class="foot-links">
-            <li><a href="https://2026folio.micahburger.com/">2026folio.micahburger.com</a></li>
-            <li><a href="https://applicants.micahburger.com/">applicants.micahburger.com</a></li>
-            <li><a href="https://lattice2026.micahburger.com/">lattice2026.micahburger.com</a></li>
-            <li><a href="https://micahburger.com/">micahburger.com</a></li>
+            <li><a href="https://2026folio.micahburger.com/" target="_blank" rel="noopener">2026folio.micahburger.com</a></li>
+            <li><a href="https://applicants.micahburger.com/" target="_blank" rel="noopener">applicants.micahburger.com</a></li>
+            <li><a href="https://lattice2026.micahburger.com/" target="_blank" rel="noopener">lattice2026.micahburger.com</a></li>
+            <li><a href="https://micahburger.com/" target="_blank" rel="noopener">micahburger.com</a></li>
           </ul>
         </div>
         <div>
           <p class="label">Contact</p>
           <ul class="foot-links">
             <li><a href="mailto:micahmicahdesign@gmail.com">micahmicahdesign@gmail.com</a></li>
-            <li><a href="https://www.linkedin.com/in/micahburger/">LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/in/micahburger/" target="_blank" rel="noopener">LinkedIn</a></li>
           </ul>
         </div>
       </div>
     </div>
   </footer>
 
-  <script src="js/shell.js?v=6"></script>
-  <script src="js/demos.js?v=6"></script>
-  <script src="js/patterns.js?v=6"></script>
+  <script src="js/shell.js?v=8"></script>
+  <script src="js/demos.js?v=8"></script>
+  <script src="js/patterns.js?v=8"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
-  <script src="js/hero.js?v=6"></script>
+  <script src="js/hero.js?v=8"></script>
 </body>
 </html>

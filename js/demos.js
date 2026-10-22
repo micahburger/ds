@@ -373,3 +373,11 @@ const DECK = [
 document.querySelectorAll('[data-to-hero]').forEach(b => b.addEventListener('click', () => {
   document.getElementById('hero').scrollIntoView({ behavior: RM ? 'auto' : 'smooth' });
 }));
+
+/* ── Register previews: scale the 1440 x 900 compositions to the card ── */
+document.querySelectorAll('.rp-canvas').forEach(canvas => {
+  const frame = canvas.parentElement;
+  const fit = () => canvas.style.setProperty('--s', String(frame.clientWidth / 1440));
+  fit();
+  new ResizeObserver(fit).observe(frame);
+});
