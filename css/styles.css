@@ -101,41 +101,111 @@ section { padding: var(--space-section) 0; border-top: 1px solid var(--page-rule
 .top-bar.is-visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
 .top-bar .top-bar-section { color: var(--page-soft); }
 
-/* ── Pill nav + jump list ────────────────────────────────────────────── */
-.section-pill {
-  position: fixed; bottom: 24px; right: 24px; z-index: 40;
-  display: flex; align-items: center; gap: 10px;
-  border: 1px solid var(--page-rule); background: rgba(29, 29, 29, 0.92); backdrop-filter: blur(6px);
-  border-radius: 999px; padding: 12px 18px;
-  font-family: var(--font-label); font-size: 11px; letter-spacing: 0.06em; color: var(--page-fg);
-  cursor: pointer; box-shadow: var(--shadow-sm);
-  transition: background-color var(--duration-base) ease, opacity var(--duration-base) var(--ease-enter), transform var(--duration-base) var(--ease-enter);
+/* ── Chapter menu ────────────────────────────────────────────────────────
+   One surface: a bar at the bottom right that grows into the chapter menu.
+   The panel is anchored to its bottom right corner, so it opens up and to the
+   left, and the content inside is pinned to that same corner. The edges move;
+   the chapters don't. Sizes are animated in shell.js (WAAPI), everything
+   else here. */
+.chapter-nav {
+  position: fixed; right: 24px; bottom: 24px; z-index: 40;
+  transition: opacity var(--duration-base) var(--ease-enter), transform var(--reveal-fast) var(--ease-enter);
 }
-.section-pill:hover { background: rgba(40, 40, 40, 0.95); }
-.section-pill .pill-count { color: var(--page-accent); font-weight: 600; }
-.section-pill .pill-sep { color: var(--page-rule); }
-body.at-hero .section-nav .section-pill { opacity: 0; transform: translateY(12px); pointer-events: none; }
-.section-pill-static { position: static; box-shadow: none; cursor: default; }
+body.at-hero .chapter-nav { opacity: 0; transform: translateY(12px); pointer-events: none; }
+.cn-panel {
+  display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end;
+  overflow: hidden; border-radius: 26px;
+  background: rgba(29, 29, 29, 0.94); border: 1px solid var(--page-rule);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--reveal-fast) var(--ease-enter);
+}
+.chapter-nav.is-open .cn-panel { border-radius: 22px; box-shadow: var(--shadow-lg); }
 
-.section-jumplist {
-  position: fixed; bottom: 24px; right: 24px; z-index: 40;
-  width: min(260px, calc(100vw - 40px));
-  background: var(--page-surface); border: 1px solid var(--page-rule); border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md); padding: 8px;
-  animation: pillListIn var(--duration-slow) var(--ease-enter);
+.cn-bar {
+  display: flex; align-items: center; gap: 10px; align-self: stretch; flex-shrink: 0;
+  padding: 7px 7px 7px 16px; cursor: pointer;
+  font: 400 11px/1 var(--font-label); letter-spacing: 0.06em; color: var(--page-fg); white-space: nowrap;
 }
-.section-jumplist.is-closing { animation: pillListOut var(--duration-fast) var(--ease-exit) forwards; }
-@keyframes pillListIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes pillListOut { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(12px); } }
-.section-jumplist button {
+.cn-count { color: var(--page-accent); font-weight: 600; font-variant-numeric: tabular-nums; }
+.cn-name { color: var(--page-soft); margin-right: auto; padding-right: 6px; }
+.cn-ring { width: 14px; height: 14px; flex-shrink: 0; transform: rotate(-90deg); }
+.cn-ring circle { fill: none; stroke-width: 2; }
+.cn-ring-bg { stroke: var(--page-rule); }
+.cn-ring-fg { stroke: var(--page-accent); stroke-dasharray: 1; stroke-dashoffset: calc(1 - var(--p, 0)); stroke-linecap: round; }
+
+.cn-toggle {
+  display: inline-flex; align-items: center; flex-shrink: 0;
+  height: 36px; padding: 0 14px; border-radius: 999px; border: none; cursor: pointer;
+  background: var(--page-fg); color: var(--page-bg);
+  font: 500 11px/1 var(--font-label); letter-spacing: 0.08em; text-transform: uppercase;
+  transition: background-color var(--duration-fast) ease, transform var(--duration-fast) var(--ease-enter);
+}
+.cn-toggle:hover { background: #fff; }
+.cn-toggle:active { transform: scale(.96); }
+.cn-roll { display: block; height: 11px; overflow: hidden; }
+.cn-roll span {
+  display: block; height: 11px; line-height: 11px; text-align: center;
+  transition: transform var(--reveal-fast) var(--ease-enter);
+}
+.cn-toggle[aria-expanded="true"] .cn-roll span { transform: translateY(-100%); }
+
+.cn-body { display: none; flex-shrink: 0; width: 360px; padding: 18px 18px 6px; }
+.chapter-nav.is-open .cn-body { display: block; }
+.cn-head {
+  display: flex; justify-content: space-between; margin: 0 0 10px;
+  font: 400 var(--size-label)/1 var(--font-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--page-muted);
+}
+.cn-list {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(6, auto); grid-auto-flow: column; column-gap: 6px;
+}
+.cn-list button {
   display: flex; align-items: baseline; gap: 10px; width: 100%; text-align: left;
-  background: none; border: none; padding: 9px 12px; border-radius: var(--radius-sm);
-  font-family: var(--font-label); font-size: 12px; letter-spacing: 0.03em; color: var(--page-soft);
-  cursor: pointer; transition: background-color .15s ease, color .15s ease;
+  background: none; border: none; cursor: pointer; padding: 8px 8px; margin: 0 -8px; width: calc(100% + 16px);
+  border-radius: var(--radius-sm); color: var(--page-soft);
+  font: 500 15px/1.2 var(--font-heading); letter-spacing: -0.005em;
+  transition: background-color var(--duration-fast) ease, color var(--duration-fast) ease;
 }
-.section-jumplist button .jump-n { color: var(--page-muted); flex-shrink: 0; width: 18px; }
-.section-jumplist button:hover { background: rgba(255, 255, 255, 0.05); color: var(--page-fg); }
-.section-jumplist button.active, .section-jumplist button.active .jump-n { color: var(--page-accent); }
+.cn-list button i { font: 400 10px/1 var(--font-label); font-style: normal; letter-spacing: .06em; color: var(--page-muted); width: 16px; flex-shrink: 0; }
+.cn-list button:hover, .cn-list button:focus-visible { background: rgba(255, 255, 255, 0.05); color: var(--page-fg); outline: none; }
+.cn-list button.active, .cn-list button.active i { color: var(--page-accent); }
+.cn-rule { height: 1px; background: var(--page-rule); margin: 12px 0 10px; }
+.cn-links { display: flex; gap: 16px; flex-wrap: wrap; padding-bottom: 6px; }
+.cn-links a {
+  font: 400 var(--size-label)/1.6 var(--font-label); letter-spacing: var(--tracking-label); text-transform: uppercase;
+  color: var(--page-muted); text-decoration: none; transition: color var(--duration-fast) ease;
+}
+.cn-links a:hover { color: var(--page-fg); }
+
+/* Stagger: each item rises 10px as the panel opens behind it. Leaving, they
+   all fade together and fast, before the panel shrinks. */
+.cn-in {
+  opacity: 0; transform: translateY(10px);
+  transition: opacity 120ms var(--ease-exit), transform 120ms var(--ease-exit);
+}
+.chapter-nav.is-revealed .cn-in {
+  opacity: 1; transform: none;
+  transition: opacity 300ms var(--ease-enter), transform 300ms var(--ease-enter);
+  transition-delay: calc(140ms + var(--i, 0) * 22ms);
+}
+
+/* Static copies for the Components section. */
+.cn-static { position: static; }
+.cn-static .cn-panel { box-shadow: none; }
+.cn-static .cn-bar { cursor: default; }
+.cn-static .cn-toggle { pointer-events: none; }
+.cn-static .cn-body { display: block; width: 300px; }
+.cn-static .cn-in { opacity: 1; transform: none; }
+.cn-static .cn-list { grid-template-rows: repeat(3, auto); }
+.cn-static .cn-list span { display: flex; align-items: baseline; gap: 10px; padding: 8px 0; font: 500 15px/1.2 var(--font-heading); color: var(--page-soft); }
+.cn-static .cn-list span i { font: 400 10px/1 var(--font-label); font-style: normal; color: var(--page-muted); width: 16px; }
+.cn-static .cn-list .active, .cn-static .cn-list .active i { color: var(--page-accent); }
+
+@media (max-width: 600px) {
+  .chapter-nav { right: 16px; bottom: 16px; }
+  .cn-body { width: calc(100vw - 34px); }
+}
 
 /* ── Toast (copy feedback) ───────────────────────────────────────────── */
 .toast {
@@ -381,10 +451,6 @@ body.at-hero .section-nav .section-pill { opacity: 0; transform: translateY(12px
 .notes .n { font-family: var(--font-label); font-size: 12px; color: var(--page-muted); flex-shrink: 0; width: 16px; padding-top: 1px; }
 .text-link { font: 600 11px/1 var(--font-label); letter-spacing: .08em; text-transform: uppercase; color: var(--page-muted); background: none; border: none; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: transparent; transition: color .15s ease, text-decoration-color .15s ease; }
 .text-link:hover { color: var(--page-soft); text-decoration-color: currentColor; }
-.jumplist-static { width: 220px; background: #262626; border: 1px solid #383838; border-radius: var(--radius-lg); padding: 8px; display: flex; flex-direction: column; }
-.jumplist-static span { display: flex; gap: 10px; padding: 9px 12px; border-radius: var(--radius-sm); font: 400 12px/1.2 var(--font-label); letter-spacing: .03em; color: var(--page-soft); }
-.jumplist-static i { font-style: normal; color: var(--page-muted); width: 18px; }
-.jumplist-static .active, .jumplist-static .active i { color: var(--page-accent); }
 
 /* ── Layout wireframes ───────────────────────────────────────────────── */
 .layout-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 48px; }
@@ -630,4 +696,5 @@ body.at-hero .section-nav .section-pill { opacity: 0; transform: translateY(12px
     scroll-behavior: auto !important;
   }
   .reveal { opacity: 1; transform: none; }
+  .cn-in, .chapter-nav.is-revealed .cn-in { transform: none; transition-delay: 0s !important; }
 }

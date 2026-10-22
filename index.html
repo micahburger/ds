@@ -10,8 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;700&family=Cormorant+Garamond:wght@400&display=swap" />
 <link rel="stylesheet" href="https://use.typekit.net/ejx8vdd.css" />
-<link rel="stylesheet" href="css/tokens.css?v=8" />
-<link rel="stylesheet" href="css/styles.css?v=8" />
+<link rel="stylesheet" href="css/tokens.css?v=9" />
+<link rel="stylesheet" href="css/styles.css?v=9" />
 </head>
 <body>
 
@@ -22,12 +22,25 @@
     <span class="top-bar-section">Hero</span>
   </div>
 
-  <nav class="section-nav" aria-label="Sections">
-    <button type="button" class="section-pill" aria-haspopup="true" aria-label="Jump to section">
-      <span class="pill-count">1 / 12</span>
-      <span class="pill-sep">&middot;</span>
-      <span class="pill-name">Hero</span>
-    </button>
+  <nav class="chapter-nav" aria-label="Chapters">
+    <div class="cn-panel">
+      <div class="cn-body" id="cn-body">
+        <p class="cn-head cn-in" style="--i:0"><span>Chapters</span><span>Design system</span></p>
+        <ol class="cn-list"></ol>
+        <div class="cn-rule cn-in" style="--i:13"></div>
+        <div class="cn-links cn-in" style="--i:14">
+          <a href="css/tokens.css" download>tokens.css</a>
+          <a href="https://micahburger.com/" target="_blank" rel="noopener">micahburger.com</a>
+          <a href="#hero" class="cn-top">Back to top</a>
+        </div>
+      </div>
+      <div class="cn-bar">
+        <svg class="cn-ring" viewBox="0 0 16 16" aria-hidden="true"><circle class="cn-ring-bg" cx="8" cy="8" r="6" /><circle class="cn-ring-fg" cx="8" cy="8" r="6" pathLength="1" /></svg>
+        <span class="cn-count">01 / 12</span>
+        <span class="cn-name">Hero</span>
+        <button type="button" class="cn-toggle" aria-expanded="false" aria-controls="cn-body" aria-label="Chapters"><span class="cn-roll" aria-hidden="true"><span>Menu</span><span>Close</span></span></button>
+      </div>
+    </div>
   </nav>
 
   <div class="toast" role="status" aria-live="polite"></div>
@@ -319,10 +332,14 @@
 
         <article class="comp">
           <div class="comp-stage comp-center">
-            <span class="section-pill section-pill-static"><span class="pill-count">2 / 7</span><span class="pill-sep">&middot;</span><span class="pill-name">Thesis</span></span>
+            <div class="chapter-nav cn-static" aria-hidden="true"><div class="cn-panel"><div class="cn-bar">
+              <svg class="cn-ring" viewBox="0 0 16 16" style="--p:.33"><circle class="cn-ring-bg" cx="8" cy="8" r="6" /><circle class="cn-ring-fg" cx="8" cy="8" r="6" pathLength="1" /></svg>
+              <span class="cn-count">04 / 12</span><span class="cn-name">Color</span>
+              <span class="cn-toggle"><span class="cn-roll"><span>Menu</span><span>Close</span></span></span>
+            </div></div></div>
           </div>
-          <h3>Section pill</h3>
-          <p>Fixed bottom right. Opens the jump list. Hidden while the hero is in view. Try the real one on this page.</p>
+          <h3>Chapter bar</h3>
+          <p>Fixed bottom right. Count, chapter name, a ring that fills as you scroll, and a Menu button. Hidden while the hero is in view. Try the real one.</p>
         </article>
 
         <article class="comp">
@@ -358,12 +375,16 @@
 
         <article class="comp">
           <div class="comp-stage comp-center">
-            <div class="jumplist-static">
-              <span><i>01</i>Hero</span><span class="active"><i>02</i>Thesis</span><span><i>03</i>Diagnosis</span>
-            </div>
+            <div class="chapter-nav cn-static" aria-hidden="true"><div class="cn-panel">
+              <div class="cn-body">
+                <p class="cn-head"><span>Chapters</span><span>Design system</span></p>
+                <div class="cn-list"><span><i>01</i>Hero</span><span><i>02</i>Principles</span><span><i>03</i>Registers</span><span class="active"><i>04</i>Color</span><span><i>05</i>Type</span><span><i>06</i>Space</span></div>
+              </div>
+              <div class="cn-bar"><svg class="cn-ring" viewBox="0 0 16 16" style="--p:.33"><circle class="cn-ring-bg" cx="8" cy="8" r="6" /><circle class="cn-ring-fg" cx="8" cy="8" r="6" pathLength="1" /></svg><span class="cn-count">04 / 12</span><span class="cn-name">Color</span><span class="cn-toggle"><span class="cn-roll"><span style="transform:translateY(-100%)">Menu</span><span style="transform:translateY(-100%)">Close</span></span></span></div>
+            </div></div>
           </div>
-          <h3>Jump list</h3>
-          <p>Mono 12px on the surface color. The current section takes the accent.</p>
+          <h3>Chapter menu</h3>
+          <p>The bar grows into this, anchored bottom right: 420ms on the enter curve, chapters rising 22ms apart. Closing fades first, then shrinks in 320ms. Current chapter takes the accent.</p>
         </article>
       </div>
     </div>
@@ -664,11 +685,11 @@
     </div>
   </footer>
 
-  <script src="js/shell.js?v=8"></script>
-  <script src="js/demos.js?v=8"></script>
-  <script src="js/patterns.js?v=8"></script>
+  <script src="js/shell.js?v=9"></script>
+  <script src="js/demos.js?v=9"></script>
+  <script src="js/patterns.js?v=9"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
-  <script src="js/hero.js?v=8"></script>
+  <script src="js/hero.js?v=9"></script>
 </body>
 </html>

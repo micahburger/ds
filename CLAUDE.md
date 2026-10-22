@@ -36,7 +36,7 @@ python3 -m http.server 8000   # then open http://localhost:8000
 index.html        all content, 11 sections in the Graphite long-form register
 css/tokens.css    every token; the file people copy into a new project
 css/styles.css    the page: shell ported from applicants, then one block per section
-js/shell.js       section tracking, pill nav + jump list, keyboard nav, reveal
+js/shell.js       section tracking, chapter menu (bar that morphs into the jump list), keyboard nav, reveal
 js/demos.js       swatches, copy-to-clipboard, every live motion demo
 js/hero.js        the hero scramble, copied verbatim from applicants
 fonts/            Proxima Nova (licensed, self-hosted, as on 2026folio)
