@@ -17,6 +17,7 @@ const SECTIONS = [
   { id: 'motion',       name: 'Motion' },
   { id: 'components',   name: 'Components' },
   { id: 'layouts',      name: 'Layouts' },
+  { id: 'patterns',     name: 'Patterns' },
   { id: 'case-studies', name: 'Case studies' },
   { id: 'voice',        name: 'Voice' },
 ];
