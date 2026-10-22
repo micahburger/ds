@@ -56,6 +56,13 @@
   --hero-spark-4: #A19BFF;
   --hero-spark-5: #FF4C00;
 
+  /* ── Homepage (micahburger.com): featured project rows ────────────────── */
+  --home-paper: #F4F1EC;
+  --home-ink:   #423736;
+  --home-link:  #6996AE;
+  --font-home:  'Poppins', 'Helvetica Neue', sans-serif;
+  --home-frame-hold: 2000ms;  /* each rotator frame, as on the live GIFs */
+
   /* ── Motion, shared by every register ────────────────────────────────── */
   --ease-enter:  cubic-bezier(.22, 1, .36, 1);   /* enter, hover, reveal */
   --ease-arrive: cubic-bezier(.23, 1, .32, 1);   /* deck copy/media arriving */

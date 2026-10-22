@@ -10,8 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;700&family=Cormorant+Garamond:wght@400&display=swap" />
 <link rel="stylesheet" href="https://use.typekit.net/ejx8vdd.css" />
-<link rel="stylesheet" href="css/tokens.css?v=9" />
-<link rel="stylesheet" href="css/styles.css?v=9" />
+<link rel="stylesheet" href="css/tokens.css?v=10" />
+<link rel="stylesheet" href="css/styles.css?v=10" />
 </head>
 <body>
 
@@ -62,7 +62,7 @@
   <section id="principles">
     <div class="wrap reveal">
       <p class="label eyebrow">Principles</p>
-      <h2 class="section-headline">Six rules the work follows.</h2>
+      <h2 class="section-headline">Seven rules the work follows.</h2>
       <p class="section-body">Everything below comes from four live sites: the 2026 mini portfolio, the rental application case study, Lattice and the earlier case studies at micahburger.com. These rules are what they share.</p>
       <ol class="num-list">
         <li><span class="num">01</span><div><h3>The work leads.</h3><p>One idea per screen. Text on the left, the product on the right.</p></div></li>
@@ -71,6 +71,7 @@
         <li><span class="num">04</span><div><h3>Warm neutrals.</h3><p>Never pure black on pure white for text. Ink is #141414, paper is #F4F1EC, cream is #FAF7F3.</p></div></li>
         <li><span class="num">05</span><div><h3>Quiet, fast, directional motion.</h3><p>Media moves first, copy follows. Exits are shorter than entrances. Every animation has a reduced-motion version.</p></div></li>
         <li><span class="num">06</span><div><h3>Restraint.</h3><p>Fewer elements, fewer words. Nothing decorative that does not explain the work.</p></div></li>
+        <li><span class="num">07</span><div><h3>Overview first, depth on click.</h3><p>The front door shows every project at once: its scale, what it involved and a taste of its UI. A recruiter who only reads the homepage still gets the whole picture. The micahburger.com homepage does it with featured project rows; the 2026 deck's menu does it with all four projects side by side. One click opens the full case study.</p></div></li>
       </ol>
     </div>
   </section>
@@ -445,7 +446,38 @@
     <div class="wrap wrap-wide reveal">
       <p class="label eyebrow">Portfolio patterns</p>
       <h2 class="section-headline">Ways to show the work.</h2>
-      <p class="section-body">Six patterns for indexes and case studies. The ideas come from Semplice's portfolio grids; every value here is rebuilt in this system's tokens and motion.</p>
+      <p class="section-body">Seven patterns for indexes and case studies. The first is the homepage overview from micahburger.com; the rest take ideas from Semplice's portfolio grids, rebuilt in this system's tokens and motion.</p>
+
+      <div class="pattern" id="pattern-featured">
+        <div class="pattern-head">
+          <h3 class="sub-heading">Featured project row</h3>
+          <p class="demo-spec">The micahburger.com homepage. Copy on the left: the project name in link blue, then one paragraph on the client, the team and the goal. On the right, a 16:9 card that rotates through four frames, 2s each: the brand logo over a photo, then three UI highlights. Rotation starts when the card is in view and stops when it leaves. The whole row opens the case study in a new tab.</p>
+        </div>
+        <div class="fp-stage">
+          <p class="fp-heading">Featured Projects</p>
+          <div class="fp-list" data-cursor="View">
+            <a class="fp-row" href="https://micahburger.com/project/infinity" target="_blank" rel="noopener">
+              <p class="fp-copy"><span class="fp-name">Infinity Thermostat</span> I led a creative team to design a digital thermostat and app for Infinity, Carrier&rsquo;s premium smart home brand, with the goal of modernizing their legacy app and wall controller for a more seamless digital experience.</p>
+              <div class="fp-media"><div class="fp-card" style="--fp-bg:#292C33">
+                <img class="is-on" src="img/featured/infinity-0.webp" srcset="img/featured/infinity-0-800.webp 800w, img/featured/infinity-0.webp 1600w" sizes="(max-width: 800px) 100vw, 640px" alt="Carrier logo over a black and white photo." loading="lazy" />
+                <img src="img/featured/infinity-1.webp" srcset="img/featured/infinity-1-800.webp 800w, img/featured/infinity-1.webp 1600w" sizes="(max-width: 800px) 100vw, 640px" alt="Infinity wall controller screens." loading="lazy" />
+                <img src="img/featured/infinity-2.webp" srcset="img/featured/infinity-2-800.webp 800w, img/featured/infinity-2.webp 1600w" sizes="(max-width: 800px) 100vw, 640px" alt="Infinity type, UI elements and colors." loading="lazy" />
+                <img src="img/featured/infinity-3.webp" srcset="img/featured/infinity-3-800.webp 800w, img/featured/infinity-3.webp 1600w" sizes="(max-width: 800px) 100vw, 640px" alt="Infinity app schedule screens." loading="lazy" />
+              </div></div>
+            </a>
+            <a class="fp-row" href="https://micahburger.com/project/bbc" target="_blank" rel="noopener">
+              <p class="fp-copy"><span class="fp-name">BBC News Stream</span> Collaborating with the BBC News digital team, we designed a video-led news experience to engage and expand their user base, focusing on an intuitive platform that prioritized video content to capture and retain attention.</p>
+              <div class="fp-media"><div class="fp-card" style="--fp-bg:#101010">
+                <img class="is-on" src="img/featured/bbc-0.webp" srcset="img/featured/bbc-0-800.webp 800w, img/featured/bbc-0.webp 1600w" sizes="(max-width: 800px) 100vw, 640px" alt="BBC News logo over a newsroom photo." loading="lazy" />
+                <img src="img/featured/bbc-1.webp" srcset="img/featured/bbc-1-800.webp 800w, img/featured/bbc-1.webp 1600w" sizes="(max-width: 800px) 100vw, 640px" alt="BBC News Stream story card on a phone." loading="lazy" />
+                <img src="img/featured/bbc-2.webp" srcset="img/featured/bbc-2-800.webp 800w, img/featured/bbc-2.webp 1600w" sizes="(max-width: 800px) 100vw, 640px" alt="BBC News Stream on a tablet." loading="lazy" />
+                <img src="img/featured/bbc-3.webp" srcset="img/featured/bbc-3-800.webp 800w, img/featured/bbc-3.webp 1600w" sizes="(max-width: 800px) 100vw, 640px" alt="BBC News Stream on an iPhone." loading="lazy" />
+              </div></div>
+            </a>
+          </div>
+        </div>
+        <dl class="spec fp-spec"><dt>Type</dt><dd>Poppins 400, name and copy at one size</dd><dt>Color</dt><dd>Paper #F4F1EC, text #423736, name #6996AE</dd><dt>Card</dt><dd>16:9, radius 3.7% of its width, the project&rsquo;s own dark</dd><dt>Frames</dt><dd>Logo, then three UI highlights, 2s each</dd></dl>
+      </div>
 
       <div class="pattern" id="pattern-table">
         <div class="pattern-head">
@@ -685,11 +717,11 @@
     </div>
   </footer>
 
-  <script src="js/shell.js?v=9"></script>
-  <script src="js/demos.js?v=9"></script>
-  <script src="js/patterns.js?v=9"></script>
+  <script src="js/shell.js?v=10"></script>
+  <script src="js/demos.js?v=10"></script>
+  <script src="js/patterns.js?v=10"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
-  <script src="js/hero.js?v=9"></script>
+  <script src="js/hero.js?v=10"></script>
 </body>
 </html>

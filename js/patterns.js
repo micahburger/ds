@@ -1,5 +1,6 @@
 /* ============================================================================
-   DESIGN SYSTEM — portfolio patterns: table index preview, text index,
+   DESIGN SYSTEM — portfolio patterns: featured project rotator, table index
+   preview, text index,
    before/after, scroll-lit statement, cursor labels. Vanilla JS.
    Ideas from Semplice's Advanced Portfolio Grids, timings from this system.
    ============================================================================ */
@@ -11,6 +12,29 @@
   /* ── Pointer position, shared by the preview and the cursor pill ────── */
   let px = -9999, py = -9999;
   window.addEventListener('pointermove', e => { px = e.clientX; py = e.clientY; }, { passive: true });
+
+  /* ── Featured project rotator ───────────────────────────────────────────
+     Four frames: the brand logo, then three UI highlights, 2s each (the
+     live homepage uses GIFs with hard cuts; here they cross-fade 400ms on
+     the move curve). Each card starts on its logo when it scrolls in and
+     stops when it leaves, so rows never run in lockstep. Reduced motion
+     holds on the logo frame. */
+  document.querySelectorAll('.fp-card').forEach(card => {
+    const frames = [...card.querySelectorAll('img')];
+    if (frames.length < 2 || RM) return;
+    const HOLD = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--home-frame-hold')) || 2000;
+    let i = 0, timer = null, inView = false;
+    const show = n => { frames[i].classList.remove('is-on'); i = n; frames[i].classList.add('is-on'); };
+    const start = () => { if (!timer) timer = setInterval(() => show((i + 1) % frames.length), HOLD); };
+    const stop = () => { clearInterval(timer); timer = null; };
+    // Warm the next frames so the first cut is not a blank.
+    frames.forEach(f => { f.loading = 'eager'; });
+    new IntersectionObserver(([e]) => {
+      inView = e.isIntersecting;
+      if (inView) { show(0); start(); } else stop();
+    }, { threshold: 0.5 }).observe(card);
+    document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); else if (inView) start(); });
+  });
 
   /* ── Table index: row hover + lagging preview ──────────────────────── */
   const table = document.querySelector('.table-grid');
