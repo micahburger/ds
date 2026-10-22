@@ -10,8 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;700&family=Cormorant+Garamond:wght@400&display=swap" />
 <link rel="stylesheet" href="https://use.typekit.net/ejx8vdd.css" />
-<link rel="stylesheet" href="css/tokens.css?v=11" />
-<link rel="stylesheet" href="css/styles.css?v=11" />
+<link rel="stylesheet" href="css/tokens.css?v=12" />
+<link rel="stylesheet" href="css/styles.css?v=12" />
 </head>
 <body>
 
@@ -242,13 +242,13 @@
       <p class="label eyebrow">Motion</p>
       <h2 class="section-headline">Make transitions easy to follow.</h2>
       <p class="section-body">Use motion to connect states and show what changed. Keep distances short. Choose a curve for the interaction and provide a reduced-motion version.</p>
-      <p class="sub-body">Five shared curves. Distances: 12px for lists, 16px for copy, 24px for reveals, 40px for a change of direction. Transitions move transform and opacity by default; the deck&rsquo;s page color wash and the hero scramble are the documented exceptions. The scramble is an expressive effect, not a transition.</p>
+      <details class="specs specs-intro"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Five shared curves. Distances: 12px for lists, 16px for copy, 24px for reveals, 40px for a change of direction. Transitions move transform and opacity by default; the deck&rsquo;s page color wash, the chapter menu&rsquo;s size morph and the hero scramble are the exceptions. The scramble is an expressive effect, not a transition.</p></div></details>
       <p class="rm-note label" hidden>Reduced motion is on for this device, so the demos below play instantly.</p>
 
       <div class="curve-grid" data-curves></div>
 
       <div class="demo" id="demo-deck">
-        <div class="demo-head"><h3 class="sub-heading">Deck project change</h3><p class="demo-what">The current project leaves before the next one arrives. Media leads; copy follows. The background changes with the project.</p><p class="demo-spec">Timed from the moment the project changes. 0ms: media starts leaving, 320ms, move curve. 120ms: copy starts leaving, 320ms. 160ms: new media arrives, 380ms, arrive curve. 320ms: new copy arrives, 380ms. Page color crossfades over 560ms, move curve.</p></div>
+        <div class="demo-head"><h3 class="sub-heading">Deck project change</h3><p class="demo-what">The current project leaves before the next one arrives. Media leads; copy follows. The background changes with the project.</p><details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Timed from the moment the project changes. 0ms: media starts leaving, 320ms, move curve. 120ms: copy starts leaving, 320ms. 160ms: new media arrives, 380ms, arrive curve. 320ms: new copy arrives, 380ms. Page color crossfades over 560ms, move curve.</p></div></details></div>
         <div class="deck-demo" tabindex="0" role="group" aria-label="Deck transition demo. Use the arrow keys or buttons.">
           <div class="dd-bg"></div>
           <div class="dd-header"><span>MICAH LINDENBERGER</span><span class="dd-pill">Menu</span><span>2026 Mini portfolio</span></div>
@@ -259,7 +259,7 @@
 
       <div class="demo-pair">
         <div class="demo" id="demo-carousel">
-          <div class="demo-head"><h3 class="sub-heading">Media carousel</h3><p class="demo-what">Browse with the dots, arrow keys, or drag. Automatic playback pauses while you drag and when the carousel is out of view.</p><p class="demo-spec">Auto every 4.2s, 700ms move curve. Manual: 400ms settle curve. Drag past 20% of the width, or flick, to change slide.</p></div>
+          <div class="demo-head"><h3 class="sub-heading">Media carousel</h3><p class="demo-what">Browse with the dots, arrow keys, or drag. Automatic playback pauses while you drag and when the carousel is out of view.</p><details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Auto every 4.2s, 700ms move curve. Manual: 400ms settle curve. Drag past 20% of the width, or flick, to change slide.</p></div></details></div>
           <div class="carousel" tabindex="0" role="group" aria-roledescription="carousel" aria-label="Carousel demo">
             <div class="car-stage"><div class="car-track"></div></div>
             <div class="car-dots" role="tablist" aria-label="Examples"></div>
@@ -267,20 +267,20 @@
         </div>
 
         <div class="demo" id="demo-zoom">
-          <div class="demo-head"><h3 class="sub-heading">Overview zoom</h3><p class="demo-what">Open a project from the overview. Select it again or press Escape to return.</p><p class="demo-spec">FLIP with the Web Animations API, 650ms move curve. The other cards dim to 15% in 200ms.</p></div>
+          <div class="demo-head"><h3 class="sub-heading">Overview zoom</h3><p class="demo-what">Open a project from the overview. Select it again or press Escape to return.</p><details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">FLIP with the Web Animations API, 650ms move curve. The other cards dim to 15% in 200ms.</p></div></details></div>
           <div class="zoom-box"><div class="zoom-grid"></div></div>
         </div>
       </div>
 
       <div class="demo-trio">
         <div class="demo" id="demo-reveal">
-          <div class="demo-head"><h3 class="sub-heading">Scroll reveal</h3><p class="demo-what">Sections rise and fade into view once.</p><p class="demo-spec">24px, 400ms enter curve.</p></div>
+          <div class="demo-head"><h3 class="sub-heading">Scroll reveal</h3><p class="demo-what">Sections rise and fade into view once.</p><details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">24px, 400ms enter curve.</p></div></details></div>
           <div class="reveal-box"><div class="rb-line rb-label"></div><div class="rb-line rb-head"></div><div class="rb-line"></div><div class="rb-line short"></div></div>
           <div class="demo-controls"><button type="button" class="ctl" data-replay-reveal>Replay</button></div>
         </div>
 
         <div class="demo" id="demo-hover">
-          <div class="demo-head"><h3 class="sub-heading">Hover feedback</h3><p class="demo-what">Buttons and cards grow slightly on hover. Only on devices with a precise pointer.</p><p class="demo-spec">Buttons 1.12, cards 1.05, 320ms enter curve.</p></div>
+          <div class="demo-head"><h3 class="sub-heading">Hover feedback</h3><p class="demo-what">Buttons and cards grow slightly on hover. Only on devices with a precise pointer.</p><details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Buttons 1.12, cards 1.05, 320ms enter curve.</p></div></details></div>
           <div class="hover-box">
             <span class="grow-pill">Menu</span>
             <span class="grow-card"></span>
@@ -288,7 +288,7 @@
         </div>
 
         <div class="demo" id="demo-drawer">
-          <div class="demo-head"><h3 class="sub-heading">Drawer</h3><p class="demo-what">Open a panel without losing the current page.</p><p class="demo-spec">In: 36px and fade, 240ms enter curve. Out: 180ms exit curve.</p></div>
+          <div class="demo-head"><h3 class="sub-heading">Drawer</h3><p class="demo-what">Open a panel without losing the current page.</p><details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">In: 36px and fade, 240ms enter curve. Out: 180ms exit curve.</p></div></details></div>
           <div class="drawer-box">
             <div class="drawer" hidden><p class="label">Design controls</p><div class="rb-line"></div><div class="rb-line short"></div><div class="rb-line"></div></div>
           </div>
@@ -298,11 +298,11 @@
 
       <div class="demo-pair">
         <div class="demo" id="demo-cursor">
-          <div class="demo-head"><h3 class="sub-heading">Custom cursor</h3><p class="demo-what">The cursor changes over links and draggable content. Move into the box to try it.</p><p class="demo-spec">16px white dot, difference blending. #FF5A36 over anything clickable, #DB4D2E while grabbing.</p></div>
+          <div class="demo-head"><h3 class="sub-heading">Custom cursor</h3><p class="demo-what">The cursor changes over links and draggable content. Move into the box to try it.</p><details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">16px white dot, difference blending. #FF5A36 over anything clickable, #DB4D2E while grabbing.</p></div></details></div>
           <div class="cursor-zone"><div class="cz-dot" aria-hidden="true"></div><button type="button" class="cz-button">Hover this button</button><span class="cz-drag">Drag me</span></div>
         </div>
         <div class="demo" id="demo-scramble">
-          <div class="demo-head"><h3 class="sub-heading">Hero scramble</h3><p class="demo-what">An expressive hover effect for the page title.</p><p class="demo-spec">GSAP SplitText. Each character flashes a spark color for 300ms, rippling out from the center; half swap to a random glyph, a third show their width. After 6s without pointer movement, one line plays every 4s. Reduced motion: the title never splits or moves.</p></div>
+          <div class="demo-head"><h3 class="sub-heading">Hero scramble</h3><p class="demo-what">An expressive hover effect for the page title.</p><details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">GSAP SplitText. Each character flashes a spark color for 300ms, rippling out from the center; half swap to a random glyph, a third show their width. After 6s without pointer movement, one line plays every 4s. Reduced motion: the title never splits or moves.</p></div></details></div>
           <div class="scramble-note"><p>The live version is the title at the top of this page.</p><button type="button" class="ctl" data-to-hero>Go to the hero &uarr;</button></div>
         </div>
       </div>
@@ -345,7 +345,7 @@
           </div>
           <h3>Deck header</h3>
           <p>Use across deck pages for identity and navigation. Keep the menu button readable on each project background.</p>
-          <p class="comp-spec">Centered, Inter 500 14px. The pill fills with the header text color and uses the page color for its label.</p>
+          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Centered, Inter 500 14px. The pill fills with the header text color and uses the page color for its label.</p></div></details>
         </article>
 
         <article class="comp comp-span">
@@ -356,7 +356,7 @@
           </div>
           <h3>Media frames</h3>
           <p>Use frames when a device or viewport helps explain the screen. Let exported product visuals stand alone when they already include that context.</p>
-          <p class="comp-spec">Inside a 786 &times; 762 media box. Phone 260px wide, 9:19, radius 36. Card 340px, 4:3, radius 18. Desktop 440px, 16:10, radius 14.</p>
+          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Inside a 786 &times; 762 media box. Phone 260px wide, 9:19, radius 36. Card 340px, 4:3, radius 18. Desktop 440px, 16:10, radius 14.</p></div></details>
         </article>
 
         <article class="comp">
@@ -365,7 +365,7 @@
           </div>
           <h3>Progress dots</h3>
           <p>Show the active item in a small gallery. Keep the indicators visually small and give each control enough space to select.</p>
-          <p class="comp-spec">8px dot, 12px apart. Each dot&rsquo;s clickable area extends 12px past it on every side, a 32px square. Active dot: text color at 90%.</p>
+          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">8px dot, 12px apart. Each dot&rsquo;s clickable area extends 12px past it on every side, a 32px square. Active dot: text color at 90%.</p></div></details>
         </article>
 
         <article class="comp">
@@ -378,7 +378,7 @@
           </div>
           <h3>Chapter bar</h3>
           <p>Help people navigate a long page. Show the current section and a Menu button that opens the chapter list.</p>
-          <p class="comp-spec">Fixed bottom right, hidden while the hero is in view. Count, chapter name and a ring that fills with scroll position. The button&rsquo;s accessible name is &ldquo;Chapter menu&rdquo;.</p>
+          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Fixed bottom right, hidden while the hero is in view. Count, chapter name and a ring that fills with scroll position. The button&rsquo;s accessible name is &ldquo;Chapter menu&rdquo;.</p></div></details>
         </article>
 
         <article class="comp">
@@ -390,7 +390,7 @@
           </div>
           <h3>Numbered breakdown</h3>
           <p>Use for a short sequence or a small set of related findings. Give each item a clear title and one useful explanation.</p>
-          <p class="comp-spec">Mono number in accent, Instrument Sans title, short body, hairline rule between items.</p>
+          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Mono number in accent, Instrument Sans title, short body, hairline rule between items.</p></div></details>
         </article>
 
         <article class="comp">
@@ -403,7 +403,7 @@
           </div>
           <h3>Annotation notes</h3>
           <p>Explain a specific behavior beside the relevant screen. On wide layouts, notes can stay in view with the media.</p>
-          <p class="comp-spec">Mono numbers, 13px body. Sticky on wide screens.</p>
+          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Mono numbers, 13px body. Sticky on wide screens.</p></div></details>
         </article>
 
         <article class="comp">
@@ -412,7 +412,7 @@
           </div>
           <h3>Text control</h3>
           <p>Use for supporting actions such as replaying a demo. Keep the label clear, with visible hover and keyboard-focus states.</p>
-          <p class="comp-spec">Mono 11px, uppercase, muted. Underline on hover. Kept out of the accent so it reads as secondary to the content.</p>
+          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Mono 11px, uppercase, muted. Underline on hover. Kept out of the accent so it reads as secondary to the content.</p></div></details>
         </article>
 
         <article class="comp">
@@ -427,7 +427,7 @@
           </div>
           <h3>Chapter menu</h3>
           <p>Open the section list from the chapter bar. Mark the current chapter and make each destination easy to identify.</p>
-          <p class="comp-spec">The bar grows into the menu from its bottom-right corner, 420ms enter curve; chapters rise 22ms apart. Closing fades the content, then shrinks in 320ms. Arrow keys move between chapters.</p>
+          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">The bar grows into the menu from its bottom-right corner, 420ms enter curve; chapters rise 22ms apart. Closing fades the content, then shrinks in 320ms. Arrow keys move between chapters.</p></div></details>
         </article>
       </div>
     </div>
@@ -449,14 +449,14 @@
             <div class="w-media"><b>Media</b><em>786 &times; 762</em></div>
             <span class="w-m w-ml">140px</span><span class="w-m w-mt">130px</span><span class="w-m w-mr">64px</span>
           </div>
-          <figcaption><strong>Deck project.</strong> Pair a short explanation with prominent media. On wide screens, use two columns. Stack the content when space is limited.<span class="cap-spec">Text 600px, media 786 &times; 762, both centered vertically. Padding: 130px top, 64px right and bottom, 140px left. One variant fills the whole page with the project&rsquo;s color.</span></figcaption>
+          <figcaption><strong>Deck project.</strong> Pair a short explanation with prominent media. On wide screens, use two columns. Stack the content when space is limited.</figcaption><details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Text 600px, media 786 &times; 762, both centered vertically. Padding: 130px top, 64px right and bottom, 140px left. One variant fills the whole page with the project&rsquo;s color.</p></div></details>
         </figure>
 
         <figure class="wire">
           <div class="wire-stage wire-overview">
             <span></span><span></span><span></span><span></span>
           </div>
-          <figcaption><strong>Project overview.</strong> Show the selected projects together so someone can understand the range before choosing one. This is the layout behind the &ldquo;Start with the overview&rdquo; principle; the overview zoom under Motion is how a card opens.<span class="cap-spec">Black page, two columns, 56px gap. Padding: 140px top, 64px sides, 96px bottom. Each card is the real page, scaled down. One column under 900px.</span></figcaption>
+          <figcaption><strong>Project overview.</strong> Show the selected projects together so someone can understand the range before choosing one. This is the layout behind the &ldquo;Start with the overview&rdquo; principle; the overview zoom under Motion is how a card opens.</figcaption><details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Black page, two columns, 56px gap. Padding: 140px top, 64px sides, 96px bottom. Each card is the real page, scaled down. One column under 900px.</p></div></details>
         </figure>
 
         <figure class="wire">
@@ -464,7 +464,7 @@
             <div class="wr-label"><b>Work<br>history</b></div>
             <div class="wr-rows"><span></span><span></span><span></span></div>
           </div>
-          <figcaption><strong>Work history.</strong> Keep roles, companies, and dates easy to scan. Use a consistent structure for each entry.<span class="cap-spec">Label column 240 to 380px, content fills the rest, 64px apart. 72px logos, 56px between entries.</span></figcaption>
+          <figcaption><strong>Work history.</strong> Keep roles, companies, and dates easy to scan. Use a consistent structure for each entry.</figcaption><details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Label column 240 to 380px, content fills the rest, 64px apart. 72px logos, 56px between entries.</p></div></details>
         </figure>
 
         <figure class="wire">
@@ -474,7 +474,7 @@
             <span class="wl-list"><i></i><i></i><i></i></span>
             <span class="wl-split wl-rev"><i></i><i></i></span>
           </div>
-          <figcaption><strong>Case study.</strong> Start with the project and my role. Follow with the decisions and relevant screens, then the outcome or learning.<span class="cap-spec">Serif title and overview at the top, full-width UI under them, then sections that alternate text and screens.</span></figcaption>
+          <figcaption><strong>Case study.</strong> Start with the project and my role. Follow with the decisions and relevant screens, then the outcome or learning.</figcaption><details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Serif title and overview at the top, full-width UI under them, then sections that alternate text and screens.</p></div></details>
         </figure>
       </div>
 
@@ -490,13 +490,15 @@
       <p class="label eyebrow">Portfolio patterns</p>
       <h2 class="section-headline">Choose how people explore the work.</h2>
       <p class="section-body">Use an overview to show range, a gallery to show a sequence, and a comparison when the change is easier to see side by side.</p>
-      <p class="sub-body">Sources: the featured project row is from the micahburger.com homepage. The others adapt ideas from Semplice&rsquo;s portfolio grids, rebuilt with this system&rsquo;s tokens and motion.</p>
 
       <div class="pattern" id="pattern-featured">
         <div class="pattern-head">
-          <h3 class="sub-heading">Featured project row</h3>
-          <p class="demo-what">Pair a project summary with a preview of the work. Use it when someone should understand the project before opening the case study.</p>
-          <p class="demo-spec">Copy left, project name in link blue. A 16:9 card on the right rotates four frames, 2s each: the brand logo over a photo, then three UI highlights. It runs only while in view. The row opens the case study in a new tab.</p>
+          <span class="pattern-num" aria-hidden="true">01</span>
+          <div class="pattern-intro">
+            <h3 class="pattern-title">Featured project row</h3>
+            <p class="demo-what">A project summary beside a rotating preview. Use it on the homepage so people understand each project before opening it.</p>
+            <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">From the micahburger.com homepage. The card rotates four frames, 2s each: the brand logo over a photo, then three UI highlights. It runs only while in view. The row opens the case study in a new tab.</p><dl class="spec"><dt>Type</dt><dd>Poppins 400, name and copy at one size</dd><dt>Color</dt><dd>Paper #F4F1EC, text #423736, name #6996AE. The name blue is 2.8:1 on the paper, so it always sits inside full-contrast copy.</dd><dt>Card</dt><dd>16:9, radius 3.7% of its width, the project&rsquo;s own dark</dd><dt>Frames</dt><dd>Logo, then three UI highlights, 2s each</dd></dl></div></details>
+          </div>
         </div>
         <div class="fp-stage">
           <p class="fp-heading">Featured Projects</p>
@@ -521,14 +523,16 @@
             </a>
           </div>
         </div>
-        <dl class="spec fp-spec"><dt>Type</dt><dd>Poppins 400, name and copy at one size</dd><dt>Color</dt><dd>Paper #F4F1EC, text #423736, name #6996AE. The name blue is 2.8:1 on the paper, so it always sits inside full-contrast copy.</dd><dt>Card</dt><dd>16:9, radius 3.7% of its width, the project&rsquo;s own dark</dd><dt>Frames</dt><dd>Logo, then three UI highlights, 2s each</dd></dl>
       </div>
 
       <div class="pattern" id="pattern-table">
         <div class="pattern-head">
-          <h3 class="sub-heading">Table index</h3>
-          <p class="demo-what">A compact list for a larger body of work. Keep the project name and category visible; the hover preview adds a quick look.</p>
-          <p class="demo-spec">Rows on hairline rules. Hover fills the row from the bottom with a color sampled from the project&rsquo;s thumbnail, 250ms enter curve, and the thumbnail follows the pointer. Projects from <a href="https://micahburger.com/" target="_blank" rel="noopener">micahburger.com</a>.</p>
+          <span class="pattern-num" aria-hidden="true">02</span>
+          <div class="pattern-intro">
+            <h3 class="pattern-title">Table index</h3>
+            <p class="demo-what">A compact list for a larger body of work, with a quick preview on hover.</p>
+            <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Rows on hairline rules. Hover fills the row from the bottom with a color sampled from the project&rsquo;s thumbnail, 250ms enter curve, and the thumbnail follows the pointer. Projects from <a href="https://micahburger.com/" target="_blank" rel="noopener">micahburger.com</a>. Adapted from Semplice&rsquo;s portfolio grids.</p></div></details>
+          </div>
         </div>
         <div class="table-grid" data-cursor="View">
           <div class="tg-head" aria-hidden="true"><span>No.</span><span>Project</span><span>Industry</span></div>
@@ -569,9 +573,12 @@
 
       <div class="pattern" id="pattern-text">
         <div class="pattern-head">
-          <h3 class="sub-heading">Text index</h3>
-          <p class="demo-what">A simple list for a small selection of projects, three to six. Let the titles lead, with previews that support browsing.</p>
-          <p class="demo-spec">Large centered titles. Hover dims the others to 20% and brings that project&rsquo;s screen up behind, 400ms enter curve.</p>
+          <span class="pattern-num" aria-hidden="true">03</span>
+          <div class="pattern-intro">
+            <h3 class="pattern-title">Text index</h3>
+            <p class="demo-what">Big titles for three to six projects, with the screen rising behind on hover.</p>
+            <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Large centered titles. Hover dims the others to 20% and brings that project&rsquo;s screen up behind, 400ms enter curve.</p></div></details>
+          </div>
         </div>
         <div class="text-grid" data-cursor="View">
           <div class="txg-stage" aria-hidden="true">
@@ -591,9 +598,12 @@
 
       <div class="pattern" id="pattern-gallery">
         <div class="pattern-head">
-          <h3 class="sub-heading">Gallery slider</h3>
-          <p class="demo-what">Show related screens or stages in sequence. Give each frame a useful caption and a clear way to move through the gallery.</p>
-          <p class="demo-spec">Auto advances every 4.2s on the 700ms move curve while in view, and pauses on hover. Arrows, keys, drag and a flick use the 400ms settle curve. Example: Lincoln, Build and Price.</p>
+          <span class="pattern-num" aria-hidden="true">04</span>
+          <div class="pattern-intro">
+            <h3 class="pattern-title">Gallery slider</h3>
+            <p class="demo-what">Related screens in sequence, one big frame at a time, each with a caption.</p>
+            <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Auto advances every 4.2s on the 700ms move curve while in view, and pauses on hover. Arrows, keys, drag and a flick use the 400ms settle curve. Example: Lincoln, Build and Price.</p></div></details>
+          </div>
         </div>
         <div class="gallery-slider" tabindex="0" role="group" aria-roledescription="carousel" aria-label="Lincoln gallery">
           <div class="gs-stage" data-cursor="Drag">
@@ -629,9 +639,15 @@
 
       <div class="pattern" id="pattern-compare">
         <div class="pattern-head">
-          <h3 class="sub-heading">Before and after</h3>
-          <p class="demo-what">Compare the same part of the experience in two versions. Use it when comparable visuals explain a meaningful change. Align the images and say what to look for.</p>
-          <p class="demo-spec">Drag the divider, or focus it and use the arrow keys. A click settles on the 400ms settle curve. Example: Opendoor&rsquo;s preliminary offer in Eero, the previous design system, and in Novo.</p>
+          <span class="pattern-num" aria-hidden="true">05</span>
+          <div class="pattern-intro">
+            <h3 class="pattern-title">Before and after</h3>
+            <p class="demo-what">The same screen in two versions, when the change is easier to see side by side. Drag the divider.</p>
+            <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Arrow keys move the divider when it has focus. A click settles on the 400ms settle curve. Adapted from Semplice&rsquo;s portfolio grids.</p><dl class="spec">
+              <dt>Frame</dt><dd>Both images exported on the same canvas, so the divider lines up.</dd>
+              <dt>Labels</dt><dd>Mono tags, V1 left, V2 right. Text rather than color, so the comparison reads without relying on color.</dd>
+            </dl></div></details>
+          </div>
         </div>
         <div class="compare-wrap">
           <figure class="compare" data-cursor="Drag" style="--pos:50%">
@@ -641,37 +657,31 @@
             <div class="cmp-handle" aria-hidden="true"><span></span></div>
             <input class="cmp-range" type="range" min="0" max="100" value="50" step="1" aria-label="Reveal before or after. Lower shows more of V1." />
           </figure>
-          <div class="compare-copy">
-            <p class="label">Opendoor, preliminary offer</p>
-            <p class="compare-line">Eero spread the offer across a busy page. Novo leads with one offer card, the cash range and a single next step.</p>
-            <dl class="spec spec-stack">
-              <dt>Frame</dt><dd>Both images exported on the same canvas, so the divider lines up.</dd>
-              <dt>Labels</dt><dd>Mono tags, V1 left, V2 right. Text rather than color, so the comparison reads without relying on color.</dd>
-            </dl>
-          </div>
+          <p class="pattern-cap"><b>Opendoor, preliminary offer.</b> V1 is Eero, the previous design system. V2 is Novo, which leads with one offer card, the cash range and a single next step.</p>
         </div>
       </div>
 
       <div class="pattern" id="pattern-lit">
         <div class="pattern-head">
-          <h3 class="sub-heading">Key insight</h3>
-          <p class="demo-what">Highlight an insight when it helps explain a decision. The sentence should still be readable without animation.</p>
-          <p class="demo-spec">Words go from rule gray to foreground as the line crosses the middle of the screen. Plain scroll position, no library. Reduced motion shows it fully lit.</p>
+          <span class="pattern-num" aria-hidden="true">06</span>
+          <div class="pattern-intro">
+            <h3 class="pattern-title">Key insight</h3>
+            <p class="demo-what">One sentence that explains a decision, lit as you scroll. It must read fine without the animation.</p>
+            <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Words go from rule gray to foreground as the line crosses the middle of the screen. Plain scroll position, no library. Reduced motion shows it fully lit.</p></div></details>
+          </div>
         </div>
         <p class="lit" data-lit>The test shifted my focus from payment placement to whether applicants understood what they were paying for.</p>
       </div>
 
       <div class="pattern" id="pattern-cursor">
         <div class="pattern-head">
-          <h3 class="sub-heading">Cursor labels</h3>
-          <p class="demo-what">Add a short hint for pointer interactions, such as View or Drag. Keep the underlying control understandable without the custom cursor: links and captions still say what they do.</p>
-          <p class="demo-spec">The dot grows into a pill: View on links, Drag on the slider. Precise pointers only; touch never sees it.</p>
+          <span class="pattern-num" aria-hidden="true">07</span>
+          <div class="pattern-intro">
+            <h3 class="pattern-title">Cursor labels</h3>
+            <p class="demo-what">A short hint on the cursor, like View or Drag. Hover the rows or the slider above to see it.</p>
+            <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">The dot grows into a pill: View on links, Drag on the slider. Precise pointers only; touch never sees it.</p><dl class="spec"> <dt>Size</dt><dd>16px dot grows to a 28px tall pill, 250ms enter curve.</dd> <dt>Type</dt><dd>IBM Plex Mono 10px, uppercase, .14em, #141414 on #ff5a36.</dd> <dt>Markup</dt><dd><code>data-cursor="View"</code> on any element. The nearest one wins.</dd> </dl></div></details>
+          </div>
         </div>
-        <dl class="spec spec-inline">
-          <dt>Size</dt><dd>16px dot grows to a 28px tall pill, 250ms enter curve.</dd>
-          <dt>Type</dt><dd>IBM Plex Mono 10px, uppercase, .14em, #141414 on #ff5a36.</dd>
-          <dt>Markup</dt><dd><code>data-cursor="View"</code> on any element. The nearest one wins.</dd>
-        </dl>
       </div>
     </div>
   </section>
@@ -713,7 +723,7 @@
             <li><i>04</i><b>The decisions</b><span>What changed, what I considered, and why I chose this direction. Put relevant screens beside the explanation.</span></li>
             <li><i>05</i><b>The result</b><span>What shipped, what was measured, or what I learned. Be clear about what is still unknown.</span></li>
           </ol>
-          <p class="comp-spec">On micahburger.com the title is usually two lines of Orpheus Pro, with Objective and Role as bold labels under the overview. Those are layout defaults, not rules for every project.</p>
+          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">On micahburger.com the title is usually two lines of Orpheus Pro, with Objective and Role as bold labels under the overview. Those are layout defaults, not rules for every project.</p></div></details>
         </article>
       </div>
 
@@ -776,11 +786,11 @@
     </div>
   </footer>
 
-  <script src="js/shell.js?v=11"></script>
-  <script src="js/demos.js?v=11"></script>
-  <script src="js/patterns.js?v=11"></script>
+  <script src="js/shell.js?v=12"></script>
+  <script src="js/demos.js?v=12"></script>
+  <script src="js/patterns.js?v=12"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
-  <script src="js/hero.js?v=11"></script>
+  <script src="js/hero.js?v=12"></script>
 </body>
 </html>

@@ -337,7 +337,27 @@ body.at-hero .chapter-nav { opacity: 0; transform: translateY(12px); pointer-eve
 .demo-spec a { color: inherit; }
 .demo-what { font-weight: 300; font-size: 15px; line-height: 1.6; color: var(--page-soft); margin: 0 0 8px; max-width: 640px; }
 .comp-spec { font: 400 11px/1.6 var(--font-label); color: var(--page-muted); margin: 10px 0 0; }
-.cap-spec { display: block; margin-top: 8px; font: 400 11px/1.6 var(--font-label); color: var(--page-muted); }
+
+/* ── Specs toggle: detail copy tucked behind a small pill ─────────────── */
+.specs { margin-top: 12px; }
+.specs summary {
+  display: inline-flex; align-items: center; gap: 8px; list-style: none; cursor: pointer;
+  padding: 7px 12px; border: 1px solid var(--page-rule); border-radius: 999px;
+  font: 500 10px/1 var(--font-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--page-muted);
+  transition: color var(--duration-fast) ease, border-color var(--duration-fast) ease, background-color var(--duration-fast) ease;
+}
+.specs summary::-webkit-details-marker { display: none; }
+.specs summary::after { content: "+"; font-size: 13px; line-height: 1; transition: transform var(--duration-slow) var(--ease-enter); }
+.specs[open] summary::after { transform: rotate(45deg); }
+.specs summary:hover, .specs[open] summary { color: var(--page-fg); border-color: #4a4a4a; }
+.specs summary:focus-visible { outline: 2px solid var(--page-accent); outline-offset: 2px; }
+.specs-body { margin-top: 14px; padding-left: 14px; border-left: 1px solid var(--page-rule); max-width: 720px; animation: specsIn var(--reveal-fast) var(--ease-enter); }
+.specs-body .demo-spec { margin: 0; }
+.specs-body .spec { margin-top: 12px; }
+.specs-body .demo-spec + .spec { margin-top: 12px; }
+@keyframes specsIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+.comp .specs, .wire .specs { margin-top: 10px; }
+.specs-intro { margin: -4px 0 8px; }
 .impl-notes { margin-top: 48px; max-width: 780px; }
 .impl-notes ul { margin: 12px 0 0; padding-left: 18px; font-size: 14px; line-height: 1.7; font-weight: 300; color: var(--page-soft); }
 .impl-notes li { margin-bottom: 8px; }
@@ -579,8 +599,15 @@ body.at-hero .chapter-nav { opacity: 0; transform: translateY(12px); pointer-eve
    Inspired by Semplice's Advanced Portfolio Grids, rebuilt in these tokens.
    Each pattern keeps the house rules: hairlines not boxes, the project's own
    page color as the only color, transform/opacity motion on the enter curve. */
-.pattern { margin-top: 72px; }
-.pattern-head .sub-heading { margin: 0 0 6px; }
+.pattern { margin-top: 64px; padding-top: 40px; border-top: 1px solid var(--page-rule); }
+.pattern + .pattern { margin-top: 88px; }
+.pattern-head { display: grid; grid-template-columns: 56px minmax(0, 1fr); column-gap: 16px; align-items: baseline; margin-bottom: 28px; }
+.pattern-num { font: 400 20px/1 var(--font-label); color: var(--page-accent); }
+.pattern-title { margin: 0 0 8px; font: 600 clamp(22px, 2.2vw, 30px)/1.15 var(--font-heading); letter-spacing: -.015em; color: var(--page-fg); }
+.pattern-intro .demo-what { margin: 0; }
+.pattern-cap { margin: 14px 0 0; max-width: 720px; font-weight: 300; font-size: 14px; line-height: 1.6; color: var(--page-soft); }
+.pattern-cap b { font-weight: 500; color: var(--page-fg); }
+@media (max-width: 600px) { .pattern-head { grid-template-columns: 1fr; row-gap: 10px; } }
 
 /* Table index */
 .table-grid { position: relative; margin-top: 8px; border-top: 1px solid var(--page-rule); }
@@ -644,7 +671,7 @@ body.at-hero .chapter-nav { opacity: 0; transform: translateY(12px); pointer-eve
 }
 
 /* Before and after */
-.compare-wrap { display: grid; grid-template-columns: 1fr; gap: 28px; margin-top: 8px; }
+.compare-wrap { margin-top: 8px; }
 .compare { position: relative; margin: 0; aspect-ratio: 16 / 9; border-radius: var(--radius-lg); overflow: hidden; background: #000; touch-action: pan-y; user-select: none; }
 .compare img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; -webkit-user-drag: none; }
 .cmp-after { position: absolute; inset: 0; clip-path: inset(0 0 0 var(--pos)); }
@@ -663,12 +690,6 @@ body.at-hero .chapter-nav { opacity: 0; transform: translateY(12px); pointer-eve
 .cmp-range { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; pointer-events: none; -webkit-appearance: none; appearance: none; }
 .compare { cursor: ew-resize; }
 .compare:has(.cmp-range:focus-visible) { outline: 2px solid var(--page-accent); outline-offset: 4px; }
-.compare-copy { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 8px 56px; align-items: start; }
-.compare-copy .label { grid-column: 1 / -1; }
-.compare-line { font: 500 clamp(20px, 2vw, 26px)/1.3 var(--font-body); letter-spacing: -.01em; margin: 4px 0 0; max-width: 560px; text-wrap: balance; }
-.compare-copy .spec { margin-top: 8px; }
-@media (max-width: 900px) { .compare-copy { grid-template-columns: 1fr; } }
-
 /* Scroll-lit statement */
 .lit { font: 500 clamp(30px, 4.4vw, 60px)/1.12 var(--font-heading); letter-spacing: -.025em; max-width: 1100px; margin: 24px 0 0; color: #3d3a38; text-wrap: balance; }
 .lit .w { transition: color var(--duration-fast) ease; }
@@ -732,7 +753,6 @@ body.at-hero .chapter-nav { opacity: 0; transform: translateY(12px); pointer-eve
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
   .fp-row:hover .fp-card { transform: scale(1.015); }
 }
-.fp-spec { margin-top: 20px; }
 @media (max-width: 700px) {
   .fp-row { grid-template-columns: 1fr; row-gap: 18px; }
 }
