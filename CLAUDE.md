@@ -33,7 +33,7 @@ python3 -m http.server 8000   # then open http://localhost:8000
 ## Layout of the source
 
 ```
-index.html        all content, 11 sections in the Graphite long-form register
+index.html        all content, 12 sections in the reference page format (formerly Graphite)
 css/tokens.css    every token; the file people copy into a new project
 css/styles.css    the page: shell ported from applicants, then one block per section
 js/shell.js       section tracking, chapter menu (bar that morphs into the jump list), keyboard nav, reveal

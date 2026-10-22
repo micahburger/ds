@@ -4,14 +4,14 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Design system · Micah Lindenberger</title>
-<meta name="description" content="The tokens, type, color, motion, components and writing rules behind Micah Lindenberger's portfolio and case studies." />
+<meta name="description" content="A reference for building Micah Lindenberger's portfolio, case studies, and prototypes: tokens, type, color, motion, components and writing guidance." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23161516'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%239C8B70'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;700&family=Cormorant+Garamond:wght@400&display=swap" />
 <link rel="stylesheet" href="https://use.typekit.net/ejx8vdd.css" />
-<link rel="stylesheet" href="css/tokens.css?v=10" />
-<link rel="stylesheet" href="css/styles.css?v=10" />
+<link rel="stylesheet" href="css/tokens.css?v=11" />
+<link rel="stylesheet" href="css/styles.css?v=11" />
 </head>
 <body>
 
@@ -38,7 +38,7 @@
         <svg class="cn-ring" viewBox="0 0 16 16" aria-hidden="true"><circle class="cn-ring-bg" cx="8" cy="8" r="6" /><circle class="cn-ring-fg" cx="8" cy="8" r="6" pathLength="1" /></svg>
         <span class="cn-count">01 / 12</span>
         <span class="cn-name">Hero</span>
-        <button type="button" class="cn-toggle" aria-expanded="false" aria-controls="cn-body" aria-label="Chapters"><span class="cn-roll" aria-hidden="true"><span>Menu</span><span>Close</span></span></button>
+        <button type="button" class="cn-toggle" aria-expanded="false" aria-controls="cn-body" aria-label="Chapter menu"><span class="cn-roll" aria-hidden="true"><span>Menu</span><span>Close</span></span></button>
       </div>
     </div>
   </nav>
@@ -53,8 +53,9 @@
       <h1>Design system</h1>
       <h1 class="title-stanza">Micah</h1>
       <h1>Lindenberger</h1>
-      <p class="label hero-meta">Version 1 &middot; October 2026 &middot; Hover the title</p>
-      <p class="label scroll-cue"><span aria-hidden="true">&darr;</span> Scroll</p>
+      <p class="hero-purpose">A reference for building my portfolio, case studies, and prototypes.</p>
+      <p class="label hero-meta">Version 1 &middot; October 2026</p>
+      <p class="label scroll-cue"><a href="#principles">Explore the system <span aria-hidden="true">&darr;</span></a></p>
     </div>
   </section>
 
@@ -62,26 +63,23 @@
   <section id="principles">
     <div class="wrap reveal">
       <p class="label eyebrow">Principles</p>
-      <h2 class="section-headline">Seven rules the work follows.</h2>
-      <p class="section-body">Everything below comes from four live sites: the 2026 mini portfolio, the rental application case study, Lattice and the earlier case studies at micahburger.com. These rules are what they share.</p>
+      <h2 class="section-headline">How I present the work.</h2>
+      <p class="section-body">These principles guide my portfolio, case studies, and prototypes. The format changes with the project.</p>
       <ol class="num-list">
-        <li><span class="num">01</span><div><h3>The work leads.</h3><p>One idea per screen. Text on the left, the product on the right.</p></div></li>
-        <li><span class="num">02</span><div><h3>Scale contrast.</h3><p>Very large, tightly set titles against small, quiet body copy and labels. Titles sit under a line-height of 1 with negative tracking.</p></div></li>
-        <li><span class="num">03</span><div><h3>Color lives in the page.</h3><p>Each project owns its background. Chrome stays neutral and inverts against it automatically.</p></div></li>
-        <li><span class="num">04</span><div><h3>Warm neutrals.</h3><p>Never pure black on pure white for text. Ink is #141414, paper is #F4F1EC, cream is #FAF7F3.</p></div></li>
-        <li><span class="num">05</span><div><h3>Quiet, fast, directional motion.</h3><p>Media moves first, copy follows. Exits are shorter than entrances. Every animation has a reduced-motion version.</p></div></li>
-        <li><span class="num">06</span><div><h3>Restraint.</h3><p>Fewer elements, fewer words. Nothing decorative that does not explain the work.</p></div></li>
-        <li><span class="num">07</span><div><h3>Overview first, depth on click.</h3><p>The front door shows every project at once: its scale, what it involved and a taste of its UI. A recruiter who only reads the homepage still gets the whole picture. The micahburger.com homepage does it with featured project rows; the 2026 deck's menu does it with all four projects side by side. One click opens the full case study.</p></div></li>
+        <li><span class="num">01</span><div><h3>Show the work in context.</h3><p>Use real screens and enough context to explain the problem, my role, and what changed. Give the work room. Let the copy explain what the visuals can&rsquo;t.</p></div></li>
+        <li><span class="num">02</span><div><h3>Make it easy to scan.</h3><p>Use type, spacing, and contrast to make the important parts easy to find. Give each section a clear point and keep the supporting copy readable.</p></div></li>
+        <li><span class="num">03</span><div><h3>Start with the overview.</h3><p>Show the range of work before asking someone to open a case study. The overview should explain what each project involved. The detail is there when they want it.</p></div></li>
+        <li><span class="num">04</span><div><h3>Make changes easy to follow.</h3><p>Use motion to connect views, show a response, and keep people oriented. Keep transitions quick and provide a reduced-motion version. Leave room for play where it fits.</p></div></li>
       </ol>
     </div>
   </section>
 
-  <!-- ═══ 3 · REGISTERS ══════════════════════════════════════════════════ -->
-  <section id="registers">
+  <!-- ═══ 3 · FORMATS ════════════════════════════════════════════════════ -->
+  <section id="formats">
     <div class="wrap wrap-wide reveal">
-      <p class="label eyebrow">Registers</p>
-      <h2 class="section-headline">Two registers, one hand.</h2>
-      <p class="section-body">Pick one before building. A register sets the color, type, layout and stack. A case study can also carry a product register: the real product UI, scoped under <code>.product</code> so it never styles the shell.</p>
+      <p class="label eyebrow">Formats</p>
+      <h2 class="section-headline">Choose a format for the story.</h2>
+      <p class="section-body">Use the deck for a quick view of several projects. Use a case study when the decisions need more explanation. Both should make the work easy to understand.</p>
 
       <div class="register-grid">
         <article class="register-card">
@@ -97,9 +95,9 @@
               <div class="dk-dots"><i class="on"></i><i></i><i></i></div>
             </div>
           </div>
-          <h3>Deck</h3>
-          <p>A mini portfolio. Three to six projects, one per screen, each in its own color.</p>
-          <dl class="spec"><dt>Type</dt><dd>Proxima Nova, Inter</dd><dt>Stack</dt><dd>Vite + React, no animation library</dd><dt>Live</dt><dd><a href="https://2026folio.micahburger.com/" target="_blank" rel="noopener">2026folio.micahburger.com</a></dd></dl>
+          <h3>Portfolio deck</h3>
+          <p>A short introduction to selected work. Each project pairs a brief explanation with a few key screens.</p>
+          <dl class="spec"><dt>Type</dt><dd>Proxima Nova, Inter</dd><dt>Live</dt><dd><a href="https://2026folio.micahburger.com/" target="_blank" rel="noopener">2026folio.micahburger.com</a></dd></dl>
         </article>
 
         <article class="register-card">
@@ -116,11 +114,21 @@
               <img class="cs-hero" src="img/registers/opendoor-hero.webp" alt="" />
             </div>
           </div>
-          <h3>Long-form</h3>
-          <p>The case-study page from micahburger.com. A big serif title and a short overview, then the problem, then big UI. One project, read top to bottom.</p>
-          <dl class="spec"><dt>Type</dt><dd>Orpheus Pro titles, Poppins text</dd><dt>Color</dt><dd>Dark #161416 or cream #F5F1EB, chosen per project</dd><dt>Stack</dt><dd>Semplice on WordPress today; plain HTML for new builds</dd><dt>Live</dt><dd><a href="https://micahburger.com/project/opendoor" target="_blank" rel="noopener">micahburger.com/project/opendoor</a></dd></dl>
+          <h3>Case study</h3>
+          <p>A closer look at one project: the problem, my role, the decisions, and what I learned. Keep the screens close to the explanation.</p>
+          <dl class="spec"><dt>Type</dt><dd>Orpheus Pro titles, Poppins text</dd><dt>Color</dt><dd>Dark #161416 or cream #F5F1EB, chosen per project</dd><dt>Live</dt><dd><a href="https://micahburger.com/project/opendoor" target="_blank" rel="noopener">micahburger.com/project/opendoor</a></dd></dl>
         </article>
 
+      </div>
+
+      <div class="impl-notes">
+        <p class="label">Implementation notes</p>
+        <ul>
+          <li><b>Reference page.</b> This site. A third, plainer format for documentation: the dark palette, Instrument Sans and Inter. Earlier versions called it Graphite.</li>
+          <li><b>Lattice</b> contributes interaction examples, such as the design-controls drawer under Motion, not a format of its own.</li>
+          <li><b>Built with.</b> The deck is Vite and React with no animation library. micahburger.com case studies are Semplice on WordPress. This page is plain HTML, CSS and JS. These are facts about each source, not requirements of the format.</li>
+          <li><b>Embedded product UI.</b> Scope it to its own styles so it does not inherit the portfolio&rsquo;s typography and color. The convention here is a <code>.product</code> wrapper.</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -129,10 +137,21 @@
   <section id="color">
     <div class="wrap wrap-wide reveal">
       <p class="label eyebrow">Color</p>
-      <h2 class="section-headline">Warm neutrals, one accent.</h2>
-      <p class="section-body">One palette. Neutrals do the work; the accent is saved for large marks. Click any swatch to copy its value.</p>
+      <h2 class="section-headline">A neutral base, with room for project color.</h2>
+      <p class="section-body">Use warm neutrals for the page, text, and navigation. Project sections can use a palette that suits the work. Check text and controls against each background.</p>
 
-      <div class="swatch-row" data-swatches='[["--page-bg","#161516","Page"],["--page-surface","#1D1D1D","Surface"],["--page-rule","#303030","Rule"],["--page-muted","#B7B0A8","Muted, labels only"],["--page-soft","#D0C9C1","Soft, body copy"],["--page-fg","#F4F1EC","Foreground"],["--page-accent","#9C8B70","Accent, 18px and up"]]'></div>
+      <h3 class="sub-heading">Reference page &middot; dark</h3>
+      <p class="sub-body">The base palette for this page. Muted is for labels, soft is for body copy, foreground is for titles. The accent marks the things that should stand out: numbers, the current chapter, pull lines. It passes contrast on the page (5.5:1), but it is kept to those few marks so it reads as emphasis rather than a second text color. Select a swatch to copy its value.</p>
+
+      <div class="swatch-row" data-swatches='[["--page-bg","#161516","Page"],["--page-surface","#1D1D1D","Surface"],["--page-rule","#303030","Rule"],["--page-muted","#B7B0A8","Muted, labels"],["--page-soft","#D0C9C1","Soft, body"],["--page-fg","#F4F1EC","Foreground"],["--page-accent","#9C8B70","Accent, marks"]]'></div>
+
+      <h3 class="sub-heading">Other palettes</h3>
+      <dl class="spec spec-inline">
+        <dt>Deck</dt><dd>Each project owns its page color: white, cream #FAF7F3, lilac #F2E6FB or charcoal #222222. Ink #141414, paper text #F5F4F1. The header pill takes the page color as its text, so it stays readable on each background; check new colors anyway.</dd>
+        <dt>Case study</dt><dd>Dark #161416 or cream #F5F1EB, chosen per project.</dd>
+        <dt>Homepage</dt><dd>Paper #F4F1EC, text #423736, project names #6996AE.</dd>
+        <dt>Interaction</dt><dd>The cursor orange #FF5A36 and the hero spark colors are for interaction feedback only, not for text or surfaces.</dd>
+      </dl>
 
     </div>
   </section>
@@ -140,22 +159,23 @@
   <!-- ═══ 5 · TYPE ═══════════════════════════════════════════════════════ -->
   <section id="type">
     <div class="wrap wrap-wide reveal">
-      <p class="label eyebrow">Type</p>
-      <h2 class="section-headline">Big and tight. Small and quiet.</h2>
-      <p class="section-body">Titles carry the page. Everything else steps back.</p>
+      <p class="label eyebrow">Typography</p>
+      <h2 class="section-headline">Clear hierarchy, readable detail.</h2>
+      <p class="section-body">Large titles set the pace. Supporting text explains the work. Use the scale for the chosen format and adjust line breaks to suit the content.</p>
+      <p class="sub-body">Specs read as font size / line height / letter spacing.</p>
 
-      <h3 class="sub-heading">Graphite scale</h3>
+      <h3 class="sub-heading">Reference page</h3>
       <div class="type-table">
         <div class="type-row"><div class="type-spec"><span>Hero</span>Instrument Sans 600<br>7.5vw / .95 / -.03em</div><div class="type-sample t-hero">Design system</div></div>
         <div class="type-row"><div class="type-spec"><span>Section headline</span>Inter 500<br>38px / 1.15 / -.01em</div><div class="type-sample t-headline">Designed to be picked back up.</div></div>
         <div class="type-row"><div class="type-spec"><span>Display</span>Instrument Sans 600<br>clamp(30px, 3.6vw, 54px) / 1.04</div><div class="type-sample t-display">Making payment make sense.</div></div>
         <div class="type-row"><div class="type-spec"><span>Item title</span>Instrument Sans 600<br>19px</div><div class="type-sample t-item">No clear sense of progress</div></div>
         <div class="type-row"><div class="type-spec"><span>Body</span>Inter 300<br>16px / 1.6, soft</div><div class="type-sample t-body">Reducing the number of steps helped, but the bigger change was giving the application a visible structure.</div></div>
-        <div class="type-row"><div class="type-spec"><span>Label</span>IBM Plex Mono 400<br>10px, uppercase, .14em</div><div class="type-sample"><span class="label">Arc one &middot; Moment one</span></div></div>
+        <div class="type-row"><div class="type-spec"><span>Label</span>IBM Plex Mono 400<br>10px, uppercase, .14em</div><div class="type-sample"><span class="label">Rental application &middot; Payment</span></div></div>
         <div class="type-row"><div class="type-spec"><span>Number</span>IBM Plex Mono 400<br>20px, accent</div><div class="type-sample t-num">01</div></div>
       </div>
 
-      <h3 class="sub-heading">Deck scale</h3>
+      <h3 class="sub-heading">Portfolio deck</h3>
       <div class="deck-type">
         <div class="deck-type-sample">
           <div class="dt-header">MICAH LINDENBERGER</div>
@@ -163,13 +183,16 @@
           <p class="dt-body">Applying for a rental is long, sensitive, mostly completed on a phone, and ends with a payment.</p>
         </div>
         <dl class="spec spec-stack">
-          <dt>Title</dt><dd>Proxima Nova 400, clamp(40px, 5.2vw, 94px), line-height .79, -.03em. Mobile 64px / .88.</dd>
+          <dt>Title</dt><dd>Proxima Nova 400, clamp(40px, 5.2vw, 94px) / .79 / -.03em. Mobile 64px / .88. The tight line height is a display setting for short deck titles, not a rule for all titles.</dd>
           <dt>Stacked title</dt><dd>clamp(56px, 6vw, 96px), weight 900, line-height .94, one span per line.</dd>
           <dt>Body</dt><dd>18px / 1.4, mobile 16px. 16px between paragraphs.</dd>
           <dt>Header</dt><dd>Inter 500, 14px / 1.15, -.01em. Name in uppercase.</dd>
           <dt>Disciplines</dt><dd>13px, .02em, 75% opacity, joined with a middle dot.</dd>
         </dl>
       </div>
+
+      <h3 class="sub-heading">Case study</h3>
+      <p class="sub-body">Orpheus Pro for titles, Poppins for text, as on the micahburger.com case studies. A size scale has not been standardized yet; take sizes from the live <a href="https://micahburger.com/project/opendoor" target="_blank" rel="noopener">Opendoor case study</a> until it is.</p>
 
     </div>
   </section>
@@ -178,36 +201,38 @@
   <section id="space">
     <div class="wrap wrap-wide reveal">
       <p class="label eyebrow">Space and surface</p>
-      <h2 class="section-headline">Generous margins. Few surfaces.</h2>
-      <p class="section-body">Space does the grouping. Surfaces, radii and shadows are used sparingly and always from this short list.</p>
+      <h2 class="section-headline">Group with space first.</h2>
+      <p class="section-body">Use spacing to show what belongs together. Add a surface, border, or shadow when it helps separate content or explain an interaction.</p>
 
       <div class="space-grid">
         <div class="space-block">
-          <h3 class="sub-heading">Graphite</h3>
+          <h3 class="sub-heading">Reference page</h3>
           <ul class="measure-list">
             <li><span class="bar" style="--w:120px"></span><code>--space-section</code><em>clamp(64px, 10vw, 120px)</em></li>
             <li><span class="bar" style="--w:48px"></span><code>--gutter</code><em>clamp(20px, 6vw, 48px)</em></li>
-            <li><span class="bar bar-wide"></span><code>--content-max</code><em>1080px, 1300 to 1407 for media</em></li>
+            <li><span class="bar bar-wide"></span><code>--content-max</code><em>1080px text width</em></li>
+            <li><span class="bar bar-wide"></span><code>media width</code><em>1300 to 1407px</em></li>
           </ul>
         </div>
         <div class="space-block">
-          <h3 class="sub-heading">Deck</h3>
+          <h3 class="sub-heading">Portfolio deck, desktop</h3>
           <ul class="measure-list">
-            <li><span class="bar" style="--w:140px"></span><code>--page-margin-left</code><em>140px</em></li>
-            <li><span class="bar" style="--w:130px"></span><code>--page-margin-top</code><em>130px</em></li>
-            <li><span class="bar" style="--w:64px"></span><code>--page-margin</code><em>64px</em></li>
-            <li><span class="bar" style="--w:28px"></span><code>--page-margin-mobile</code><em>28px, top 96px</em></li>
+            <li><span class="bar" style="--w:140px"></span><code>--page-margin-left</code><em>140px left</em></li>
+            <li><span class="bar" style="--w:130px"></span><code>--page-margin-top</code><em>130px top</em></li>
+            <li><span class="bar" style="--w:64px"></span><code>--page-margin</code><em>64px right and bottom</em></li>
+            <li><span class="bar" style="--w:28px"></span><code>--page-margin-mobile</code><em>28px sides under 900px, 96px top</em></li>
           </ul>
         </div>
       </div>
 
       <h3 class="sub-heading">Radius and shadow</h3>
       <div class="surface-row">
-        <div class="surface" style="border-radius:var(--radius-sm);box-shadow:var(--shadow-sm)"><code>--radius-sm</code><em>8px</em><code>--shadow-sm</code></div>
-        <div class="surface" style="border-radius:var(--radius-md);box-shadow:var(--shadow-md)"><code>--radius-md</code><em>14px</em><code>--shadow-md</code></div>
-        <div class="surface" style="border-radius:var(--radius-lg);box-shadow:var(--shadow-lg)"><code>--radius-lg</code><em>20px</em><code>--shadow-lg</code></div>
+        <div class="surface" style="border-radius:var(--radius-sm);box-shadow:var(--shadow-sm)"><code>--radius-sm</code><em>8px</em><code>--shadow-sm</code><em>0 8px 30px / .28</em></div>
+        <div class="surface" style="border-radius:var(--radius-md);box-shadow:var(--shadow-md)"><code>--radius-md</code><em>14px</em><code>--shadow-md</code><em>0 20px 60px / .32</em></div>
+        <div class="surface" style="border-radius:var(--radius-lg);box-shadow:var(--shadow-lg)"><code>--radius-lg</code><em>20px</em><code>--shadow-lg</code><em>0 30px 80px / .4</em></div>
         <div class="surface surface-pill"><code>pill</code><em>999px</em></div>
       </div>
+      <p class="sub-body">Surfaces use these radii. Device and media frames have their own geometry (36px phones, 18px cards, 14px desktops), listed under Components.</p>
     </div>
   </section>
 
@@ -215,14 +240,15 @@
   <section id="motion">
     <div class="wrap wrap-wide reveal">
       <p class="label eyebrow">Motion</p>
-      <h2 class="section-headline">Quiet, fast, directional.</h2>
-      <p class="section-body">Five curves cover everything. Distances stay small: 12px for lists, 16px for copy, 24px for reveals, 40px for direction. Only transform and opacity move, plus a page color wash.</p>
+      <h2 class="section-headline">Make transitions easy to follow.</h2>
+      <p class="section-body">Use motion to connect states and show what changed. Keep distances short. Choose a curve for the interaction and provide a reduced-motion version.</p>
+      <p class="sub-body">Five shared curves. Distances: 12px for lists, 16px for copy, 24px for reveals, 40px for a change of direction. Transitions move transform and opacity by default; the deck&rsquo;s page color wash and the hero scramble are the documented exceptions. The scramble is an expressive effect, not a transition.</p>
       <p class="rm-note label" hidden>Reduced motion is on for this device, so the demos below play instantly.</p>
 
       <div class="curve-grid" data-curves></div>
 
       <div class="demo" id="demo-deck">
-        <div class="demo-head"><h3 class="sub-heading">Deck project change</h3><p class="demo-spec">Media leaves 320ms, copy follows 120ms later. New media arrives at 160ms, copy at 320ms. Page color crossfades 560ms.</p></div>
+        <div class="demo-head"><h3 class="sub-heading">Deck project change</h3><p class="demo-what">The current project leaves before the next one arrives. Media leads; copy follows. The background changes with the project.</p><p class="demo-spec">Timed from the moment the project changes. 0ms: media starts leaving, 320ms, move curve. 120ms: copy starts leaving, 320ms. 160ms: new media arrives, 380ms, arrive curve. 320ms: new copy arrives, 380ms. Page color crossfades over 560ms, move curve.</p></div>
         <div class="deck-demo" tabindex="0" role="group" aria-label="Deck transition demo. Use the arrow keys or buttons.">
           <div class="dd-bg"></div>
           <div class="dd-header"><span>MICAH LINDENBERGER</span><span class="dd-pill">Menu</span><span>2026 Mini portfolio</span></div>
@@ -233,7 +259,7 @@
 
       <div class="demo-pair">
         <div class="demo" id="demo-carousel">
-          <div class="demo-head"><h3 class="sub-heading">Media carousel</h3><p class="demo-spec">Auto every 4.2s, 700ms move curve. Click or drag: 400ms settle curve. Drag past 20% or flick to commit.</p></div>
+          <div class="demo-head"><h3 class="sub-heading">Media carousel</h3><p class="demo-what">Browse with the dots, arrow keys, or drag. Automatic playback pauses while you drag and when the carousel is out of view.</p><p class="demo-spec">Auto every 4.2s, 700ms move curve. Manual: 400ms settle curve. Drag past 20% of the width, or flick, to change slide.</p></div>
           <div class="carousel" tabindex="0" role="group" aria-roledescription="carousel" aria-label="Carousel demo">
             <div class="car-stage"><div class="car-track"></div></div>
             <div class="car-dots" role="tablist" aria-label="Examples"></div>
@@ -241,20 +267,20 @@
         </div>
 
         <div class="demo" id="demo-zoom">
-          <div class="demo-head"><h3 class="sub-heading">Overview zoom</h3><p class="demo-spec">FLIP with the Web Animations API, 650ms move curve. Others dim to 15% in 200ms. Click a card, then click again or press Escape.</p></div>
+          <div class="demo-head"><h3 class="sub-heading">Overview zoom</h3><p class="demo-what">Open a project from the overview. Select it again or press Escape to return.</p><p class="demo-spec">FLIP with the Web Animations API, 650ms move curve. The other cards dim to 15% in 200ms.</p></div>
           <div class="zoom-box"><div class="zoom-grid"></div></div>
         </div>
       </div>
 
       <div class="demo-trio">
         <div class="demo" id="demo-reveal">
-          <div class="demo-head"><h3 class="sub-heading">Scroll reveal</h3><p class="demo-spec">Rise 24px and fade, 400ms enter curve, once per section.</p></div>
+          <div class="demo-head"><h3 class="sub-heading">Scroll reveal</h3><p class="demo-what">Sections rise and fade into view once.</p><p class="demo-spec">24px, 400ms enter curve.</p></div>
           <div class="reveal-box"><div class="rb-line rb-label"></div><div class="rb-line rb-head"></div><div class="rb-line"></div><div class="rb-line short"></div></div>
           <div class="demo-controls"><button type="button" class="ctl" data-replay-reveal>Replay</button></div>
         </div>
 
         <div class="demo" id="demo-hover">
-          <div class="demo-head"><h3 class="sub-heading">Hover grow</h3><p class="demo-spec">Pills 1.12, cards 1.05, 320ms enter curve. Fine pointers only.</p></div>
+          <div class="demo-head"><h3 class="sub-heading">Hover feedback</h3><p class="demo-what">Buttons and cards grow slightly on hover. Only on devices with a precise pointer.</p><p class="demo-spec">Buttons 1.12, cards 1.05, 320ms enter curve.</p></div>
           <div class="hover-box">
             <span class="grow-pill">Menu</span>
             <span class="grow-card"></span>
@@ -262,7 +288,7 @@
         </div>
 
         <div class="demo" id="demo-drawer">
-          <div class="demo-head"><h3 class="sub-heading">Drawer and jump list</h3><p class="demo-spec">In: 36px and fade, 240ms enter curve. Out: 180ms exit curve.</p></div>
+          <div class="demo-head"><h3 class="sub-heading">Drawer</h3><p class="demo-what">Open a panel without losing the current page.</p><p class="demo-spec">In: 36px and fade, 240ms enter curve. Out: 180ms exit curve.</p></div>
           <div class="drawer-box">
             <div class="drawer" hidden><p class="label">Design controls</p><div class="rb-line"></div><div class="rb-line short"></div><div class="rb-line"></div></div>
           </div>
@@ -272,17 +298,17 @@
 
       <div class="demo-pair">
         <div class="demo" id="demo-cursor">
-          <div class="demo-head"><h3 class="sub-heading">Custom cursor</h3><p class="demo-spec">16px white dot with difference blending. Orange over anything clickable, darker while grabbing. Move into the box.</p></div>
-          <div class="cursor-zone"><div class="cz-dot" aria-hidden="true"></div><button type="button" class="cz-button">A button</button><span class="cz-drag">Drag me</span></div>
+          <div class="demo-head"><h3 class="sub-heading">Custom cursor</h3><p class="demo-what">The cursor changes over links and draggable content. Move into the box to try it.</p><p class="demo-spec">16px white dot, difference blending. #FF5A36 over anything clickable, #DB4D2E while grabbing.</p></div>
+          <div class="cursor-zone"><div class="cz-dot" aria-hidden="true"></div><button type="button" class="cz-button">Hover this button</button><span class="cz-drag">Drag me</span></div>
         </div>
         <div class="demo" id="demo-scramble">
-          <div class="demo-head"><h3 class="sub-heading">Hero scramble</h3><p class="demo-spec">GSAP SplitText. On hover each character flashes a spark color for 300ms, rippling out from the center. Half swap to a random glyph, a third show their width. After 6s idle a random line plays every 4s.</p></div>
+          <div class="demo-head"><h3 class="sub-heading">Hero scramble</h3><p class="demo-what">An expressive hover effect for the page title.</p><p class="demo-spec">GSAP SplitText. Each character flashes a spark color for 300ms, rippling out from the center; half swap to a random glyph, a third show their width. After 6s without pointer movement, one line plays every 4s. Reduced motion: the title never splits or moves.</p></div>
           <div class="scramble-note"><p>The live version is the title at the top of this page.</p><button type="button" class="ctl" data-to-hero>Go to the hero &uarr;</button></div>
         </div>
       </div>
 
-      <h3 class="sub-heading">Page to page</h3>
-      <p class="sub-body">Recommended for multi-page sites. Native View Transitions with the same curves. Chrome, Edge and Safari animate it, Firefox simply navigates.</p>
+      <h3 class="sub-heading">Page transitions</h3>
+      <p class="sub-body">Connect related pages with a short transition. Navigation should still work when transitions are unavailable. This uses native View Transitions with the same curves; browsers without support navigate normally.</p>
       <pre class="code" data-copyable><code>@view-transition { navigation: auto; }
 ::view-transition-old(root) { animation: .32s cubic-bezier(.65,0,.35,1) both vt-out; }
 ::view-transition-new(root) { animation: .38s cubic-bezier(.23,1,.32,1) .16s both vt-in; }
@@ -291,7 +317,15 @@
 .case-hero-media { view-transition-name: hero-media; }</code></pre>
 
       <h3 class="sub-heading">Reduced motion</h3>
-      <p class="sub-body">Required on every build. Transitions drop to 120ms, keyframes are removed, view changes become a 150ms crossfade, carousels stop, zooms become fades, and the hero is never split.</p>
+      <p class="sub-body">Respect reduced-motion preferences across the site. Remove decorative animation, stop automatic slides, and keep view changes simple. Content and controls should remain usable without animation.</p>
+      <dl class="spec spec-inline">
+        <dt>Transitions</dt><dd>Color and state transitions drop to 120ms. Keyframe animations are removed.</dd>
+        <dt>Deck</dt><dd>The project change becomes a 150ms crossfade.</dd>
+        <dt>Carousels</dt><dd>Automatic slides stop. Manual changes still work.</dd>
+        <dt>Zoom</dt><dd>Becomes a fade.</dd>
+        <dt>Hero</dt><dd>The title is never split or scrambled.</dd>
+        <dt>Featured rows</dt><dd>Hold on the first frame.</dd>
+      </dl>
     </div>
   </section>
 
@@ -299,8 +333,8 @@
   <section id="components">
     <div class="wrap wrap-wide reveal">
       <p class="label eyebrow">Components</p>
-      <h2 class="section-headline">A short list of parts.</h2>
-      <p class="section-body">Most pages need only these. Each one already exists on a live site.</p>
+      <h2 class="section-headline">Reusable parts for presenting the work.</h2>
+      <p class="section-body">Use these for navigation, media, and supporting detail. Each example includes where it belongs and how it behaves. The deck header, media frames and progress dots come from the portfolio deck; the chapter bar, chapter menu and text control are from this page.</p>
 
       <div class="comp-grid">
         <article class="comp comp-span">
@@ -310,7 +344,8 @@
             <div class="hdr" style="--bg:#000000;--fg:#F5F4F1"><span>MICAH LINDENBERGER</span><span class="hdr-pill">Close</span><span>2026 Mini portfolio</span></div>
           </div>
           <h3>Deck header</h3>
-          <p>Centered, Inter 500 14px. The pill fills with the header color and takes the page color as its text, so it always inverts.</p>
+          <p>Use across deck pages for identity and navigation. Keep the menu button readable on each project background.</p>
+          <p class="comp-spec">Centered, Inter 500 14px. The pill fills with the header text color and uses the page color for its label.</p>
         </article>
 
         <article class="comp comp-span">
@@ -320,7 +355,8 @@
             <div class="frame frame-desktop"><span>Desktop<br>440w, 16/10, r14</span></div>
           </div>
           <h3>Media frames</h3>
-          <p>Placeholders inside a 786 by 762 box. Real exported screens drop the frame and its shadow.</p>
+          <p>Use frames when a device or viewport helps explain the screen. Let exported product visuals stand alone when they already include that context.</p>
+          <p class="comp-spec">Inside a 786 &times; 762 media box. Phone 260px wide, 9:19, radius 36. Card 340px, 4:3, radius 18. Desktop 440px, 16:10, radius 14.</p>
         </article>
 
         <article class="comp">
@@ -328,7 +364,8 @@
             <div class="dots"><span class="is-active"></span><span></span><span></span></div>
           </div>
           <h3>Progress dots</h3>
-          <p>8px circles, 12px apart, with a 12px invisible hit area. Active dot is the text color at 90%.</p>
+          <p>Show the active item in a small gallery. Keep the indicators visually small and give each control enough space to select.</p>
+          <p class="comp-spec">8px dot, 12px apart. Each dot&rsquo;s clickable area extends 12px past it on every side, a 32px square. Active dot: text color at 90%.</p>
         </article>
 
         <article class="comp">
@@ -340,7 +377,8 @@
             </div></div></div>
           </div>
           <h3>Chapter bar</h3>
-          <p>Fixed bottom right. Count, chapter name, a ring that fills as you scroll, and a Menu button. Hidden while the hero is in view. Try the real one.</p>
+          <p>Help people navigate a long page. Show the current section and a Menu button that opens the chapter list.</p>
+          <p class="comp-spec">Fixed bottom right, hidden while the hero is in view. Count, chapter name and a ring that fills with scroll position. The button&rsquo;s accessible name is &ldquo;Chapter menu&rdquo;.</p>
         </article>
 
         <article class="comp">
@@ -351,19 +389,21 @@
             </ol>
           </div>
           <h3>Numbered breakdown</h3>
-          <p>Mono number in accent, Instrument Sans title, short body, hairline rule between items.</p>
+          <p>Use for a short sequence or a small set of related findings. Give each item a clear title and one useful explanation.</p>
+          <p class="comp-spec">Mono number in accent, Instrument Sans title, short body, hairline rule between items.</p>
         </article>
 
         <article class="comp">
           <div class="comp-stage">
-            <p class="label">Moment one</p>
+            <p class="label">Payment step</p>
             <ol class="notes">
               <li><span class="n">01</span>When a step is complete, its number becomes a check.</li>
               <li><span class="n">02</span>The primary action changes from Start to Continue.</li>
             </ol>
           </div>
           <h3>Annotation notes</h3>
-          <p>Sit beside a screen. Sticky on wide screens so they travel with the phone they describe.</p>
+          <p>Explain a specific behavior beside the relevant screen. On wide layouts, notes can stay in view with the media.</p>
+          <p class="comp-spec">Mono numbers, 13px body. Sticky on wide screens.</p>
         </article>
 
         <article class="comp">
@@ -371,7 +411,8 @@
             <button type="button" class="text-link">Replay animation</button>
           </div>
           <h3>Text control</h3>
-          <p>Mono 11px, uppercase, muted. Underline appears on hover. Never accent colored.</p>
+          <p>Use for supporting actions such as replaying a demo. Keep the label clear, with visible hover and keyboard-focus states.</p>
+          <p class="comp-spec">Mono 11px, uppercase, muted. Underline on hover. Kept out of the accent so it reads as secondary to the content.</p>
         </article>
 
         <article class="comp">
@@ -379,13 +420,14 @@
             <div class="chapter-nav cn-static" aria-hidden="true"><div class="cn-panel">
               <div class="cn-body">
                 <p class="cn-head"><span>Chapters</span><span>Design system</span></p>
-                <div class="cn-list"><span><i>01</i>Hero</span><span><i>02</i>Principles</span><span><i>03</i>Registers</span><span class="active"><i>04</i>Color</span><span><i>05</i>Type</span><span><i>06</i>Space</span></div>
+                <div class="cn-list"><span><i>01</i>Hero</span><span><i>02</i>Principles</span><span><i>03</i>Formats</span><span class="active"><i>04</i>Color</span><span><i>05</i>Typography</span><span><i>06</i>Space</span></div>
               </div>
               <div class="cn-bar"><svg class="cn-ring" viewBox="0 0 16 16" style="--p:.33"><circle class="cn-ring-bg" cx="8" cy="8" r="6" /><circle class="cn-ring-fg" cx="8" cy="8" r="6" pathLength="1" /></svg><span class="cn-count">04 / 12</span><span class="cn-name">Color</span><span class="cn-toggle"><span class="cn-roll"><span style="transform:translateY(-100%)">Menu</span><span style="transform:translateY(-100%)">Close</span></span></span></div>
             </div></div>
           </div>
           <h3>Chapter menu</h3>
-          <p>The bar grows into this, anchored bottom right: 420ms on the enter curve, chapters rising 22ms apart. Closing fades first, then shrinks in 320ms. Current chapter takes the accent.</p>
+          <p>Open the section list from the chapter bar. Mark the current chapter and make each destination easy to identify.</p>
+          <p class="comp-spec">The bar grows into the menu from its bottom-right corner, 420ms enter curve; chapters rise 22ms apart. Closing fades the content, then shrinks in 320ms. Arrow keys move between chapters.</p>
         </article>
       </div>
     </div>
@@ -395,8 +437,8 @@
   <section id="layouts">
     <div class="wrap wrap-wide reveal">
       <p class="label eyebrow">Layouts</p>
-      <h2 class="section-headline">Text left, work right.</h2>
-      <p class="section-body">The deck holds one composition per screen. The long-form page stacks a few repeatable sections.</p>
+      <h2 class="section-headline">Match the layout to the content.</h2>
+      <p class="section-body">The deck gives each project a focused introduction. Case studies use a longer sequence of text and screens. Start with these layouts and adjust for the work.</p>
 
       <div class="layout-grid">
         <figure class="wire">
@@ -405,16 +447,16 @@
             <div class="w-text"><b>Text</b><em>600px</em></div>
             <div class="w-gap"><em>clamp(48px, 8vw, 125px)</em></div>
             <div class="w-media"><b>Media</b><em>786 &times; 762</em></div>
-            <span class="w-m w-ml">140</span><span class="w-m w-mt">130</span><span class="w-m w-mr">64</span>
+            <span class="w-m w-ml">140px</span><span class="w-m w-mt">130px</span><span class="w-m w-mr">64px</span>
           </div>
-          <figcaption><strong>Deck project.</strong> Both columns centered vertically. Bleed, panel and open share this frame; panel fills the page with the active slide's color.</figcaption>
+          <figcaption><strong>Deck project.</strong> Pair a short explanation with prominent media. On wide screens, use two columns. Stack the content when space is limited.<span class="cap-spec">Text 600px, media 786 &times; 762, both centered vertically. Padding: 130px top, 64px right and bottom, 140px left. One variant fills the whole page with the project&rsquo;s color.</span></figcaption>
         </figure>
 
         <figure class="wire">
           <div class="wire-stage wire-overview">
             <span></span><span></span><span></span><span></span>
           </div>
-          <figcaption><strong>Overview.</strong> Black page, two columns, 56px gap, padding 140 64 96. Each card is the real page scaled with container query units. One column under 900px.</figcaption>
+          <figcaption><strong>Project overview.</strong> Show the selected projects together so someone can understand the range before choosing one. This is the layout behind the &ldquo;Start with the overview&rdquo; principle; the overview zoom under Motion is how a card opens.<span class="cap-spec">Black page, two columns, 56px gap. Padding: 140px top, 64px sides, 96px bottom. Each card is the real page, scaled down. One column under 900px.</span></figcaption>
         </figure>
 
         <figure class="wire">
@@ -422,7 +464,7 @@
             <div class="wr-label"><b>Work<br>history</b></div>
             <div class="wr-rows"><span></span><span></span><span></span></div>
           </div>
-          <figcaption><strong>Resume.</strong> Label column minmax(240px, 380px), content 1fr, 64px apart. 72px logos, 56px between rows.</figcaption>
+          <figcaption><strong>Work history.</strong> Keep roles, companies, and dates easy to scan. Use a consistent structure for each entry.<span class="cap-spec">Label column 240 to 380px, content fills the rest, 64px apart. 72px logos, 56px between entries.</span></figcaption>
         </figure>
 
         <figure class="wire">
@@ -432,12 +474,13 @@
             <span class="wl-list"><i></i><i></i><i></i></span>
             <span class="wl-split wl-rev"><i></i><i></i></span>
           </div>
-          <figcaption><strong>Long-form.</strong> Serif title and overview at the top, full-width UI under them, then problem and solution sections that alternate text and screens.</figcaption>
+          <figcaption><strong>Case study.</strong> Start with the project and my role. Follow with the decisions and relevant screens, then the outcome or learning.<span class="cap-spec">Serif title and overview at the top, full-width UI under them, then sections that alternate text and screens.</span></figcaption>
         </figure>
       </div>
 
       <h3 class="sub-heading">Breakpoints</h3>
-      <dl class="spec spec-inline"><dt>900px</dt><dd>Columns stack, the deck scrolls, header turns fixed with a color scrim.</dd><dt>600px</dt><dd>Tighter header, 12px gaps.</dd><dt>2000px</dt><dd>The composition centers instead of stretching.</dd></dl>
+      <p class="sub-body">These are the portfolio deck&rsquo;s breakpoints.</p>
+      <dl class="spec spec-inline"><dt>Under 600px</dt><dd>The header tightens and its items sit 12px apart.</dd><dt>Under 900px</dt><dd>Columns stack and the deck becomes a scrolling page. Navigation stays visible, over a fade of the page color.</dd><dt>Over 2000px</dt><dd>The composition centers instead of stretching.</dd></dl>
     </div>
   </section>
 
@@ -445,19 +488,21 @@
   <section id="patterns">
     <div class="wrap wrap-wide reveal">
       <p class="label eyebrow">Portfolio patterns</p>
-      <h2 class="section-headline">Ways to show the work.</h2>
-      <p class="section-body">Seven patterns for indexes and case studies. The first is the homepage overview from micahburger.com; the rest take ideas from Semplice's portfolio grids, rebuilt in this system's tokens and motion.</p>
+      <h2 class="section-headline">Choose how people explore the work.</h2>
+      <p class="section-body">Use an overview to show range, a gallery to show a sequence, and a comparison when the change is easier to see side by side.</p>
+      <p class="sub-body">Sources: the featured project row is from the micahburger.com homepage. The others adapt ideas from Semplice&rsquo;s portfolio grids, rebuilt with this system&rsquo;s tokens and motion.</p>
 
       <div class="pattern" id="pattern-featured">
         <div class="pattern-head">
           <h3 class="sub-heading">Featured project row</h3>
-          <p class="demo-spec">The micahburger.com homepage. Copy on the left: the project name in link blue, then one paragraph on the client, the team and the goal. On the right, a 16:9 card that rotates through four frames, 2s each: the brand logo over a photo, then three UI highlights. Rotation starts when the card is in view and stops when it leaves. The whole row opens the case study in a new tab.</p>
+          <p class="demo-what">Pair a project summary with a preview of the work. Use it when someone should understand the project before opening the case study.</p>
+          <p class="demo-spec">Copy left, project name in link blue. A 16:9 card on the right rotates four frames, 2s each: the brand logo over a photo, then three UI highlights. It runs only while in view. The row opens the case study in a new tab.</p>
         </div>
         <div class="fp-stage">
           <p class="fp-heading">Featured Projects</p>
           <div class="fp-list" data-cursor="View">
             <a class="fp-row" href="https://micahburger.com/project/infinity" target="_blank" rel="noopener">
-              <p class="fp-copy"><span class="fp-name">Infinity Thermostat</span> I led a creative team to design a digital thermostat and app for Infinity, Carrier&rsquo;s premium smart home brand, with the goal of modernizing their legacy app and wall controller for a more seamless digital experience.</p>
+              <p class="fp-copy"><span class="fp-name">Infinity Thermostat</span> I led a creative team redesigning Carrier&rsquo;s Infinity thermostat and app. We updated the wall controller and mobile experience to make everyday controls easier to use.</p>
               <div class="fp-media"><div class="fp-card" style="--fp-bg:#292C33">
                 <img class="is-on" src="img/featured/infinity-0.webp" srcset="img/featured/infinity-0-800.webp 800w, img/featured/infinity-0.webp 1600w" sizes="(max-width: 800px) 100vw, 640px" alt="Carrier logo over a black and white photo." loading="lazy" />
                 <img src="img/featured/infinity-1.webp" srcset="img/featured/infinity-1-800.webp 800w, img/featured/infinity-1.webp 1600w" sizes="(max-width: 800px) 100vw, 640px" alt="Infinity wall controller screens." loading="lazy" />
@@ -466,7 +511,7 @@
               </div></div>
             </a>
             <a class="fp-row" href="https://micahburger.com/project/bbc" target="_blank" rel="noopener">
-              <p class="fp-copy"><span class="fp-name">BBC News Stream</span> Collaborating with the BBC News digital team, we designed a video-led news experience to engage and expand their user base, focusing on an intuitive platform that prioritized video content to capture and retain attention.</p>
+              <p class="fp-copy"><span class="fp-name">BBC News Stream</span> I worked with the BBC News digital team on a video-led news experience, designing how people discover stories and move between videos.</p>
               <div class="fp-media"><div class="fp-card" style="--fp-bg:#101010">
                 <img class="is-on" src="img/featured/bbc-0.webp" srcset="img/featured/bbc-0-800.webp 800w, img/featured/bbc-0.webp 1600w" sizes="(max-width: 800px) 100vw, 640px" alt="BBC News logo over a newsroom photo." loading="lazy" />
                 <img src="img/featured/bbc-1.webp" srcset="img/featured/bbc-1-800.webp 800w, img/featured/bbc-1.webp 1600w" sizes="(max-width: 800px) 100vw, 640px" alt="BBC News Stream story card on a phone." loading="lazy" />
@@ -476,13 +521,14 @@
             </a>
           </div>
         </div>
-        <dl class="spec fp-spec"><dt>Type</dt><dd>Poppins 400, name and copy at one size</dd><dt>Color</dt><dd>Paper #F4F1EC, text #423736, name #6996AE</dd><dt>Card</dt><dd>16:9, radius 3.7% of its width, the project&rsquo;s own dark</dd><dt>Frames</dt><dd>Logo, then three UI highlights, 2s each</dd></dl>
+        <dl class="spec fp-spec"><dt>Type</dt><dd>Poppins 400, name and copy at one size</dd><dt>Color</dt><dd>Paper #F4F1EC, text #423736, name #6996AE. The name blue is 2.8:1 on the paper, so it always sits inside full-contrast copy.</dd><dt>Card</dt><dd>16:9, radius 3.7% of its width, the project&rsquo;s own dark</dd><dt>Frames</dt><dd>Logo, then three UI highlights, 2s each</dd></dl>
       </div>
 
       <div class="pattern" id="pattern-table">
         <div class="pattern-head">
           <h3 class="sub-heading">Table index</h3>
-          <p class="demo-spec">Rows on hairline rules. Hover fills the row with a color sampled from that project's thumbnail, from the bottom, 250ms enter curve. The thumbnail follows the cursor with a soft lag. The same list as the homev2 draft on micahburger.com.</p>
+          <p class="demo-what">A compact list for a larger body of work. Keep the project name and category visible; the hover preview adds a quick look.</p>
+          <p class="demo-spec">Rows on hairline rules. Hover fills the row from the bottom with a color sampled from the project&rsquo;s thumbnail, 250ms enter curve, and the thumbnail follows the pointer. Projects from <a href="https://micahburger.com/" target="_blank" rel="noopener">micahburger.com</a>.</p>
         </div>
         <div class="table-grid" data-cursor="View">
           <div class="tg-head" aria-hidden="true"><span>No.</span><span>Project</span><span>Industry</span></div>
@@ -524,7 +570,8 @@
       <div class="pattern" id="pattern-text">
         <div class="pattern-head">
           <h3 class="sub-heading">Text index</h3>
-          <p class="demo-spec">Large centered titles. Hover dims the others to 20% and brings that project's screen up behind, 400ms enter curve. Calmer than the table, for three to six projects.</p>
+          <p class="demo-what">A simple list for a small selection of projects, three to six. Let the titles lead, with previews that support browsing.</p>
+          <p class="demo-spec">Large centered titles. Hover dims the others to 20% and brings that project&rsquo;s screen up behind, 400ms enter curve.</p>
         </div>
         <div class="text-grid" data-cursor="View">
           <div class="txg-stage" aria-hidden="true">
@@ -545,7 +592,8 @@
       <div class="pattern" id="pattern-gallery">
         <div class="pattern-head">
           <h3 class="sub-heading">Gallery slider</h3>
-          <p class="demo-spec">Big UI, one frame at a time. Auto advances every 4.2s on the 700ms move curve while in view; arrows, keys, drag and a flick use the 400ms settle curve. Pauses on hover. Lincoln, Build and Price.</p>
+          <p class="demo-what">Show related screens or stages in sequence. Give each frame a useful caption and a clear way to move through the gallery.</p>
+          <p class="demo-spec">Auto advances every 4.2s on the 700ms move curve while in view, and pauses on hover. Arrows, keys, drag and a flick use the 400ms settle curve. Example: Lincoln, Build and Price.</p>
         </div>
         <div class="gallery-slider" tabindex="0" role="group" aria-roledescription="carousel" aria-label="Lincoln gallery">
           <div class="gs-stage" data-cursor="Drag">
@@ -582,7 +630,8 @@
       <div class="pattern" id="pattern-compare">
         <div class="pattern-head">
           <h3 class="sub-heading">Before and after</h3>
-          <p class="demo-spec">Drag the divider, or focus it and use the arrow keys. A click settles on the 400ms settle curve. Every redesign case study should have one. Here: Opendoor's preliminary offer in Eero, the previous system, and in Novo.</p>
+          <p class="demo-what">Compare the same part of the experience in two versions. Use it when comparable visuals explain a meaningful change. Align the images and say what to look for.</p>
+          <p class="demo-spec">Drag the divider, or focus it and use the arrow keys. A click settles on the 400ms settle curve. Example: Opendoor&rsquo;s preliminary offer in Eero, the previous design system, and in Novo.</p>
         </div>
         <div class="compare-wrap">
           <figure class="compare" data-cursor="Drag" style="--pos:50%">
@@ -597,7 +646,7 @@
             <p class="compare-line">Eero spread the offer across a busy page. Novo leads with one offer card, the cash range and a single next step.</p>
             <dl class="spec spec-stack">
               <dt>Frame</dt><dd>Both images exported on the same canvas, so the divider lines up.</dd>
-              <dt>Labels</dt><dd>Mono tags, V1 left, V2 right. Never color-code them.</dd>
+              <dt>Labels</dt><dd>Mono tags, V1 left, V2 right. Text rather than color, so the comparison reads without relying on color.</dd>
             </dl>
           </div>
         </div>
@@ -605,16 +654,18 @@
 
       <div class="pattern" id="pattern-lit">
         <div class="pattern-head">
-          <h3 class="sub-heading">Scroll-lit statement</h3>
-          <p class="demo-spec">One sentence per case study, usually the thesis. Words go from rule gray to foreground as the line crosses the middle of the screen. Plain scroll position, no library. Reduced motion shows it fully lit.</p>
+          <h3 class="sub-heading">Key insight</h3>
+          <p class="demo-what">Highlight an insight when it helps explain a decision. The sentence should still be readable without animation.</p>
+          <p class="demo-spec">Words go from rule gray to foreground as the line crosses the middle of the screen. Plain scroll position, no library. Reduced motion shows it fully lit.</p>
         </div>
-        <p class="lit" data-lit>Payment placement was never the real variable. Comprehension was. That idea became the foundation for the next test.</p>
+        <p class="lit" data-lit>The test shifted my focus from payment placement to whether applicants understood what they were paying for.</p>
       </div>
 
       <div class="pattern" id="pattern-cursor">
         <div class="pattern-head">
           <h3 class="sub-heading">Cursor labels</h3>
-          <p class="demo-spec">On these patterns the dot grows into a pill that says what a click does: View on links, Drag on the slider. Ink on the active cursor color. Fine pointers only; touch never sees it.</p>
+          <p class="demo-what">Add a short hint for pointer interactions, such as View or Drag. Keep the underlying control understandable without the custom cursor: links and captions still say what they do.</p>
+          <p class="demo-spec">The dot grows into a pill: View on links, Drag on the slider. Precise pointers only; touch never sees it.</p>
         </div>
         <dl class="spec spec-inline">
           <dt>Size</dt><dd>16px dot grows to a 28px tall pill, 250ms enter curve.</dd>
@@ -632,43 +683,43 @@
   <section id="case-studies">
     <div class="wrap wrap-wide reveal">
       <p class="label eyebrow">Case studies</p>
-      <h2 class="section-headline">Problem, move, proof.</h2>
-      <p class="section-body">Two templates. Both end with something measured.</p>
+      <h2 class="section-headline">Explain the decisions. Show what changed.</h2>
+      <p class="section-body">Give readers enough context to understand the problem, my contribution, and the result. Use the format that fits the project.</p>
 
       <div class="template-grid">
         <article class="template">
-          <p class="label">Deck card</p>
+          <p class="label">Portfolio deck</p>
           <div class="deck-card-sample">
             <p class="dcs-title">Applicant experience</p>
-            <p><mark>Problem.</mark> Applying for a rental is long, sensitive, mostly completed on a phone, and ends with a payment.</p>
-            <p><mark>Move.</mark> I restructured the application into clear chapters that follow the applicant's mental model.</p>
-            <p><mark>Media.</mark> Three screens, each with a plain label.</p>
+            <p><mark>Context</mark> Applying for a rental is long, sensitive, mostly completed on a phone, and ends with a payment.</p>
+            <p><mark>My contribution</mark> I restructured the application into clear chapters that follow the applicant's mental model.</p>
+            <p><mark>Screens</mark> Three screens, each with a plain label.</p>
           </div>
           <ul class="rules">
-            <li>Title: two to four words naming the surface.</li>
-            <li>First paragraph: who, what context, why it is hard.</li>
-            <li>Second paragraph starts with "I" and a strong verb.</li>
-            <li>Optional third line: status or one number.</li>
+            <li>Name the project clearly.</li>
+            <li>Explain who it was for and what needed to improve.</li>
+            <li>Describe my contribution and the main change.</li>
+            <li>Show a few screens that support the explanation.</li>
+            <li>Include a result, learning, or current status when it adds useful context.</li>
           </ul>
         </article>
 
         <article class="template">
-          <p class="label">Long-form, top to bottom</p>
+          <p class="label">Case study</p>
           <ol class="outline">
-            <li><i>01</i><b>Title</b><span>Two lines of Orpheus Pro. The product name, or what changed: "Redesign of Opendoor&rsquo;s seller experience".</span></li>
-            <li><i>02</i><b>Overview</b><span>Two short paragraphs beside or under the title: the challenge, then what I led.</span></li>
-            <li><i>03</i><b>Objective, role</b><span>One sentence each, bold label in sage #C3C3AF.</span></li>
-            <li><i>04</i><b>Hero UI</b><span>Full width and big. Real screens, or the device in hand.</span></li>
-            <li><i>05</i><b>Challenge</b><span>Pain points or the brief, each a bold title and a short body beside a screen.</span></li>
-            <li><i>06</i><b>What changed</b><span>Feature by feature, text with UI, alternating sides. Sliders for directions.</span></li>
-            <li><i>07</i><b>Outcomes</b><span>Learnings and business impact, with numbers. Project team last.</span></li>
+            <li><i>01</i><b>Overview</b><span>What the project was, who it served, and why it mattered.</span></li>
+            <li><i>02</i><b>My role</b><span>What I owned and how I worked with the team.</span></li>
+            <li><i>03</i><b>The problem</b><span>The specific friction or opportunity, supported by evidence.</span></li>
+            <li><i>04</i><b>The decisions</b><span>What changed, what I considered, and why I chose this direction. Put relevant screens beside the explanation.</span></li>
+            <li><i>05</i><b>The result</b><span>What shipped, what was measured, or what I learned. Be clear about what is still unknown.</span></li>
           </ol>
+          <p class="comp-spec">On micahburger.com the title is usually two lines of Orpheus Pro, with Objective and Role as bold labels under the overview. Those are layout defaults, not rules for every project.</p>
         </article>
       </div>
 
       <div class="callout">
-        <p class="pull-line">Every case study needs at least one number.</p>
-        <p class="section-body">"22% rise in video call scheduling." "Closings 3 days faster." If the number is not known yet, leave a marked placeholder. Never invent one.</p>
+        <p class="pull-line">Use evidence that fits the claim.</p>
+        <p class="section-body">Include a metric when it helps explain the result. For work without outcome data, describe what changed, what testing showed, or what remains unmeasured. Keep a measured result separate from a hypothesis, a design intention, or an early signal. Never invent a number, and keep internal placeholders out of published case studies.</p>
       </div>
     </div>
   </section>
@@ -677,14 +728,21 @@
   <section id="voice">
     <div class="wrap reveal">
       <p class="label eyebrow">Voice</p>
-      <h2 class="section-headline">Say less. Mean it.</h2>
-      <div class="voice-list">
-        <div class="voice-row"><p class="v-rule">No em dashes.</p><p class="v-do">The flow had no save point. People left.</p><p class="v-dont">The flow had no save point &mdash; and people left.</p></div>
-        <div class="voice-row"><p class="v-rule">Headlines are sentences.</p><p class="v-do">Designed to be picked back up.</p><p class="v-dont">Progress &amp; Resumption Framework</p></div>
-        <div class="voice-row"><p class="v-rule">First person for decisions.</p><p class="v-do">I collapsed the common path to a few taps.</p><p class="v-dont">The team leveraged synergies to streamline workflows.</p></div>
-        <div class="voice-row"><p class="v-rule">Name the real insight.</p><p class="v-do">Payment placement was never the real variable, comprehension was.</p><p class="v-dont">We tested several payment placements.</p></div>
-        <div class="voice-row"><p class="v-rule">Restraint over addition.</p><p class="v-do">Cut the adjective, the second example and anything the screen already shows.</p><p class="v-dont">An incredibly intuitive, beautifully crafted, seamless experience.</p></div>
+      <h2 class="section-headline">Be specific. Keep it direct.</h2>
+      <p class="section-body">Write the way I explain the work to another designer: what was happening, what I changed, and why. Keep the useful detail and remove the rest.</p>
+      <div class="voice-list voice-list-single">
+        <div class="voice-row"><p class="v-rule">Name the problem.</p><p class="v-do">Applicants couldn&rsquo;t tell how much was left.</p></div>
+        <div class="voice-row"><p class="v-rule">Explain the decision.</p><p class="v-do">I grouped the application into sections so applicants could see their progress.</p></div>
+        <div class="voice-row"><p class="v-rule">Be clear about ownership.</p><p class="v-do">I led the interaction design and worked with engineering on the responsive behavior.</p></div>
+        <div class="voice-row"><p class="v-rule">Match the claim to the evidence.</p><p class="v-do">The next test will show whether the new explanation helps.</p></div>
+        <div class="voice-row"><p class="v-rule">Give each sentence a job.</p><p class="v-do">Use the caption to explain what changed. Let the screen show the layout.</p></div>
       </div>
+      <dl class="spec spec-inline voice-notes">
+        <dt>Edit</dt><dd>Remove repeated context, vague adjectives, and explanations the visual already provides.</dd>
+        <dt>Headings</dt><dd>Make a clear point. Use short labels for navigation and reference sections.</dd>
+        <dt>Credit</dt><dd>Name collaborators where the work is described. First person makes ownership clear; it is not a sentence template.</dd>
+        <dt>Style</dt><dd>No em dashes.</dd>
+      </dl>
     </div>
   </section>
 
@@ -694,16 +752,17 @@
     <div class="wrap wrap-wide">
       <div class="footer-grid">
         <div>
-          <p class="label">Use it</p>
-          <p class="section-body">Copy <a href="css/tokens.css" download>tokens.css</a> into a new project, or ask Claude to use the <code>micah-design-system</code> skill.</p>
+          <p class="label">Use this system</p>
+          <p class="section-body">Start with the tokens and the format that fits the project. Use the examples as a reference, then adapt the content and layout to the work.</p>
+          <p class="sub-body"><a href="css/tokens.css" download>Download tokens.css</a>. The file carries color, type, spacing and motion values. Fonts, components, layouts and interaction code are examples on this page, not a package.</p>
         </div>
         <div>
           <p class="label">Sources</p>
           <ul class="foot-links">
-            <li><a href="https://2026folio.micahburger.com/" target="_blank" rel="noopener">2026folio.micahburger.com</a></li>
-            <li><a href="https://applicants.micahburger.com/" target="_blank" rel="noopener">applicants.micahburger.com</a></li>
-            <li><a href="https://lattice2026.micahburger.com/" target="_blank" rel="noopener">lattice2026.micahburger.com</a></li>
-            <li><a href="https://micahburger.com/" target="_blank" rel="noopener">micahburger.com</a></li>
+            <li><a href="https://2026folio.micahburger.com/" target="_blank" rel="noopener">Portfolio deck</a></li>
+            <li><a href="https://applicants.micahburger.com/" target="_blank" rel="noopener">Application case study</a></li>
+            <li><a href="https://lattice2026.micahburger.com/" target="_blank" rel="noopener">Lattice</a></li>
+            <li><a href="https://micahburger.com/" target="_blank" rel="noopener">Earlier portfolio</a></li>
           </ul>
         </div>
         <div>
@@ -717,11 +776,11 @@
     </div>
   </footer>
 
-  <script src="js/shell.js?v=10"></script>
-  <script src="js/demos.js?v=10"></script>
-  <script src="js/patterns.js?v=10"></script>
+  <script src="js/shell.js?v=11"></script>
+  <script src="js/demos.js?v=11"></script>
+  <script src="js/patterns.js?v=11"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
-  <script src="js/hero.js?v=10"></script>
+  <script src="js/hero.js?v=11"></script>
 </body>
 </html>

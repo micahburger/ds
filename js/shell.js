@@ -11,9 +11,9 @@
 const SECTIONS = [
   { id: 'hero',         name: 'Hero' },
   { id: 'principles',   name: 'Principles' },
-  { id: 'registers',    name: 'Registers' },
+  { id: 'formats',      name: 'Formats' },
   { id: 'color',        name: 'Color' },
-  { id: 'type',         name: 'Type' },
+  { id: 'type',         name: 'Typography' },
   { id: 'space',        name: 'Space' },
   { id: 'motion',       name: 'Motion' },
   { id: 'components',   name: 'Components' },

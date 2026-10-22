@@ -56,11 +56,11 @@ if (RM) { const n = document.querySelector('.rm-note'); if (n) n.hidden = false;
 
 /* ── Curves ───────────────────────────────────────────────────────────── */
 const CURVES = [
-  { name: 'Enter',  bez: [.22, 1, .36, 1],  dur: 400, spec: 'cubic-bezier(.22,1,.36,1)', time: '200 to 400ms', use: 'Reveals, hover, drawers opening.' },
-  { name: 'Arrive', bez: [.23, 1, .32, 1],  dur: 380, spec: 'cubic-bezier(.23,1,.32,1)', time: '380ms', use: 'Deck media and copy arriving.' },
-  { name: 'Exit',   bez: [.4, 0, 1, 1],     dur: 180, spec: 'cubic-bezier(.4,0,1,1)',    time: '150 to 180ms', use: 'Anything leaving. Always shorter.' },
-  { name: 'Move',   bez: [.65, 0, .35, 1],  dur: 700, spec: 'cubic-bezier(.65,0,.35,1)', time: '320 to 700ms', use: 'Page color, auto slides, zoom.' },
-  { name: 'Settle', bez: [.32, .72, 0, 1],  dur: 400, spec: 'cubic-bezier(.32,.72,0,1)', time: '400ms', use: 'Drag release, manual slides.' },
+  { name: 'Enter',  bez: [.22, 1, .36, 1],  dur: 400, spec: 'cubic-bezier(.22,1,.36,1)', time: '200 to 400ms', use: 'Reveal content and open panels.' },
+  { name: 'Arrive', bez: [.23, 1, .32, 1],  dur: 380, spec: 'cubic-bezier(.23,1,.32,1)', time: '380ms', use: 'Bring in the next project\'s media and copy.' },
+  { name: 'Exit',   bez: [.4, 0, 1, 1],     dur: 180, spec: 'cubic-bezier(.4,0,1,1)',    time: '150 to 180ms', use: 'Dismiss content. Keep it shorter than the matching entrance.' },
+  { name: 'Move',   bez: [.65, 0, .35, 1],  dur: 700, spec: 'cubic-bezier(.65,0,.35,1)', time: '320 to 700ms', use: 'Move between views or animate a larger change.' },
+  { name: 'Settle', bez: [.32, .72, 0, 1],  dur: 400, spec: 'cubic-bezier(.32,.72,0,1)', time: '400ms', use: 'Finish a drag or a manual slide change.' },
 ];
 const curveGrid = document.querySelector('[data-curves]');
 if (curveGrid) {

@@ -5,10 +5,11 @@
    "recommended". Mirrors the micah-design-system skill one to one; change
    both together or they drift.
 
-   Two registers live here:
-     --page-*   Graphite long-form (applicants). The default for case studies.
-     --deck-*   The 2026 mini portfolio deck (light, color per project).
-   Product registers (--rs-* etc.) are NOT here on purpose: they belong to the
+   Formats and palettes here:
+     --page-*   Reference page (this site; formerly "Graphite"), dark.
+     --deck-*   Portfolio deck (2026folio), light, color per project.
+     --home-*   micahburger.com homepage featured rows.
+   Product palettes (--rs-* etc.) are NOT here on purpose: they belong to the
    product being shown and are scoped under .product in that project only.
    ============================================================================ */
 
