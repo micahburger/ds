@@ -66,6 +66,90 @@
     tgrid.querySelector('.txg-list').addEventListener('pointerleave', () => show(null));
   }
 
+  /* ── Gallery slider ────────────────────────────────────────────────── */
+  document.querySelectorAll('.gallery-slider').forEach(root => {
+    const stage = root.querySelector('.gs-stage');
+    const track = root.querySelector('.gs-track');
+    const slides = [...root.querySelectorAll('.gs-slide')];
+    const caption = root.querySelector('.gs-caption');
+    const count = root.querySelector('.gs-count');
+    const bar = root.querySelector('.gs-progress');
+    const n = slides.length;
+    let index = 0, timer = null, inView = false, hovering = false, drag = null;
+    const pad = v => String(v).padStart(2, '0');
+    // Shortest signed distance on the ring, so slides wrap the short way.
+    const rel = (i, at) => { let r = i - at; if (r * 2 > n) r -= n; if (r * 2 < -n) r += n; return r; };
+    const timing = src => RM ? '120ms linear' : (src === 'auto' ? '700ms cubic-bezier(.65,0,.35,1)' : '400ms cubic-bezier(.32,.72,0,1)');
+
+    function layout(src, first) {
+      slides.forEach((s, i) => {
+        const o = rel(i, index);
+        const prev = Number(s.dataset.o ?? o);
+        s.style.transition = (first || Math.abs(o - prev) > 1) ? 'none' : `transform ${timing(src)}`;
+        s.style.setProperty('--o', o);
+        s.dataset.o = o;
+        s.setAttribute('aria-hidden', o === 0 ? 'false' : 'true');
+      });
+      caption.textContent = slides[index].dataset.caption;
+      count.textContent = `${pad(index + 1)} / ${pad(n)}`;
+    }
+    function restartBar() {
+      bar.classList.remove('is-running'); void bar.offsetWidth;
+      if (!RM && inView && !hovering && !drag) bar.classList.add('is-running');
+    }
+    function schedule() {
+      clearTimeout(timer);
+      restartBar();
+      if (RM || !inView || hovering || drag) return;
+      timer = setTimeout(() => go(index + 1, 'auto'), 4200);
+    }
+    function go(i, src) { index = ((i % n) + n) % n; layout(src); schedule(); }
+
+    layout('auto', true);
+    new IntersectionObserver(es => { inView = es[0].isIntersecting; schedule(); }, { threshold: 0.5 }).observe(root);
+    root.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') { hovering = true; schedule(); } });
+    root.addEventListener('pointerleave', () => { hovering = false; schedule(); });
+    root.querySelectorAll('.gs-btn').forEach(b => b.addEventListener('click', () => go(index + Number(b.dataset.dir), 'manual')));
+    root.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(index + 1, 'manual'); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(index - 1, 'manual'); }
+    });
+
+    stage.addEventListener('pointerdown', e => {
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      drag = { id: e.pointerId, x0: e.clientX, lastX: e.clientX, lastT: e.timeStamp, v: 0, dx: 0 };
+      stage.setPointerCapture(e.pointerId);
+      stage.classList.add('is-dragging');
+      track.style.transition = 'none';
+      schedule();
+      document.querySelector('.cursor-pill')?.classList.add('is-grabbing');
+    });
+    stage.addEventListener('pointermove', e => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const dt = e.timeStamp - drag.lastT;
+      if (dt > 0) drag.v = (e.clientX - drag.lastX) / dt;
+      drag.lastX = e.clientX; drag.lastT = e.timeStamp;
+      const w = stage.offsetWidth;
+      drag.dx = Math.max(-w, Math.min(w, e.clientX - drag.x0));
+      track.style.setProperty('--drag', `${drag.dx}px`);
+    });
+    function endDrag(e) {
+      if (!drag || e.pointerId !== drag.id) return;
+      const { dx, v } = drag;
+      drag = null;
+      stage.classList.remove('is-dragging');
+      document.querySelector('.cursor-pill')?.classList.remove('is-grabbing');
+      const far = Math.abs(dx) > stage.offsetWidth * 0.2;
+      const flick = Math.abs(v) > 0.45 && Math.sign(v) === Math.sign(dx);
+      track.style.transition = `transform ${timing('manual')}`;
+      track.style.setProperty('--drag', '0px');
+      if (dx !== 0 && (far || flick)) go(index + (dx < 0 ? 1 : -1), 'manual');
+      else schedule();
+    }
+    stage.addEventListener('pointerup', endDrag);
+    stage.addEventListener('pointercancel', endDrag);
+  });
+
   /* ── Before and after ──────────────────────────────────────────────── */
   document.querySelectorAll('.compare').forEach(fig => {
     const range = fig.querySelector('.cmp-range');
