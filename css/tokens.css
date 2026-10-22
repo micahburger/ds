@@ -5,10 +5,9 @@
    "recommended". Mirrors the micah-design-system skill one to one; change
    both together or they drift.
 
-   Three registers live here:
+   Two registers live here:
      --page-*   Graphite long-form (applicants). The default for case studies.
      --deck-*   The 2026 mini portfolio deck (light, color per project).
-     [data-atm] Lattice atmospheres, for a site that needs another mood.
    Product registers (--rs-* etc.) are NOT here on purpose: they belong to the
    product being shown and are scoped under .product in that project only.
    ============================================================================ */
@@ -97,15 +96,6 @@
   --hover-grow-duration: .32s;
   --hover-grow-easing: var(--ease-enter);
 }
-
-/* ── Lattice atmospheres — set data-atm on any element to re-skin it ────── */
-[data-atm="museum"]   { --a-bg:#F6F2EE; --a-surface:#EFE9E4; --a-text:#5D494B; --a-soft:#7A6668; --a-muted:#8D807C; --a-accent:#D5B998; --a-accent-fg:#fff;   --a-border:#DDD5CE; --a-nav-bg:#5D494B; --a-nav-text:#F6F2EE; }
-[data-atm="graphite"] { --a-bg:#111111; --a-surface:#1D1D1D; --a-text:#F4F1EC; --a-soft:#D0C9C1; --a-muted:#B7B0A8; --a-accent:#9C8B70; --a-accent-fg:#111;   --a-border:#303030; --a-nav-bg:#1D1D1D; --a-nav-text:#F4F1EC; }
-[data-atm="signal"]   { --a-bg:#F4512F; --a-surface:#E84827; --a-text:#111111; --a-soft:#2A1010; --a-muted:#FFF2E8; --a-accent:#FFF8F2; --a-accent-fg:#111;   --a-border:rgba(17,17,17,.15); --a-nav-bg:#111111; --a-nav-text:#F4512F; }
-[data-atm="forest"]   { --a-bg:#2E3B35; --a-surface:#3C4943; --a-text:#F5F2EC; --a-soft:#DBD5C8; --a-muted:#C7C1B7; --a-accent:#95A38C; --a-accent-fg:#2E3B35; --a-border:#536058; --a-nav-bg:#1E2B25; --a-nav-text:#F5F2EC; }
-[data-atm="electric"] { --a-bg:#EEF3FF; --a-surface:#DCE6FF; --a-text:#22304B; --a-soft:#3D4F6E; --a-muted:#6579A5; --a-accent:#6077FF; --a-accent-fg:#fff;   --a-border:#C7D4F4; --a-nav-bg:#22304B; --a-nav-text:#EEF3FF; }
-[data-atm="midnight"] { --a-bg:#090909; --a-surface:#181818; --a-text:#FFFFFF; --a-soft:#CCCCCC; --a-muted:#A7A7A7; --a-accent:#4D8EFF; --a-accent-fg:#fff;   --a-border:#2A2A2A; --a-nav-bg:#181818; --a-nav-text:#FFFFFF; }
-[data-atm="clay"]     { --a-bg:#E8D7C7; --a-surface:#DCC8B7; --a-text:#4D3A33; --a-soft:#6B5247; --a-muted:#8C6F60; --a-accent:#C98B66; --a-accent-fg:#fff;   --a-border:#CDB8A8; --a-nav-bg:#4D3A33; --a-nav-text:#E8D7C7; }
 
 @font-face {
   font-family: 'Proxima Nova';

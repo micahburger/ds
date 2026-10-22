@@ -8,9 +8,9 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23161516'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%239C8B70'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Source+Serif+4:wght@400&family=Cormorant+Garamond:wght@300;400&family=Manrope:wght@400;500;600&family=Bodoni+Moda:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" />
-<link rel="stylesheet" href="css/tokens.css?v=2" />
-<link rel="stylesheet" href="css/styles.css?v=2" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" />
+<link rel="stylesheet" href="css/tokens.css?v=3" />
+<link rel="stylesheet" href="css/styles.css?v=3" />
 </head>
 <body>
 
@@ -65,7 +65,7 @@
   <section id="registers">
     <div class="wrap wrap-wide reveal">
       <p class="label eyebrow">Registers</p>
-      <h2 class="section-headline">Three registers, one hand.</h2>
+      <h2 class="section-headline">Two registers, one hand.</h2>
       <p class="section-body">Pick one before building. A register sets the color, type, layout and stack. A case study can also carry a product register: the real product UI, scoped under <code>.product</code> so it never styles the shell.</p>
 
       <div class="register-grid">
@@ -93,14 +93,6 @@
           <dl class="spec"><dt>Type</dt><dd>Instrument Sans, Inter, IBM Plex Mono</dd><dt>Stack</dt><dd>Plain HTML, CSS, JS. GSAP for one signature moment</dd><dt>Live</dt><dd><a href="https://applicants.micahburger.com/">applicants.micahburger.com</a></dd></dl>
         </article>
 
-        <article class="register-card">
-          <div class="register-preview preview-lattice" aria-hidden="true">
-            <span data-atm="museum"></span><span data-atm="graphite"></span><span data-atm="signal"></span><span data-atm="forest"></span><span data-atm="electric"></span><span data-atm="midnight"></span><span data-atm="clay"></span>
-          </div>
-          <h3>Lattice variant</h3>
-          <p>A new site that needs a different mood. Any atmosphere plus any type set below.</p>
-          <dl class="spec"><dt>Type</dt><dd>Five curated pairings</dd><dt>Stack</dt><dd>Either of the above</dd><dt>Live</dt><dd><a href="https://lattice2026.micahburger.com/">lattice2026.micahburger.com</a></dd></dl>
-        </article>
       </div>
     </div>
   </section>
@@ -109,29 +101,11 @@
   <section id="color">
     <div class="wrap wrap-wide reveal">
       <p class="label eyebrow">Color</p>
-      <h2 class="section-headline">Color lives in the page.</h2>
-      <p class="section-body">Neutrals are warm and few. Accent is rare. Click any swatch to copy its value.</p>
+      <h2 class="section-headline">Warm neutrals, one accent.</h2>
+      <p class="section-body">One palette. Neutrals do the work; the accent is saved for large marks. Click any swatch to copy its value.</p>
 
-      <h3 class="sub-heading">Graphite</h3>
       <div class="swatch-row" data-swatches='[["--page-bg","#161516","Page"],["--page-surface","#1D1D1D","Surface"],["--page-rule","#303030","Rule"],["--page-muted","#B7B0A8","Muted, labels only"],["--page-soft","#D0C9C1","Soft, body copy"],["--page-fg","#F4F1EC","Foreground"],["--page-accent","#9C8B70","Accent, 18px and up"]]'></div>
 
-      <h3 class="sub-heading">Deck project backgrounds</h3>
-      <p class="sub-body">The header and dots pick light or dark from the background: light when .299r + .587g + .114b is above 150.</p>
-      <div class="deck-swatches">
-        <button type="button" class="deck-swatch" data-copy="#FAF7F3" style="--bg:#FAF7F3"><span class="ds-head">MICAH LINDENBERGER <i>Menu</i></span><span class="ds-name">Warm cream</span><span class="ds-hex">#FAF7F3 &middot; panel</span></button>
-        <button type="button" class="deck-swatch" data-copy="#F2E6FB" style="--bg:#F2E6FB"><span class="ds-head">MICAH LINDENBERGER <i>Menu</i></span><span class="ds-name">Lilac</span><span class="ds-hex">#F2E6FB &middot; open</span></button>
-        <button type="button" class="deck-swatch" data-copy="#222222" style="--bg:#222222"><span class="ds-head">MICAH LINDENBERGER <i>Menu</i></span><span class="ds-name">Charcoal</span><span class="ds-hex">#222222 &middot; bleed</span></button>
-        <button type="button" class="deck-swatch" data-copy="#FFFFFF" style="--bg:#FFFFFF"><span class="ds-head">MICAH LINDENBERGER <i>Menu</i></span><span class="ds-name">White</span><span class="ds-hex">#FFFFFF &middot; open, resume</span></button>
-      </div>
-      <div class="swatch-row swatch-row-sm" data-swatches='[["--deck-ink","#141414","Ink"],["--deck-ink-header","#1C1C1C","Header on light"],["--deck-paper-text","#F5F4F1","Text on dark"],["--deck-placeholder","#f4f2ec","Media placeholder"],["--deck-overview","#000000","Overview"],["--cursor-color-active","#ff5a36","Cursor, active"],["--cursor-color-grabbing","#db4d2e","Cursor, grabbing"]]'></div>
-
-      <h3 class="sub-heading">Hero sparks</h3>
-      <p class="sub-body">Used only by the hero scramble. Nowhere else.</p>
-      <div class="swatch-row swatch-row-sm" data-swatches='[["--hero-spark-1","#85AF00","Moss"],["--hero-spark-2","#FFCC00","Signal yellow"],["--hero-spark-3","#FB9CFD","Magenta"],["--hero-spark-4","#A19BFF","Periwinkle"],["--hero-spark-5","#FF4C00","Orange red"]]'></div>
-
-      <h3 class="sub-heading">Lattice atmospheres</h3>
-      <p class="sub-body">Seven moods. Set <code>data-atm</code> on any element to re-skin it.</p>
-      <div class="atm-grid" data-atm-grid></div>
     </div>
   </section>
 
@@ -169,14 +143,6 @@
         </dl>
       </div>
 
-      <h3 class="sub-heading">Lattice type sets</h3>
-      <div class="typeset-grid">
-        <article class="typeset" style="--h:'Newsreader',Georgia,serif;--b:'Source Serif 4',Georgia,serif;--w:300;--tt:none;--ls:-.01em;--lh:1.04"><p class="ts-name">Editorial</p><p class="ts-display">A quiet life. Well made.</p><p class="ts-body">Essays on design, culture and the details that quietly shape everyday life.</p><p class="ts-meta">Newsreader &middot; Source Serif 4 &middot; Inter</p></article>
-        <article class="typeset" style="--h:'Instrument Sans',sans-serif;--b:'Inter',sans-serif;--w:600;--tt:none;--ls:0;--lh:1.04"><p class="ts-name">Contemporary</p><p class="ts-display">A quiet life. Well made.</p><p class="ts-body">Essays on design, culture and the details that quietly shape everyday life.</p><p class="ts-meta">Instrument Sans &middot; Inter &middot; IBM Plex Mono</p></article>
-        <article class="typeset" style="--h:'Cormorant Garamond',Georgia,serif;--b:'Manrope',sans-serif;--w:300;--tt:uppercase;--ls:-.02em;--lh:1"><p class="ts-name">Fashion</p><p class="ts-display">A quiet life. Well made.</p><p class="ts-body">Essays on design, culture and the details that quietly shape everyday life.</p><p class="ts-meta">Cormorant Garamond &middot; Manrope &middot; Inter</p></article>
-        <article class="typeset" style="--h:'Bodoni Moda',Georgia,serif;--b:'Newsreader',Georgia,serif;--w:400;--tt:none;--ls:-.01em;--lh:1.06"><p class="ts-name">Luxury</p><p class="ts-display">A quiet life. Well made.</p><p class="ts-body">Essays on design, culture and the details that quietly shape everyday life.</p><p class="ts-meta">Bodoni Moda &middot; Newsreader &middot; Inter</p></article>
-        <article class="typeset" style="--h:'IBM Plex Mono',monospace;--b:'IBM Plex Sans',sans-serif;--w:400;--tt:none;--ls:0;--lh:1.35"><p class="ts-name">Mono</p><p class="ts-display">A quiet life. Well made.</p><p class="ts-body">Essays on design, culture and the details that quietly shape everyday life.</p><p class="ts-meta">IBM Plex Mono &middot; IBM Plex Sans</p></article>
-      </div>
     </div>
   </section>
 
@@ -204,17 +170,6 @@
             <li><span class="bar" style="--w:64px"></span><code>--page-margin</code><em>64px</em></li>
             <li><span class="bar" style="--w:28px"></span><code>--page-margin-mobile</code><em>28px, top 96px</em></li>
           </ul>
-        </div>
-        <div class="space-block">
-          <h3 class="sub-heading">Lattice spacing presets</h3>
-          <table class="mini-table">
-            <thead><tr><th></th><th>Nav</th><th>Section</th><th>Gap</th><th>Element</th><th>Micro</th></tr></thead>
-            <tbody>
-              <tr><th>Generous</th><td>64</td><td>72 / 60</td><td>44</td><td>28</td><td>18</td></tr>
-              <tr><th>Rhythmic</th><td>56</td><td>48 / 40</td><td>24</td><td>16</td><td>8</td></tr>
-              <tr><th>Compact</th><td>44</td><td>24 / 24</td><td>12</td><td>12</td><td>6</td></tr>
-            </tbody>
-          </table>
         </div>
       </div>
 
@@ -646,11 +601,11 @@
     </div>
   </footer>
 
-  <script src="js/shell.js?v=2"></script>
-  <script src="js/demos.js?v=2"></script>
-  <script src="js/patterns.js?v=2"></script>
+  <script src="js/shell.js?v=3"></script>
+  <script src="js/demos.js?v=3"></script>
+  <script src="js/patterns.js?v=3"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
-  <script src="js/hero.js?v=2"></script>
+  <script src="js/hero.js?v=3"></script>
 </body>
 </html>

@@ -46,43 +46,10 @@ document.querySelectorAll('[data-swatches]').forEach(row => {
   });
 });
 
-document.querySelectorAll('.deck-swatch').forEach(el => {
-  if (!isLight(el.dataset.copy)) el.classList.add('is-dark');
-  el.addEventListener('click', () => copy(el.dataset.copy));
-});
 
 document.querySelectorAll('[data-copyable]').forEach(el => {
   el.addEventListener('click', () => copy(el.innerText.trim(), 'snippet'));
 });
-
-/* ── Lattice atmospheres ──────────────────────────────────────────────── */
-const ATMOSPHERES = [
-  { id: 'museum',   name: 'Museum Paper',   keys: 'Quiet · Editorial · Timeless',        colors: ['#F6F2EE', '#EFE9E4', '#5D494B', '#7A6668', '#8D807C', '#D5B998', '#DDD5CE'] },
-  { id: 'graphite', name: 'Graphite Night', keys: 'Luxury · Film · Editorial',           colors: ['#111111', '#1D1D1D', '#F4F1EC', '#D0C9C1', '#B7B0A8', '#9C8B70', '#303030'] },
-  { id: 'signal',   name: 'Signal Red',     keys: 'Swiss · Campaign · Bold',             colors: ['#F4512F', '#E84827', '#111111', '#2A1010', '#FFF2E8', '#FFF8F2', '#D84728'] },
-  { id: 'forest',   name: 'Deep Forest',    keys: 'Natural · Architectural · Organic',   colors: ['#2E3B35', '#3C4943', '#F5F2EC', '#DBD5C8', '#C7C1B7', '#95A38C', '#536058'] },
-  { id: 'electric', name: 'Electric Blue',  keys: 'Modern · Precise · Technical',        colors: ['#EEF3FF', '#DCE6FF', '#22304B', '#3D4F6E', '#6579A5', '#6077FF', '#C7D4F4'] },
-  { id: 'midnight', name: 'Midnight',       keys: 'Digital · Focus · Premium',           colors: ['#090909', '#181818', '#FFFFFF', '#CCCCCC', '#A7A7A7', '#4D8EFF', '#2A2A2A'] },
-  { id: 'clay',     name: 'Soft Clay',      keys: 'Hospitality · Interior · Boutique',   colors: ['#E8D7C7', '#DCC8B7', '#4D3A33', '#6B5247', '#8C6F60', '#C98B66', '#CDB8A8'] },
-];
-const ROLES = ['bg', 'surface', 'text', 'soft', 'muted', 'accent', 'border'];
-const atmGrid = document.querySelector('[data-atm-grid]');
-if (atmGrid) {
-  ATMOSPHERES.forEach(a => {
-    const card = document.createElement('article');
-    card.className = 'atm';
-    card.dataset.atm = a.id;
-    const chips = a.colors.map((c, i) => {
-      // Signal Red's real border is rgba(17,17,17,.15); the chip shows it
-      // composited on its own bg so it reads, but copies the true value.
-      const real = (a.id === 'signal' && ROLES[i] === 'border') ? 'rgba(17,17,17,.15)' : c;
-      return `<button type="button" style="--c:${c}" data-copy="${real}" aria-label="${a.name} ${ROLES[i]} ${real}. Copy value." title="${ROLES[i]} ${real}"></button>`;
-    }).join('');
-    card.innerHTML = `<div class="atm-top"><p class="atm-name">${a.name}</p><p class="atm-keys">${a.keys}</p><p class="atm-sample">Essays on design, culture and the details that shape everyday life.</p><span class="atm-btn">Read the essay</span></div><div class="atm-chips">${chips}</div>`;
-    card.querySelectorAll('button').forEach(b => b.addEventListener('click', () => copy(b.dataset.copy)));
-    atmGrid.appendChild(card);
-  });
-}
 
 /* ── Reduced-motion note ──────────────────────────────────────────────── */
 if (RM) { const n = document.querySelector('.rm-note'); if (n) n.hidden = false; }
