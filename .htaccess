@@ -1,0 +1,29 @@
+# Hostinger serves this repo's root as the site, so everything committed
+# here is public unless a rule below says otherwise. Two jobs: keep the
+# repo's non-site files out of reach, and set the browser security headers
+# a static site should have.
+#
+# The same block is in v2-site's .htaccess, which explains each choice at
+# length; change one, change all three (micahburger.com sites, 2026-11-11).
+# In short: HTTPS only, no type sniffing, framing only by Micah's own
+# sites (the prototype viewer at prototypes.micahburger.com shows these
+# pages in iframes; localhost for running it in dev), no full URLs leaked
+# to other sites, no camera, mic or location.
+
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set Content-Security-Policy "upgrade-insecure-requests; frame-ancestors 'self' https://micahburger.com https://*.micahburger.com http://localhost:*"
+</IfModule>
+
+# Project notes, scripts, configs and dotfiles are refused. .well-known
+# stays open for the host's SSL certificate checks.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule \.(md|sh|ts|tsx|map|lock)$ - [F,L,NC]
+  RewriteRule (^|/)(package(-lock)?\.json|tsconfig[^/]*\.json)$ - [F,L,NC]
+  RewriteCond %{REQUEST_URI} !^/\.well-known/
+  RewriteRule (^|/)\. - [F,L]
+</IfModule>
