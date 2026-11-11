@@ -51,7 +51,9 @@ The long-form register (`--page-*`, `--cs-*`, `--radius-media/card/phone`,
 `--content`, `--gutter`) is copied from v2: `app/src/styles/global.css` in
 micahburger/v2 (`../v2-site`), its Night palette (`:root[data-palette="night"]`)
 and the case study scale in `:root`, mobile values in its 900px block.
-applicants.micahburger.com mirrors the same values. When v2 changes, change
+The applicant experience page (in v2 at `app/public/project/applicant-experience`
+since 2026-11-11; it was applicants.micahburger.com) mirrors the same values.
+When v2 changes, change
 `css/tokens.css` and the Color, Typography and Space sections here to match.
 It replaced the lattice-derived Graphite register (Instrument Sans, Inter,
 Plex Mono labels, #161516, 1080px) on 2026-11-10; don't bring those back.

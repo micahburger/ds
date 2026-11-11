@@ -117,7 +117,7 @@
           </div>
           <h3>Case study</h3>
           <p>A closer look at one project: the problem, my role, the decisions, and what I learned. Keep the screens close to the explanation. Every case study shares one register, and this page is set in it too.</p>
-          <dl class="spec"><dt>Type</dt><dd>Poppins 400 and 500, the --cs-* scale</dd><dt>Color</dt><dd>Night: page #161417, text #E4DED6, titles #F4F1EC, accent #C4AE88</dd><dt>Live</dt><dd><a href="https://v2.micahburger.com/project/opendoor" target="_blank" rel="noopener">Opendoor</a>, <a href="https://v2.micahburger.com/project/rentspree" target="_blank" rel="noopener">RentSpree</a>, <a href="https://applicants.micahburger.com/" target="_blank" rel="noopener">applicants</a></dd></dl>
+          <dl class="spec"><dt>Type</dt><dd>Poppins 400 and 500, the --cs-* scale</dd><dt>Color</dt><dd>Night: page #161417, text #E4DED6, titles #F4F1EC, accent #C4AE88</dd><dt>Live</dt><dd><a href="https://v2.micahburger.com/project/opendoor" target="_blank" rel="noopener">Opendoor</a>, <a href="https://v2.micahburger.com/project/rentspree" target="_blank" rel="noopener">RentSpree</a>, <a href="https://v2.micahburger.com/project/applicant-experience/" target="_blank" rel="noopener">Applicant experience</a></dd></dl>
         </article>
 
       </div>
@@ -126,7 +126,7 @@
         <p class="label">Implementation notes</p>
         <ul>
           <li><b>Reference page.</b> This site. It wears the case study register, so every value on it is one a case study uses. It used to have a register of its own, Graphite (Instrument Sans, Inter, IBM Plex Mono labels, #161516, a 1080px column); that was retired on 10 November 2026, when the case studies became one system.</li>
-          <li><b>Source of truth.</b> v2&rsquo;s <code>app/src/styles/global.css</code>: the Night palette and the case study scale. applicants.micahburger.com and <code>css/tokens.css</code> here copy those values. When v2 changes, change both.</li>
+          <li><b>Source of truth.</b> v2&rsquo;s <code>app/src/styles/global.css</code>: the Night palette and the case study scale. The applicant experience page (static files inside v2 since 2026-11-11) and <code>css/tokens.css</code> here copy those values. When v2 changes, change both.</li>
           <li><b>Lattice</b> contributes interaction examples, such as the design-controls drawer under Motion, not a format of its own.</li>
           <li><b>Built with.</b> The deck and the v2 case studies are Vite and React with no animation library. applicants and this page are plain HTML, CSS and JS. The older micahburger.com pages are Semplice on WordPress. These are facts about each source, not requirements of the format.</li>
           <li><b>Embedded product UI.</b> Scope it to its own styles so it does not inherit the portfolio&rsquo;s typography and color. The convention here is a <code>.product</code> wrapper.</li>
@@ -785,7 +785,7 @@
           <ul class="foot-links">
             <li><a href="https://2026folio.micahburger.com/" target="_blank" rel="noopener">Portfolio deck</a></li>
             <li><a href="https://v2.micahburger.com/project/opendoor" target="_blank" rel="noopener">Case studies, v2</a></li>
-            <li><a href="https://applicants.micahburger.com/" target="_blank" rel="noopener">Application case study</a></li>
+            <li><a href="https://v2.micahburger.com/project/applicant-experience/" target="_blank" rel="noopener">Application case study</a></li>
             <li><a href="https://lattice2026.micahburger.com/" target="_blank" rel="noopener">Lattice</a></li>
             <li><a href="https://micahburger.com/" target="_blank" rel="noopener">Earlier portfolio</a></li>
           </ul>
