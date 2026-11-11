@@ -5,13 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Design system · Micah Lindenberger</title>
 <meta name="description" content="A reference for building Micah Lindenberger's portfolio, case studies, and prototypes: tokens, type, color, motion, components and writing guidance." />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23161516'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%239C8B70'/%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23161417'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23C4AE88'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;700&family=Cormorant+Garamond:wght@400&display=swap" />
-<link rel="stylesheet" href="https://use.typekit.net/ejx8vdd.css" />
-<link rel="stylesheet" href="css/tokens.css?v=12" />
-<link rel="stylesheet" href="css/styles.css?v=12" />
+<!-- Poppins 400/500 is the case study register (and this page); Inter 400/500
+     is only for the deck samples' header and pills. Nothing else is loaded,
+     so no rule may ask for another weight. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Inter:wght@400;500&display=swap" />
+<link rel="stylesheet" href="css/tokens.css?v=13" />
+<link rel="stylesheet" href="css/styles.css?v=13" />
 </head>
 <body>
 
@@ -54,7 +56,7 @@
       <h1 class="title-stanza">Micah</h1>
       <h1>Lindenberger</h1>
       <p class="hero-purpose">A reference for building my portfolio, case studies, and prototypes.</p>
-      <p class="label hero-meta">Version 1 &middot; October 2026</p>
+      <p class="label hero-meta">Version 2 &middot; November 2026</p>
       <p class="label scroll-cue"><a href="#principles">Explore the system <span aria-hidden="true">&darr;</span></a></p>
     </div>
   </section>
@@ -76,7 +78,7 @@
 
   <!-- ═══ 3 · FORMATS ════════════════════════════════════════════════════ -->
   <section id="formats">
-    <div class="wrap wrap-wide reveal">
+    <div class="wrap reveal">
       <p class="label eyebrow">Formats</p>
       <h2 class="section-headline">Choose a format for the story.</h2>
       <p class="section-body">Use the deck for a quick view of several projects. Use a case study when the decisions need more explanation. Both should make the work easy to understand.</p>
@@ -103,20 +105,19 @@
         <article class="register-card">
           <div class="register-preview preview-case" aria-hidden="true">
             <div class="rp-canvas case-canvas">
-              <div class="cs-nav"><span class="cs-name">M Lindenberger</span><span class="cs-links"><span>Opendoor</span><span>Carrier</span><span>Lincoln</span><span>Rockwell</span><span>BBC</span></span></div>
-              <p class="cs-title">Redesign of Opendoor&rsquo;s<br>seller experience</p>
-              <div class="cs-copy">
-                <p class="cs-intro">Opendoor aimed to simplify home selling, but the addition of &lsquo;List with Opendoor&rsquo; created a new challenge: how to seamlessly integrate these distinct pathways.</p>
-                <p class="cs-intro">I led the redesign of the seller experience, working across teams to unify the flow from offer to closing while also refreshing Opendoor&rsquo;s visual and interaction design standards.</p>
-                <p class="cs-meta"><b>Objective:</b> To create a cohesive, flexible experience for home sellers, integrating the option to list on the market with Opendoor&rsquo;s cash offer.</p>
-                <p class="cs-meta"><b>Role:</b> Led the redesign and managed cross-functional collaboration across Product, Design, and Engineering</p>
+              <span class="cs-home cp-home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11.5 5.5 5 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>Back to home</span>
+              <p class="cp-title">Redesign of Opendoor&rsquo;s seller experience</p>
+              <div class="cp-copy">
+                <p>Opendoor was adding &lsquo;List with Opendoor&rsquo; alongside its cash offer. Sellers needed a clear way to compare the two options, understand their offer, and know what would happen next.</p>
+                <p>I led the redesign of the seller experience with Product, Design, and Engineering, simplifying key pages and forms while updating the visual and interaction patterns used across the journey.</p>
+                <dl class="cp-facts"><dt>Objective</dt><dd>Help sellers compare their options, understand pricing, and move forward with a clear next step.</dd><dt>Role</dt><dd>Led the experience redesign in partnership with Product, Design, and Engineering.</dd></dl>
               </div>
-              <img class="cs-hero" src="img/registers/opendoor-hero.webp" alt="" />
+              <img class="cp-media" src="img/registers/opendoor-hero.webp" alt="" />
             </div>
           </div>
           <h3>Case study</h3>
-          <p>A closer look at one project: the problem, my role, the decisions, and what I learned. Keep the screens close to the explanation.</p>
-          <dl class="spec"><dt>Type</dt><dd>Orpheus Pro titles, Poppins text</dd><dt>Color</dt><dd>Dark #161416 or cream #F5F1EB, chosen per project</dd><dt>Live</dt><dd><a href="https://micahburger.com/project/opendoor" target="_blank" rel="noopener">micahburger.com/project/opendoor</a></dd></dl>
+          <p>A closer look at one project: the problem, my role, the decisions, and what I learned. Keep the screens close to the explanation. Every case study shares one register, and this page is set in it too.</p>
+          <dl class="spec"><dt>Type</dt><dd>Poppins 400 and 500, the --cs-* scale</dd><dt>Color</dt><dd>Night: page #161417, text #E4DED6, titles #F4F1EC, accent #C4AE88</dd><dt>Live</dt><dd><a href="https://v2.micahburger.com/project/opendoor" target="_blank" rel="noopener">Opendoor</a>, <a href="https://v2.micahburger.com/project/rentspree" target="_blank" rel="noopener">RentSpree</a>, <a href="https://applicants.micahburger.com/" target="_blank" rel="noopener">applicants</a></dd></dl>
         </article>
 
       </div>
@@ -124,9 +125,10 @@
       <div class="impl-notes">
         <p class="label">Implementation notes</p>
         <ul>
-          <li><b>Reference page.</b> This site. A third, plainer format for documentation: the dark palette, Instrument Sans and Inter. Earlier versions called it Graphite.</li>
+          <li><b>Reference page.</b> This site. It wears the case study register, so every value on it is one a case study uses. It used to have a register of its own, Graphite (Instrument Sans, Inter, IBM Plex Mono labels, #161516, a 1080px column); that was retired on 10 November 2026, when the case studies became one system.</li>
+          <li><b>Source of truth.</b> v2&rsquo;s <code>app/src/styles/global.css</code>: the Night palette and the case study scale. applicants.micahburger.com and <code>css/tokens.css</code> here copy those values. When v2 changes, change both.</li>
           <li><b>Lattice</b> contributes interaction examples, such as the design-controls drawer under Motion, not a format of its own.</li>
-          <li><b>Built with.</b> The deck is Vite and React with no animation library. micahburger.com case studies are Semplice on WordPress. This page is plain HTML, CSS and JS. These are facts about each source, not requirements of the format.</li>
+          <li><b>Built with.</b> The deck and the v2 case studies are Vite and React with no animation library. applicants and this page are plain HTML, CSS and JS. The older micahburger.com pages are Semplice on WordPress. These are facts about each source, not requirements of the format.</li>
           <li><b>Embedded product UI.</b> Scope it to its own styles so it does not inherit the portfolio&rsquo;s typography and color. The convention here is a <code>.product</code> wrapper.</li>
         </ul>
       </div>
@@ -135,20 +137,21 @@
 
   <!-- ═══ 4 · COLOR ══════════════════════════════════════════════════════ -->
   <section id="color">
-    <div class="wrap wrap-wide reveal">
+    <div class="wrap reveal">
       <p class="label eyebrow">Color</p>
       <h2 class="section-headline">A neutral base, with room for project color.</h2>
       <p class="section-body">Use warm neutrals for the page, text, and navigation. Project sections can use a palette that suits the work. Check text and controls against each background.</p>
 
-      <h3 class="sub-heading">Reference page &middot; dark</h3>
-      <p class="sub-body">The base palette for this page. Muted is for labels, soft is for body copy, foreground is for titles. The accent marks the things that should stand out: numbers, the current chapter, pull lines. It passes contrast on the page (5.5:1), but it is kept to those few marks so it reads as emphasis rather than a second text color. Select a swatch to copy its value.</p>
+      <h3 class="sub-heading">Case study &middot; Night</h3>
+      <p class="sub-body">v2&rsquo;s Night palette: every case study uses it, and so does this page. Soft is for paragraphs, foreground for titles and note titles, muted for labels. Surface and chip are the text color mixed into the page, 6% for cards and 14% for pills and small round buttons, so they read as a lift of the page rather than a grey of their own. The accent marks the few things that should stand out: numbers, the current chapter, pull lines. Select a swatch to copy its value.</p>
 
-      <div class="swatch-row" data-swatches='[["--page-bg","#161516","Page"],["--page-surface","#1D1D1D","Surface"],["--page-rule","#303030","Rule"],["--page-muted","#B7B0A8","Muted, labels"],["--page-soft","#D0C9C1","Soft, body"],["--page-fg","#F4F1EC","Foreground"],["--page-accent","#9C8B70","Accent, marks"]]'></div>
+      <div class="swatch-row" data-swatches='[["--page-bg","#161417","Page"],["--page-surface","#222022","Surface, 6% lift"],["--page-chip","#333032","Chip, 14% lift"],["--page-rule","rgba(244,241,236,.14)","Rule"],["--page-muted","#AAA5A1","Muted, labels"],["--page-soft","#E4DED6","Soft, body"],["--page-fg","#F4F1EC","Foreground"],["--page-accent","#C4AE88","Accent, marks"]]'></div>
+      <p class="sub-body swatch-note">Surface, chip and muted are written as <code>color-mix()</code> of the text into the page in tokens.css, as on v2; the hex values above are what they resolve to.</p>
 
       <h3 class="sub-heading">Other palettes</h3>
       <dl class="spec spec-inline">
         <dt>Deck</dt><dd>Each project owns its page color: white, cream #FAF7F3, lilac #F2E6FB or charcoal #222222. Ink #141414, paper text #F5F4F1. The header pill takes the page color as its text, so it stays readable on each background; check new colors anyway.</dd>
-        <dt>Case study</dt><dd>Dark #161416 or cream #F5F1EB, chosen per project.</dd>
+        <dt>Accent strong</dt><dd>#ECD2A4, for the figures inside a stated outcome (v2&rsquo;s --link-strong).</dd>
         <dt>Homepage</dt><dd>Paper #F4F1EC, text #423736, project names #6996AE.</dd>
         <dt>Interaction</dt><dd>The cursor orange #FF5A36 and the hero spark colors are for interaction feedback only, not for text or surfaces.</dd>
       </dl>
@@ -158,21 +161,24 @@
 
   <!-- ═══ 5 · TYPE ═══════════════════════════════════════════════════════ -->
   <section id="type">
-    <div class="wrap wrap-wide reveal">
+    <div class="wrap reveal">
       <p class="label eyebrow">Typography</p>
       <h2 class="section-headline">Clear hierarchy, readable detail.</h2>
       <p class="section-body">Large titles set the pace. Supporting text explains the work. Use the scale for the chosen format and adjust line breaks to suit the content.</p>
       <p class="sub-body">Specs read as font size / line height / letter spacing.</p>
 
-      <h3 class="sub-heading">Reference page</h3>
+      <h3 class="sub-heading">Case study</h3>
+      <p class="sub-body">One scale for every case study and this page, the <code>--cs-*</code> tokens, all Poppins. Only 400 and 500 are loaded: titles are 400, names, note titles and labels 500. Two sizes carry nearly everything: 16px for paragraphs and notes, 13px for captions and labels. Mobile sizes apply under 900px.</p>
       <div class="type-table">
-        <div class="type-row"><div class="type-spec"><span>Hero</span>Instrument Sans 600<br>7.5vw / .95 / -.03em</div><div class="type-sample t-hero">Design system</div></div>
-        <div class="type-row"><div class="type-spec"><span>Section headline</span>Inter 500<br>38px / 1.15 / -.01em</div><div class="type-sample t-headline">Designed to be picked back up.</div></div>
-        <div class="type-row"><div class="type-spec"><span>Display</span>Instrument Sans 600<br>clamp(30px, 3.6vw, 54px) / 1.04</div><div class="type-sample t-display">Making payment make sense.</div></div>
-        <div class="type-row"><div class="type-spec"><span>Item title</span>Instrument Sans 600<br>19px</div><div class="type-sample t-item">No clear sense of progress</div></div>
-        <div class="type-row"><div class="type-spec"><span>Body</span>Inter 300<br>16px / 1.6, soft</div><div class="type-sample t-body">Reducing the number of steps helped, but the bigger change was giving the application a visible structure.</div></div>
-        <div class="type-row"><div class="type-spec"><span>Label</span>IBM Plex Mono 400<br>10px, uppercase, .14em</div><div class="type-sample"><span class="label">Rental application &middot; Payment</span></div></div>
-        <div class="type-row"><div class="type-spec"><span>Number</span>IBM Plex Mono 400<br>20px, accent</div><div class="type-sample t-num">01</div></div>
+        <div class="type-row"><div class="type-spec"><span>Display</span>--cs-display, 400<br>clamp(40px, 5.4vw, 76px) / 1.06 / -.015em<br>Mobile 32px</div><div class="type-sample t-display">Making payment make sense.</div></div>
+        <div class="type-row"><div class="type-spec"><span>Statement</span>--cs-statement, 400<br>clamp(30px, 3.6vw, 48px) / 1.2 / -.015em<br>Mobile 28px. Figures in accent strong</div><div class="type-sample t-statement">Applicants could see how much was left.</div></div>
+        <div class="type-row"><div class="type-spec"><span>Section title</span>--cs-heading, 400<br>38px / 1.25 / -.01em<br>Mobile 26px</div><div class="type-sample t-headline">Designed to be picked back up.</div></div>
+        <div class="type-row"><div class="type-spec"><span>Lede</span>--cs-lede, 400<br>18px / 1.5, soft</div><div class="type-sample t-lede">Applying for a rental is long, sensitive, mostly completed on a phone, and ends with a payment.</div></div>
+        <div class="type-row"><div class="type-spec"><span>Body</span>--cs-body, 400<br>16px / 1.6 / .2px, soft</div><div class="type-sample t-body">Reducing the number of steps helped, but the bigger change was giving the application a visible structure.</div></div>
+        <div class="type-row"><div class="type-spec"><span>Note title</span>--cs-body, 500<br>16px / 1.4, foreground</div><div class="type-sample t-item">No clear sense of progress</div></div>
+        <div class="type-row"><div class="type-spec"><span>Caption</span>--cs-small, 400<br>13px / 1.4, 70%</div><div class="type-sample t-caption">The payment step, before and after the restructure.</div></div>
+        <div class="type-row"><div class="type-spec"><span>Label</span>--cs-small, 500<br>13px / 1.4 / .02em, muted</div><div class="type-sample"><span class="label">Rental application &middot; Payment</span></div></div>
+        <div class="type-row"><div class="type-spec"><span>Number</span>Poppins 400<br>20px, accent, tabular</div><div class="type-sample t-num">01</div></div>
       </div>
 
       <h3 class="sub-heading">Portfolio deck</h3>
@@ -191,27 +197,24 @@
         </dl>
       </div>
 
-      <h3 class="sub-heading">Case study</h3>
-      <p class="sub-body">Orpheus Pro for titles, Poppins for text, as on the micahburger.com case studies. A size scale has not been standardized yet; take sizes from the live <a href="https://micahburger.com/project/opendoor" target="_blank" rel="noopener">Opendoor case study</a> until it is.</p>
-
     </div>
   </section>
 
   <!-- ═══ 6 · SPACE ══════════════════════════════════════════════════════ -->
   <section id="space">
-    <div class="wrap wrap-wide reveal">
+    <div class="wrap reveal">
       <p class="label eyebrow">Space and surface</p>
       <h2 class="section-headline">Group with space first.</h2>
-      <p class="section-body">Use spacing to show what belongs together. Add a surface, border, or shadow when it helps separate content or explain an interaction.</p>
+      <p class="section-body">Use spacing to show what belongs together. When a group has to read apart from the story around it, lift it onto a surface rather than drawing a line or a shadow around it.</p>
 
       <div class="space-grid">
         <div class="space-block">
-          <h3 class="sub-heading">Reference page</h3>
+          <h3 class="sub-heading">Case study</h3>
           <ul class="measure-list">
-            <li><span class="bar" style="--w:120px"></span><code>--space-section</code><em>clamp(64px, 10vw, 120px)</em></li>
-            <li><span class="bar" style="--w:48px"></span><code>--gutter</code><em>clamp(20px, 6vw, 48px)</em></li>
-            <li><span class="bar bar-wide"></span><code>--content-max</code><em>1080px text width</em></li>
-            <li><span class="bar bar-wide"></span><code>media width</code><em>1300 to 1407px</em></li>
+            <li><span class="bar" style="--w:150px"></span><code>--cs-part</code><em>160px before a section title, 112px mobile</em></li>
+            <li><span class="bar" style="--w:120px"></span><code>--cs-block</code><em>120px between blocks, 80px mobile</em></li>
+            <li><span class="bar" style="--w:30px"></span><code>--gutter</code><em>30px, columns and page edge</em></li>
+            <li><span class="bar bar-wide"></span><code>--content</code><em>1220px, 12 columns</em></li>
           </ul>
         </div>
         <div class="space-block">
@@ -225,20 +228,20 @@
         </div>
       </div>
 
-      <h3 class="sub-heading">Radius and shadow</h3>
+      <h3 class="sub-heading">Corners and surfaces</h3>
       <div class="surface-row">
-        <div class="surface" style="border-radius:var(--radius-sm);box-shadow:var(--shadow-sm)"><code>--radius-sm</code><em>8px</em><code>--shadow-sm</code><em>0 8px 30px / .28</em></div>
-        <div class="surface" style="border-radius:var(--radius-md);box-shadow:var(--shadow-md)"><code>--radius-md</code><em>14px</em><code>--shadow-md</code><em>0 20px 60px / .32</em></div>
-        <div class="surface" style="border-radius:var(--radius-lg);box-shadow:var(--shadow-lg)"><code>--radius-lg</code><em>20px</em><code>--shadow-lg</code><em>0 30px 80px / .4</em></div>
-        <div class="surface surface-pill"><code>pill</code><em>999px</em></div>
+        <div class="surface" style="border-radius:var(--radius-card)"><code>--radius-card</code><em>20px, cards and menus</em></div>
+        <div class="surface" style="border-radius:var(--radius-media)"><code>--radius-media</code><em>28px, screens and frames; 20px mobile</em></div>
+        <div class="surface surface-phone" style="border-radius:var(--radius-phone)"><code>--radius-phone</code><em>36px, a phone screen; 28px mobile</em></div>
+        <div class="surface surface-pill"><code>pill</code><em>999px, chip fill</em></div>
       </div>
-      <p class="sub-body">Surfaces use these radii. Device and media frames have their own geometry (36px phones, 18px cards, 14px desktops), listed under Components.</p>
+      <p class="sub-body">Surfaces are flat: a 6% lift for cards, a 14% lift for pills and round buttons, no strokes and no shadows. Only objects cast a shadow, such as a phone cut-out or the floating preview in the table index. The deck&rsquo;s media frames keep their own geometry (36px phones, 18px cards, 14px desktops), listed under Components.</p>
     </div>
   </section>
 
   <!-- ═══ 7 · MOTION ═════════════════════════════════════════════════════ -->
   <section id="motion">
-    <div class="wrap wrap-wide reveal">
+    <div class="wrap reveal">
       <p class="label eyebrow">Motion</p>
       <h2 class="section-headline">Make transitions easy to follow.</h2>
       <p class="section-body">Use motion to connect states and show what changed. Keep distances short. Choose a curve for the interaction and provide a reduced-motion version.</p>
@@ -331,10 +334,10 @@
 
   <!-- ═══ 8 · COMPONENTS ═════════════════════════════════════════════════ -->
   <section id="components">
-    <div class="wrap wrap-wide reveal">
+    <div class="wrap reveal">
       <p class="label eyebrow">Components</p>
       <h2 class="section-headline">Reusable parts for presenting the work.</h2>
-      <p class="section-body">Use these for navigation, media, and supporting detail. Each example includes where it belongs and how it behaves. The deck header, media frames and progress dots come from the portfolio deck; the chapter bar, chapter menu and text control are from this page.</p>
+      <p class="section-body">Use these for navigation, media, and supporting detail. Each example includes where it belongs and how it behaves. The deck header, media frames and progress dots come from the portfolio deck; Back to home is from the case studies; the chapter bar, chapter menu and text control are from this page.</p>
 
       <div class="comp-grid">
         <article class="comp comp-span">
@@ -360,6 +363,17 @@
         </article>
 
         <article class="comp">
+          <div class="comp-stage cs-demo" tabindex="0" role="group" aria-label="Back to home demo. Scroll inside to see the pill lock.">
+            <div class="cs-bar"><span class="cs-home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11.5 5.5 5 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>Back to home</span></div>
+            <p class="cs-demo-title">Redesign of Opendoor&rsquo;s seller experience</p>
+            <div class="cs-demo-lines"><i></i><i></i><i class="short"></i><i></i><i></i><i class="short"></i><i></i><i class="short"></i></div>
+          </div>
+          <h3>Back to home</h3>
+          <p>The way out of every case study, in the same place on each. It scrolls up with the page, then locks near the top. Scroll inside the box to try it.</p>
+          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">From v2 (<code>.cs-bar</code>, <code>.cs-home</code>), mirrored on applicants. The bar rests 180px down (112px under 900px) and locks 24px from the top (16px). The lock is a margin, not padding, so sticky lets the bar travel up through it and then hold. The bar spans the content width but only the pill takes the pointer.</p><dl class="spec"><dt>Pill</dt><dd>Poppins 500 14px / 1.2, padding 10px 18px 10px 14px, 16px arrow 8px from the label.</dd><dt>Fill</dt><dd>--page-chip, title color text. No stroke, no shadow.</dd><dt>Hover</dt><dd>Grows by the button token (1.12) and the arrow nudges 3px left.</dd></dl></div></details>
+        </article>
+
+        <article class="comp">
           <div class="comp-stage comp-center light-stage">
             <div class="dots"><span class="is-active"></span><span></span><span></span></div>
           </div>
@@ -378,7 +392,7 @@
           </div>
           <h3>Chapter bar</h3>
           <p>Help people navigate a long page. Show the current section and a Menu button that opens the chapter list.</p>
-          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Fixed bottom right, hidden while the hero is in view. Count, chapter name and a ring that fills with scroll position. The button&rsquo;s accessible name is &ldquo;Chapter menu&rdquo;.</p></div></details>
+          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Fixed bottom right, hidden while the hero is in view. Count, chapter name and a ring that fills with scroll position, on the --page-chip fill with no stroke or shadow. The button&rsquo;s accessible name is &ldquo;Chapter menu&rdquo;.</p></div></details>
         </article>
 
         <article class="comp">
@@ -390,7 +404,7 @@
           </div>
           <h3>Numbered breakdown</h3>
           <p>Use for a short sequence or a small set of related findings. Give each item a clear title and one useful explanation.</p>
-          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Mono number in accent, Instrument Sans title, short body, hairline rule between items.</p></div></details>
+          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Number in accent, a 500 note title, a short body, a hairline rule between items.</p></div></details>
         </article>
 
         <article class="comp">
@@ -403,7 +417,7 @@
           </div>
           <h3>Annotation notes</h3>
           <p>Explain a specific behavior beside the relevant screen. On wide layouts, notes can stay in view with the media.</p>
-          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Mono numbers, 13px body. Sticky on wide screens.</p></div></details>
+          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Numbers in the label style, 16px body. Sticky on wide screens.</p></div></details>
         </article>
 
         <article class="comp">
@@ -412,7 +426,7 @@
           </div>
           <h3>Text control</h3>
           <p>Use for supporting actions such as replaying a demo. Keep the label clear, with visible hover and keyboard-focus states.</p>
-          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Mono 11px, uppercase, muted. Underline on hover. Kept out of the accent so it reads as secondary to the content.</p></div></details>
+          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">The label style: Poppins 500 13px, muted. Underline on hover. Kept out of the accent so it reads as secondary to the content.</p></div></details>
         </article>
 
         <article class="comp">
@@ -427,7 +441,7 @@
           </div>
           <h3>Chapter menu</h3>
           <p>Open the section list from the chapter bar. Mark the current chapter and make each destination easy to identify.</p>
-          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">The bar grows into the menu from its bottom-right corner, 420ms enter curve; chapters rise 22ms apart. Closing fades the content, then shrinks in 320ms. Arrow keys move between chapters.</p></div></details>
+          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">The bar grows into the menu from its bottom-right corner, 420ms enter curve, taking the 20px card corner; chapters rise 22ms apart. Closing fades the content, then shrinks in 320ms. Arrow keys move between chapters.</p></div></details>
         </article>
       </div>
     </div>
@@ -435,7 +449,7 @@
 
   <!-- ═══ 9 · LAYOUTS ════════════════════════════════════════════════════ -->
   <section id="layouts">
-    <div class="wrap wrap-wide reveal">
+    <div class="wrap reveal">
       <p class="label eyebrow">Layouts</p>
       <h2 class="section-headline">Match the layout to the content.</h2>
       <p class="section-body">The deck gives each project a focused introduction. Case studies use a longer sequence of text and screens. Start with these layouts and adjust for the work.</p>
@@ -474,19 +488,19 @@
             <span class="wl-list"><i></i><i></i><i></i></span>
             <span class="wl-split wl-rev"><i></i><i></i></span>
           </div>
-          <figcaption><strong>Case study.</strong> Start with the project and my role. Follow with the decisions and relevant screens, then the outcome or learning.</figcaption><details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Serif title and overview at the top, full-width UI under them, then sections that alternate text and screens.</p></div></details>
+          <figcaption><strong>Case study.</strong> Start with the project and my role. Follow with the decisions and relevant screens, then the outcome or learning.</figcaption><details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">From v2: Back to home, a two-line title at --cs-display, then the intro: copy in six of twelve columns with the Objective and Role card under it, the lead screen in the other six. Blocks sit --cs-block apart; a section title opens a new part --cs-part down. Content 1220px, 30px gutters.</p></div></details>
         </figure>
       </div>
 
       <h3 class="sub-heading">Breakpoints</h3>
-      <p class="sub-body">These are the portfolio deck&rsquo;s breakpoints.</p>
-      <dl class="spec spec-inline"><dt>Under 600px</dt><dd>The header tightens and its items sit 12px apart.</dd><dt>Under 900px</dt><dd>Columns stack and the deck becomes a scrolling page. Navigation stays visible, over a fade of the page color.</dd><dt>Over 2000px</dt><dd>The composition centers instead of stretching.</dd></dl>
+      <p class="sub-body">The portfolio deck&rsquo;s breakpoints, and the one the case studies share.</p>
+      <dl class="spec spec-inline"><dt>Case study, under 900px</dt><dd>The --cs-* scale steps down: titles 32px, statements 28px, section titles 26px, blocks 80px, parts 112px, media corners 20px, phone corners 28px. Back to home rests 112px down and locks 16px from the top.</dd><dt>Under 600px</dt><dd>The header tightens and its items sit 12px apart.</dd><dt>Under 900px</dt><dd>Columns stack and the deck becomes a scrolling page. Navigation stays visible, over a fade of the page color.</dd><dt>Over 2000px</dt><dd>The composition centers instead of stretching.</dd></dl>
     </div>
   </section>
 
   <!-- ═══ 10 · PATTERNS ═════════════════════════════════════════════════ -->
   <section id="patterns">
-    <div class="wrap wrap-wide reveal">
+    <div class="wrap reveal">
       <p class="label eyebrow">Portfolio patterns</p>
       <h2 class="section-headline">Choose how people explore the work.</h2>
       <p class="section-body">Use an overview to show range, a gallery to show a sequence, and a comparison when the change is easier to see side by side.</p>
@@ -645,7 +659,7 @@
             <p class="demo-what">The same screen in two versions, when the change is easier to see side by side. Drag the divider.</p>
             <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Arrow keys move the divider when it has focus. A click settles on the 400ms settle curve. Adapted from Semplice&rsquo;s portfolio grids.</p><dl class="spec">
               <dt>Frame</dt><dd>Both images exported on the same canvas, so the divider lines up.</dd>
-              <dt>Labels</dt><dd>Mono tags, V1 left, V2 right. Text rather than color, so the comparison reads without relying on color.</dd>
+              <dt>Labels</dt><dd>Plain words in the label style, V1 left, V2 right. Text rather than color, so the comparison reads without relying on color.</dd>
             </dl></div></details>
           </div>
         </div>
@@ -667,7 +681,7 @@
           <div class="pattern-intro">
             <h3 class="pattern-title">Key insight</h3>
             <p class="demo-what">One sentence that explains a decision, lit as you scroll. It must read fine without the animation.</p>
-            <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Words go from rule gray to foreground as the line crosses the middle of the screen. Plain scroll position, no library. Reduced motion shows it fully lit.</p></div></details>
+            <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">Words go from a faint tint of the title color to full as the line crosses the middle of the screen. Set at the statement size. Plain scroll position, no library. Reduced motion shows it fully lit.</p></div></details>
           </div>
         </div>
         <p class="lit" data-lit>The test shifted my focus from payment placement to whether applicants understood what they were paying for.</p>
@@ -679,7 +693,7 @@
           <div class="pattern-intro">
             <h3 class="pattern-title">Cursor labels</h3>
             <p class="demo-what">A short hint on the cursor, like View or Drag. Hover the rows or the slider above to see it.</p>
-            <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">The dot grows into a pill: View on links, Drag on the slider. Precise pointers only; touch never sees it.</p><dl class="spec"> <dt>Size</dt><dd>16px dot grows to a 28px tall pill, 250ms enter curve.</dd> <dt>Type</dt><dd>IBM Plex Mono 10px, uppercase, .14em, #141414 on #ff5a36.</dd> <dt>Markup</dt><dd><code>data-cursor="View"</code> on any element. The nearest one wins.</dd> </dl></div></details>
+            <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">The dot grows into a pill: View on links, Drag on the slider. Precise pointers only; touch never sees it.</p><dl class="spec"> <dt>Size</dt><dd>16px dot grows to a 28px tall pill, 250ms enter curve.</dd> <dt>Type</dt><dd>Poppins 500 12px, .02em, #141414 on #ff5a36.</dd> <dt>Markup</dt><dd><code>data-cursor="View"</code> on any element. The nearest one wins.</dd> </dl></div></details>
           </div>
         </div>
       </div>
@@ -691,7 +705,7 @@
 
   <!-- ═══ 11 · CASE STUDIES ══════════════════════════════════════════════ -->
   <section id="case-studies">
-    <div class="wrap wrap-wide reveal">
+    <div class="wrap reveal">
       <p class="label eyebrow">Case studies</p>
       <h2 class="section-headline">Explain the decisions. Show what changed.</h2>
       <p class="section-body">Give readers enough context to understand the problem, my contribution, and the result. Use the format that fits the project.</p>
@@ -723,7 +737,7 @@
             <li><i>04</i><b>The decisions</b><span>What changed, what I considered, and why I chose this direction. Put relevant screens beside the explanation.</span></li>
             <li><i>05</i><b>The result</b><span>What shipped, what was measured, or what I learned. Be clear about what is still unknown.</span></li>
           </ol>
-          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">On micahburger.com the title is usually two lines of Orpheus Pro, with Objective and Role as bold labels under the overview. Those are layout defaults, not rules for every project.</p></div></details>
+          <details class="specs"><summary>Specs</summary><div class="specs-body"><p class="demo-spec">On v2 the title is two balanced lines at --cs-display, with Objective and Role in a card (the 6% surface) beside the lead screen. Those are layout defaults, not rules for every project.</p></div></details>
         </article>
       </div>
 
@@ -759,7 +773,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="wrap wrap-wide">
+    <div class="wrap">
       <div class="footer-grid">
         <div>
           <p class="label">Use this system</p>
@@ -770,6 +784,7 @@
           <p class="label">Sources</p>
           <ul class="foot-links">
             <li><a href="https://2026folio.micahburger.com/" target="_blank" rel="noopener">Portfolio deck</a></li>
+            <li><a href="https://v2.micahburger.com/project/opendoor" target="_blank" rel="noopener">Case studies, v2</a></li>
             <li><a href="https://applicants.micahburger.com/" target="_blank" rel="noopener">Application case study</a></li>
             <li><a href="https://lattice2026.micahburger.com/" target="_blank" rel="noopener">Lattice</a></li>
             <li><a href="https://micahburger.com/" target="_blank" rel="noopener">Earlier portfolio</a></li>
@@ -786,11 +801,11 @@
     </div>
   </footer>
 
-  <script src="js/shell.js?v=12"></script>
-  <script src="js/demos.js?v=12"></script>
-  <script src="js/patterns.js?v=12"></script>
+  <script src="js/shell.js?v=13"></script>
+  <script src="js/demos.js?v=13"></script>
+  <script src="js/patterns.js?v=13"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
-  <script src="js/hero.js?v=12"></script>
+  <script src="js/hero.js?v=13"></script>
 </body>
 </html>

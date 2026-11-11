@@ -1,55 +1,97 @@
 /* ============================================================================
    MICAH LINDENBERGER DESIGN SYSTEM — tokens
    The single file to copy into a new project. Every value was measured from
-   the live sites (2026folio, applicants, lattice2026) unless a comment says
-   "recommended". Mirrors the micah-design-system skill one to one; change
-   both together or they drift.
+   the live sites (v2.micahburger.com, applicants, 2026folio, lattice2026)
+   unless a comment says "recommended". Mirrors the micah-design-system skill
+   one to one; change both together or they drift.
 
    Formats and palettes here:
-     --page-*   Reference page (this site; formerly "Graphite"), dark.
-     --deck-*   Portfolio deck (2026folio), light, color per project.
-     --home-*   micahburger.com homepage featured rows.
+     --page-*, --cs-*  Case study, the long-form register: every
+                       micahburger.com case study and this page. Dark.
+     --deck-*          Portfolio deck (2026folio), light, color per project.
+     --home-*          micahburger.com homepage featured rows.
    Product palettes (--rs-* etc.) are NOT here on purpose: they belong to the
    product being shown and are scoped under .product in that project only.
+
+   SOURCE OF TRUTH for the case study register (Micah, 2026-11-10:
+   "systematize"): v2-site/app/src/styles/global.css, its Night palette
+   (:root[data-palette="night"]) and the case study scale in :root. Opendoor
+   and RentSpree on v2 and applicants.micahburger.com all run on it. This
+   file copies those values; when v2 changes, change them here. It replaced
+   the older lattice-derived set (Instrument Sans, Inter, Plex Mono labels,
+   #161516, a 1080px column), which no live case study uses any more.
    ============================================================================ */
 
 :root {
-  /* ── Graphite long-form ──────────────────────────────────────────────── */
-  --page-bg:      #161516;
-  --page-surface: #1D1D1D;
-  --page-fg:      #F4F1EC;
-  --page-soft:    #D0C9C1;
-  --page-muted:   #B7B0A8;
-  --page-rule:    #303030;
-  --page-accent:  #9C8B70; /* the one warm note: large marks only, never under 18px */
+  /* ── Case study color: v2's Night palette, value for value ─────────────
+     v2 names on the right. Night's page is the exact ground the Opendoor
+     screens were exported on, so a framed screen has no visible edge.
+     Surface and chip are lifts of the page, not fixed greys: the text
+     color washed into the page at 6% (cards, the facts card) and 14%
+     (small round buttons and the Back to home pill). Muted is v2's caption
+     (text at about 70%) as a solid color, so a label can fade without
+     fading its focus ring. */
+  --page-bg:      #161417;                    /* --paper, also --media-bg */
+  --page-fg:      #f4f1ec;                    /* --black: titles, note titles */
+  --page-soft:    #e4ded6;                    /* --ink: paragraphs */
+  --page-muted:   color-mix(in srgb, #e4ded6 72%, #161417); /* about #aaa5a1 */
+  --page-accent:  #c4ae88;                    /* --link: large marks only, never under 18px */
+  --page-accent-strong: #ecd2a4;              /* --link-strong: figures inside a statement */
+  --page-rule:    rgba(244, 241, 236, 0.14);  /* --rule */
+  --page-surface: color-mix(in srgb, #e4ded6 6%, #161417);  /* cards, about #222022 */
+  --page-chip:    color-mix(in srgb, #e4ded6 14%, #161417); /* --chip, about #333032 */
+  --page-dot:     rgba(244, 241, 236, 0.24);  /* --dot; active dot is --page-fg */
 
-  --font-heading: 'Instrument Sans', system-ui, sans-serif;
-  --font-body:    'Inter', 'Helvetica Neue', sans-serif;
-  --font-label:   'IBM Plex Mono', 'Courier New', monospace;
-  --font-deck:    'Proxima Nova', 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  /* ── Case study type: Poppins, the only face, at 400 and 500 ──────────
+     Only those two weights are loaded, so nothing may ask for 300 or 600
+     (the browser would fake it). Titles are 400; 500 is for names, note
+     titles, labels and pills. The role names stay so a rule still says
+     what its text is doing; they all point at the same face. */
+  --font-case:    'Poppins', 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: var(--font-case);
+  --font-body:    var(--font-case);
+  --font-label:   var(--font-case);
+  --tracking-body: 0.2px;  /* v2's body letter-spacing */
+  /* Code samples only. A system stack, so no third face is loaded. */
+  --font-code:    ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 
-  --size-display: clamp(30px, 3.6vw, 54px);
-  --line-display: 1.04;
-  --weight-display: 600;
-  --size-heading: clamp(18px, 1.8vw, 26px);
-  --line-heading: 1.12;
-  --weight-heading: 600;
-  --size-body: 15px;
-  --line-body: 1.65;
-  --size-label: 10px;
-  --weight-label: 400;
-  --tracking-label: 0.14em;
+  /* The shared case study scale, same names and values as v2's :root.
+     Two text sizes carry nearly everything: --cs-body for paragraphs and
+     notes, --cs-small for captions and labels. Mobile values are in the
+     900px block below. */
+  --cs-display:   clamp(40px, 5.4vw, 76px); /* page title, 1.06 leading, -0.015em */
+  --cs-statement: clamp(30px, 3.6vw, 48px); /* a stated outcome, 1.2 leading, -0.015em */
+  --cs-heading:   38px;  /* section titles, 1.25 leading, -0.01em */
+  --cs-lede:      18px;  /* intro paragraphs, 1.5 leading */
+  --cs-body:      16px;  /* paragraphs and notes, 1.6 leading */
+  --cs-small:     13px;  /* captions (1.4, 70%) and labels (500, 0.02em) */
+  --cs-block:     120px; /* between blocks */
+  --cs-part:      160px; /* before a section title: a new part of the story */
 
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
-  --shadow-sm: 0 8px 30px rgba(0, 0, 0, 0.28);
+  /* Corners. One per kind of thing, so a page has few of them. */
+  --radius-media: 28px;  /* screens and image frames, homepage media too */
+  --radius-card:  20px;  /* cards and menus */
+  --radius-phone: 36px;  /* a phone-shaped screenshot */
+  --radius-sm:    8px;   /* list rows and small hover fills */
+
+  /* Shadows are for objects (a phone cut-out, a floating preview), never
+     chrome: pills, round buttons, the chapter bar and cards are flat. */
   --shadow-md: 0 20px 60px rgba(0, 0, 0, 0.32);
   --shadow-lg: 0 30px 80px rgba(0, 0, 0, 0.4);
 
-  --content-max: 1080px;
-  --gutter: clamp(20px, 6vw, 48px);
-  --space-section: clamp(64px, 10vw, 120px);
+  /* v2's grid (Semplice's): 12 columns, 30px gutters, content 1220px wide
+     at most. --content-max is the wrapper, content plus a gutter each side. */
+  --content: 1220px;
+  --gutter: 30px;
+  --content-max: calc(var(--content) + var(--gutter) * 2);
+  /* Sections are padded half a --cs-part top and bottom, so one part
+     starts --cs-part after the last (as applicants does). */
+  --space-section: calc(var(--cs-part) / 2);
+
+  /* The locked Back to home bar (.cs-bar / .cs-home): it rests --bar-rest
+     down the page, then sticks --bar-lock from the top. */
+  --bar-rest: 180px;
+  --bar-lock: 24px;
 
   --hero-spark-1: #85AF00;
   --hero-spark-2: #FFCC00;
@@ -78,6 +120,10 @@
   --reveal-slow:   700ms;
 
   /* ── Deck (2026 mini portfolio) ──────────────────────────────────────── */
+  /* The deck's header and pills are Inter 500 (2026folio global.css); the
+     rest of the deck is Proxima Nova. */
+  --font-deck:    'Proxima Nova', 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --font-deck-ui: 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif;
   --deck-ink: #141414;
   --deck-ink-header: #1C1C1C;
   --deck-paper-text: #F5F4F1;
@@ -103,6 +149,20 @@
   --hover-grow-scale-card: 1.05;
   --hover-grow-duration: .32s;
   --hover-grow-easing: var(--ease-enter);
+}
+
+@media (max-width: 900px) {
+  :root {
+    --cs-display: 32px;
+    --cs-statement: 28px;
+    --cs-heading: 26px;
+    --cs-block: 80px;
+    --cs-part: 112px;
+    --radius-media: 20px;
+    --radius-phone: 28px;
+    --bar-rest: 112px;
+    --bar-lock: 16px;
+  }
 }
 
 @font-face {
